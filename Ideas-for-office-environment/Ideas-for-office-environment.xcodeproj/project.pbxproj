@@ -9,20 +9,26 @@
 /* Begin PBXBuildFile section */
 		3D1B64C32B66CF5600FC720E /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B64C22B66CF5600FC720E /* SigninView.swift */; };
 		3D27CED92B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27CED82B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift */; };
-		3D27CEDB2B66CAAE003C81C5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27CEDA2B66CAAE003C81C5 /* MainView.swift */; };
 		3D27CEDD2B66CAAF003C81C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D27CEDC2B66CAAF003C81C5 /* Assets.xcassets */; };
 		3D27CEE02B66CAAF003C81C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D27CEDF2B66CAAF003C81C5 /* Preview Assets.xcassets */; };
 		3DC71B152B926DBD00AA98C3 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B142B926DBD00AA98C3 /* SignupView.swift */; };
+		3DC71B172B927C8B00AA98C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B162B927C8B00AA98C3 /* Constants.swift */; };
+		3DC71B192B9319B900AA98C3 /* HybridTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B182B9319B900AA98C3 /* HybridTextField.swift */; };
+		3DC71B1B2B931DEB00AA98C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DC71B1A2B931DEB00AA98C3 /* Localizable.strings */; };
+		3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B1C2B9328D000AA98C3 /* Strings+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D1B64C22B66CF5600FC720E /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		3D27CED52B66CAAE003C81C5 /* Ideas-for-office-environment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ideas-for-office-environment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D27CED82B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ideas_for_office_environmentApp.swift; sourceTree = "<group>"; };
-		3D27CEDA2B66CAAE003C81C5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3D27CEDC2B66CAAF003C81C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D27CEDF2B66CAAF003C81C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3DC71B142B926DBD00AA98C3 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		3DC71B162B927C8B00AA98C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3DC71B182B9319B900AA98C3 /* HybridTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridTextField.swift; sourceTree = "<group>"; };
+		3DC71B1A2B931DEB00AA98C3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3DC71B1C2B9328D000AA98C3 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				3D27CEE82B66CCF8003C81C5 /* Models */,
 				3D27CEE72B66CCEA003C81C5 /* Delegate */,
 				3D27CEE62B66CCDA003C81C5 /* Views */,
+				3DC71B162B927C8B00AA98C3 /* Constants.swift */,
+				3DC71B1A2B931DEB00AA98C3 /* Localizable.strings */,
+				3DC71B1C2B9328D000AA98C3 /* Strings+Generated.swift */,
 			);
 			path = "Ideas-for-office-environment";
 			sourceTree = "<group>";
@@ -76,9 +85,9 @@
 		3D27CEE62B66CCDA003C81C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3D27CEDA2B66CAAE003C81C5 /* MainView.swift */,
 				3D1B64C22B66CF5600FC720E /* SigninView.swift */,
 				3DC71B142B926DBD00AA98C3 /* SignupView.swift */,
+				3DC71B182B9319B900AA98C3 /* HybridTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D27CEE02B66CAAF003C81C5 /* Preview Assets.xcassets in Resources */,
+				3DC71B1B2B931DEB00AA98C3 /* Localizable.strings in Resources */,
 				3D27CEDD2B66CAAF003C81C5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,8 +195,10 @@
 			files = (
 				3DC71B152B926DBD00AA98C3 /* SignupView.swift in Sources */,
 				3D1B64C32B66CF5600FC720E /* SigninView.swift in Sources */,
-				3D27CEDB2B66CAAE003C81C5 /* MainView.swift in Sources */,
+				3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */,
 				3D27CED92B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift in Sources */,
+				3DC71B192B9319B900AA98C3 /* HybridTextField.swift in Sources */,
+				3DC71B172B927C8B00AA98C3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +340,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.8;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +370,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.8;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

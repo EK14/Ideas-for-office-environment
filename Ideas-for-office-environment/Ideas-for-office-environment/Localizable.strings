@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Ideas-for-office-environment
+
+  Created by Elina Karapetian on 02.03.2024.
+  
+*/
+
+"signin" = "Войти";
+"signup" = "Зарегистрироваться";
+"password" = "Пароль";
+"entry" = "Вход";
+"notHaveAccount" = "Нет аккаунта?";
+"haveAccount" = "Есть аккаунт?";
+"email" = "Email";
+"envelope" = "envelope";
+"registration" = "Регистрация";
+"repeatPassword" = "Повторите пароль";
+"lock" = "lock";
+"eye.slash" = "eye.slash";
+"eye" = "eye";

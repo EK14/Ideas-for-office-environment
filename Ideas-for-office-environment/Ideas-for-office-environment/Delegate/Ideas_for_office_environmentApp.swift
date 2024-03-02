@@ -11,7 +11,7 @@ import SwiftUI
 struct Ideas_for_office_environmentApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SigninView()
         }
     }
 }

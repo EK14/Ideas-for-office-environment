@@ -10,53 +10,57 @@ import SwiftUI
 struct SignupView: View {
     @State var email: String = ""
     @State var password: String = ""
+    @State var passwordRepete: String = ""
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack(spacing: 40) {
-            Text("Регистрация")
+        VStack(spacing: Constants.Spacing.verticalStack) {
+            Text(S.registration)
                 .font(.largeTitle)
             
-            VStack(spacing: 30) {
+            VStack(spacing: Constants.Spacing.verticalStack) {
                 HStack {
-                    Image(systemName: "envelope")
-                        .padding(.leading, 40.0)
+                    Image(systemName: S.envelope)
                         .foregroundColor(.gray)
-                    TextField("Email", text: $email)
-                        .padding(.vertical, 15)
+                    TextField(S.email, text: $email)
+                        .padding(.vertical, Constants.TextField.verticalPadding)
                 }
+                .padding(.leading, Constants.TextField.horizontalPadding)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 5)
+                    RoundedRectangle(cornerRadius: Constants.TextField.radius)
                         .stroke(Color.gray)
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, Constants.Padding.main)
                 )
                 
-                HybridTextField(text: $password, titleKey: "Пароль")
+                HybridTextField(text: $password, titleKey: S.password)
                 
-                HybridTextField(text: $password, titleKey: "Повторите пароль")
+                HybridTextField(text: $passwordRepete, titleKey: S.repeatPassword)
             }
-            VStack(spacing: 30) {
-                Button(action: {
-                    print("нажата кнопка войти")
-                }, label: {
-                    Text("Зарегистрироваться")
+            VStack(spacing: Constants.Spacing.verticalStack) {
+                NavigationLink {
+                    Text(S.signup)
+                } label: {
+                    Text(S.signup)
                         .foregroundStyle(.white)
-                        .padding(.horizontal, 55)
-                        .padding(.vertical, 15)
+                        .padding(.horizontal, Constants.Button.Padding.horizontal)
+                        .padding(.vertical, Constants.Button.Padding.vertical)
                         .background(.blue)
                         .clipShape(Capsule())
-                })
+                }
                 HStack {
-                    Text("Есть аккаунт?")
+                    Text(S.haveAccount)
                         .font(.callout)
+                    
                     Button(action: {
-                        print("нажата кнопка зарегистрироваться")
+                        presentationMode.wrappedValue.dismiss()
                     }, label: {
-                        Text("Войти")
+                        Text(S.signin)
                             .font(.callout)
                     })
                 }
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
