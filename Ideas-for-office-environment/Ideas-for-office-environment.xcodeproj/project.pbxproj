@@ -16,6 +16,8 @@
 		3DC71B192B9319B900AA98C3 /* HybridTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B182B9319B900AA98C3 /* HybridTextField.swift */; };
 		3DC71B1B2B931DEB00AA98C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DC71B1A2B931DEB00AA98C3 /* Localizable.strings */; };
 		3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B1C2B9328D000AA98C3 /* Strings+Generated.swift */; };
+		3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */; };
+		3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		3DC71B182B9319B900AA98C3 /* HybridTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridTextField.swift; sourceTree = "<group>"; };
 		3DC71B1A2B931DEB00AA98C3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3DC71B1C2B9328D000AA98C3 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardReadable+Extensions.swift"; sourceTree = "<group>"; };
+		3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		3D27CED72B66CAAE003C81C5 /* Ideas-for-office-environment */ = {
 			isa = PBXGroup;
 			children = (
+				3DC71B212B93424A00AA98C3 /* Extensions */,
 				3D27CEDE2B66CAAF003C81C5 /* Preview Content */,
 				3D27CEEA2B66CD1E003C81C5 /* Resources */,
 				3D27CEE92B66CCFF003C81C5 /* ViewModels */,
@@ -120,6 +125,15 @@
 				3D27CEDC2B66CAAF003C81C5 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3DC71B212B93424A00AA98C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */,
+				3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,11 +207,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */,
 				3DC71B152B926DBD00AA98C3 /* SignupView.swift in Sources */,
 				3D1B64C32B66CF5600FC720E /* SigninView.swift in Sources */,
 				3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */,
 				3D27CED92B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift in Sources */,
 				3DC71B192B9319B900AA98C3 /* HybridTextField.swift in Sources */,
+				3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */,
 				3DC71B172B927C8B00AA98C3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

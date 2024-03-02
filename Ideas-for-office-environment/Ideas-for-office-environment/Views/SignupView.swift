@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-struct SignupView: View {
+struct SignupView: View, KeyboardReadable {
     @State var email: String = ""
     @State var password: String = ""
     @State var passwordRepete: String = ""
     @Environment(\.presentationMode) var presentationMode
+    @State var isKeyboardVisible = false
     
     var body: some View {
         VStack(spacing: Constants.Spacing.verticalStack) {
-            Text(S.registration)
-                .font(.largeTitle)
+            if !isKeyboardVisible {
+                Text(S.registration)
+                    .font(.largeTitle)
+                    .transition(.scale)
+            }
             
             VStack(spacing: Constants.Spacing.verticalStack) {
                 HStack {
@@ -61,6 +65,16 @@ struct SignupView: View {
             }
         }
         .navigationBarBackButtonHidden()
+        .navigationBarHidden(true)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            hideKeyboard()
+        }
+        .onReceive(keyboardPublisher) { isKeyboardVisible in
+            withAnimation {
+                self.isKeyboardVisible = isKeyboardVisible
+            }
+        }
     }
 }
 

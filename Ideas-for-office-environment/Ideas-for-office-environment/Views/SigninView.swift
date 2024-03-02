@@ -43,7 +43,7 @@ struct SigninView: View {
                             .background(.blue)
                             .clipShape(Capsule())
                     }
-
+                    
                     HStack {
                         Text(S.notHaveAccount)
                             .font(.callout)
@@ -55,6 +55,11 @@ struct SigninView: View {
                         }
                     }
                 }
+            }
+            .navigationBarHidden(true)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                hideKeyboard()
             }
         }
     }
