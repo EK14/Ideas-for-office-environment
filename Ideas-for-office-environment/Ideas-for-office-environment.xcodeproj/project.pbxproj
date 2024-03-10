@@ -65,8 +65,8 @@
 		3D27CED72B66CAAE003C81C5 /* Ideas-for-office-environment */ = {
 			isa = PBXGroup;
 			children = (
-				C3FC5DFF2B9E22D900F0D8D7 /* Models */,
-				C3FC5DFE2B9E22CC00F0D8D7 /* ViewModels */,
+				C3FC5E012B9E23E400F0D8D7 /* Models */,
+				C3FC5E002B9E23D700F0D8D7 /* ViewModels */,
 				3DC71B212B93424A00AA98C3 /* Extensions */,
 				3D27CEDE2B66CAAF003C81C5 /* Preview Content */,
 				3D27CEEA2B66CD1E003C81C5 /* Resources */,
@@ -122,14 +122,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C3FC5DFE2B9E22CC00F0D8D7 /* ViewModels */ = {
+		C3FC5E002B9E23D700F0D8D7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		C3FC5DFF2B9E22D900F0D8D7 /* Models */ = {
+		C3FC5E012B9E23E400F0D8D7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
