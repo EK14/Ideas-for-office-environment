@@ -1,0 +1,8 @@
+strings:
+  inputs: Localizable.strings
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift5
+      output: Strings+Generated.swift
+      params:
+        enumName: S
