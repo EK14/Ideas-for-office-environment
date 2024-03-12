@@ -21,7 +21,7 @@
 		C304BC872BA1081400256450 /* Office.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304BC862BA1081400256450 /* Office.swift */; };
 		C3FC5E032B9E242600F0D8D7 /* SignUpNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */; };
 		C3FC5E052B9E4FB600F0D8D7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */; };
-		C3FC5E122B9F872400F0D8D7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E112B9F872400F0D8D7 /* CustomView.swift */; };
+		C3FC5E122B9F872400F0D8D7 /* CarousalViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E112B9F872400F0D8D7 /* CarousalViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		C304BC862BA1081400256450 /* Office.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office.swift; sourceTree = "<group>"; };
 		C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextView.swift; sourceTree = "<group>"; };
 		C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		C3FC5E112B9F872400F0D8D7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		C3FC5E112B9F872400F0D8D7 /* CarousalViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 				3DC71B182B9319B900AA98C3 /* HybridTextField.swift */,
 				C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */,
 				C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */,
-				C3FC5E112B9F872400F0D8D7 /* CustomView.swift */,
+				C3FC5E112B9F872400F0D8D7 /* CarousalViewContainer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 				C3FC5E032B9E242600F0D8D7 /* SignUpNextView.swift in Sources */,
 				C3FC5E052B9E4FB600F0D8D7 /* CustomTextField.swift in Sources */,
 				3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */,
-				C3FC5E122B9F872400F0D8D7 /* CustomView.swift in Sources */,
+				C3FC5E122B9F872400F0D8D7 /* CarousalViewContainer.swift in Sources */,
 				3D27CED92B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift in Sources */,
 				3DC71B192B9319B900AA98C3 /* HybridTextField.swift in Sources */,
 				3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */,

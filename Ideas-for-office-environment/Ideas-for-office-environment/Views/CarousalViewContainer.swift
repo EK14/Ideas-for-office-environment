@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomView: View {
+struct CarousalViewContainer: View {
     
     @State var isSelected: Int = 0
     
@@ -61,8 +61,6 @@ struct CustomView: View {
                 )
             )
         }
-
-        
         return views
     }
 }
@@ -93,7 +91,6 @@ enum DragState {
 struct CarousalView: View {
     
     @GestureState private var dragState = DragState.inactive
-//    @State var carousalLocation = 0
     @Binding var isSelected: Int
     
     var itemHeight: CGFloat
@@ -188,5 +185,5 @@ struct CarousalView: View {
 }
 
 #Preview {
-    CustomView()
+    CarousalViewContainer()
 }

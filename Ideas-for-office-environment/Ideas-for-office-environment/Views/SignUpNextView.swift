@@ -61,7 +61,7 @@ struct SignUpNextView: View, KeyboardReadable {
                 Text("Офис")
                     .font(.title3)
                 
-                CustomView()
+                CarousalViewContainer()
                 
                 NavigationLink {
                     Text("hello")
