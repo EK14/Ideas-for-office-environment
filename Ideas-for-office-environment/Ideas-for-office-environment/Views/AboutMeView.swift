@@ -62,7 +62,19 @@ struct AboutMeView: View, KeyboardReadable {
                     .font(.title3)
                 
                 CustomView()
+                
+                NavigationLink {
+                    Text("hello")
+                } label: {
+                    Text("Завершить регистрацию")
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, Constants.Button.Padding.horizontal)
+                        .padding(.vertical, Constants.Button.Padding.vertical)
+                        .background(.blue)
+                        .clipShape(Capsule())
+                }
             }
+            .padding(.bottom, 30)
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
