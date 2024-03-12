@@ -42,7 +42,7 @@ struct SignupView: View, KeyboardReadable {
             }
             VStack(spacing: Constants.Spacing.verticalStack) {
                 NavigationLink {
-                    Text(S.signup)
+                    AboutMeView()
                 } label: {
                     Text(S.signup)
                         .foregroundStyle(.white)
