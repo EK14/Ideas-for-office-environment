@@ -19,7 +19,7 @@
 		3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */; };
 		3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */; };
 		C304BC872BA1081400256450 /* Office.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304BC862BA1081400256450 /* Office.swift */; };
-		C3FC5E032B9E242600F0D8D7 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E022B9E242600F0D8D7 /* AboutMeView.swift */; };
+		C3FC5E032B9E242600F0D8D7 /* SignUpNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */; };
 		C3FC5E052B9E4FB600F0D8D7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */; };
 		C3FC5E122B9F872400F0D8D7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E112B9F872400F0D8D7 /* CustomView.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardReadable+Extensions.swift"; sourceTree = "<group>"; };
 		3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C304BC862BA1081400256450 /* Office.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office.swift; sourceTree = "<group>"; };
-		C3FC5E022B9E242600F0D8D7 /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
+		C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextView.swift; sourceTree = "<group>"; };
 		C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C3FC5E112B9F872400F0D8D7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +101,7 @@
 				3D1B64C22B66CF5600FC720E /* SigninView.swift */,
 				3DC71B142B926DBD00AA98C3 /* SignupView.swift */,
 				3DC71B182B9319B900AA98C3 /* HybridTextField.swift */,
-				C3FC5E022B9E242600F0D8D7 /* AboutMeView.swift */,
+				C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */,
 				C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */,
 				C3FC5E112B9F872400F0D8D7 /* CustomView.swift */,
 			);
@@ -223,7 +223,7 @@
 				3DC71B152B926DBD00AA98C3 /* SignupView.swift in Sources */,
 				3D1B64C32B66CF5600FC720E /* SigninView.swift in Sources */,
 				C304BC872BA1081400256450 /* Office.swift in Sources */,
-				C3FC5E032B9E242600F0D8D7 /* AboutMeView.swift in Sources */,
+				C3FC5E032B9E242600F0D8D7 /* SignUpNextView.swift in Sources */,
 				C3FC5E052B9E4FB600F0D8D7 /* CustomTextField.swift in Sources */,
 				3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */,
 				C3FC5E122B9F872400F0D8D7 /* CustomView.swift in Sources */,

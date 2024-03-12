@@ -8,7 +8,7 @@
 import SwiftUI
 import PhotosUI
 
-struct AboutMeView: View, KeyboardReadable {
+struct SignUpNextView: View, KeyboardReadable {
     @Environment(\.presentationMode) var presentationMode
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
@@ -143,7 +143,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 #Preview {
-    AboutMeView()
+    SignUpNextView()
 }
 
 
