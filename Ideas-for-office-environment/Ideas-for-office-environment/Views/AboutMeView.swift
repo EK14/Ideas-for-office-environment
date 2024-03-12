@@ -16,10 +16,6 @@ struct AboutMeView: View, KeyboardReadable {
     @State private var name: String = ""
     @State private var surname: String = ""
     @State private var position: String = ""
-    @State private var selectedTab: String = "Office_1"
-    private let arr = ["Office_1", "Office_2", "Office_3",
-                           "Office_1", "Office_2", "Office_3",
-                           "Office_1", "Office_2", "Office_3"]
     
     var body: some View {
         ScrollView {
