@@ -7,40 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1B64C32B66CF5600FC720E /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B64C22B66CF5600FC720E /* SigninView.swift */; };
+		3D1B64C32B66CF5600FC720E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B64C22B66CF5600FC720E /* SignInView.swift */; };
 		3D27CED92B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27CED82B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift */; };
 		3D27CEDD2B66CAAF003C81C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D27CEDC2B66CAAF003C81C5 /* Assets.xcassets */; };
 		3D27CEE02B66CAAF003C81C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D27CEDF2B66CAAF003C81C5 /* Preview Assets.xcassets */; };
-		3DC71B152B926DBD00AA98C3 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B142B926DBD00AA98C3 /* SignupView.swift */; };
 		3DC71B172B927C8B00AA98C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B162B927C8B00AA98C3 /* Constants.swift */; };
-		3DC71B192B9319B900AA98C3 /* HybridTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B182B9319B900AA98C3 /* HybridTextField.swift */; };
 		3DC71B1B2B931DEB00AA98C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DC71B1A2B931DEB00AA98C3 /* Localizable.strings */; };
 		3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B1C2B9328D000AA98C3 /* Strings+Generated.swift */; };
 		3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */; };
 		3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */; };
 		C304BC872BA1081400256450 /* Office.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304BC862BA1081400256450 /* Office.swift */; };
-		C3FC5E032B9E242600F0D8D7 /* SignUpNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */; };
-		C3FC5E052B9E4FB600F0D8D7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */; };
-		C3FC5E122B9F872400F0D8D7 /* CarousalViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC5E112B9F872400F0D8D7 /* CarousalViewContainer.swift */; };
+		C32AA0242BA73D1700477E68 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0232BA73D1700477E68 /* SignUpView.swift */; };
+		C32AA0272BA73D6100477E68 /* HybridTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0262BA73D6100477E68 /* HybridTextField.swift */; };
+		C32AA02A2BA73D9D00477E68 /* SignUpNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0292BA73D9D00477E68 /* SignUpNextView.swift */; };
+		C32AA02C2BA73DC700477E68 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA02B2BA73DC700477E68 /* CustomTextField.swift */; };
+		C32AA02E2BA73DFC00477E68 /* CarousalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA02D2BA73DFC00477E68 /* CarousalView.swift */; };
+		C32AA0312BA73EA300477E68 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0302BA73EA300477E68 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D1B64C22B66CF5600FC720E /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		3D1B64C22B66CF5600FC720E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3D27CED52B66CAAE003C81C5 /* Ideas-for-office-environment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ideas-for-office-environment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D27CED82B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ideas_for_office_environmentApp.swift; sourceTree = "<group>"; };
 		3D27CEDC2B66CAAF003C81C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D27CEDF2B66CAAF003C81C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3DC71B142B926DBD00AA98C3 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		3DC71B162B927C8B00AA98C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3DC71B182B9319B900AA98C3 /* HybridTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridTextField.swift; sourceTree = "<group>"; };
 		3DC71B1A2B931DEB00AA98C3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3DC71B1C2B9328D000AA98C3 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardReadable+Extensions.swift"; sourceTree = "<group>"; };
 		3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C304BC862BA1081400256450 /* Office.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office.swift; sourceTree = "<group>"; };
-		C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextView.swift; sourceTree = "<group>"; };
-		C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		C3FC5E112B9F872400F0D8D7 /* CarousalViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalViewContainer.swift; sourceTree = "<group>"; };
+		C32AA0232BA73D1700477E68 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C32AA0262BA73D6100477E68 /* HybridTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridTextField.swift; sourceTree = "<group>"; };
+		C32AA0292BA73D9D00477E68 /* SignUpNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextView.swift; sourceTree = "<group>"; };
+		C32AA02B2BA73DC700477E68 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C32AA02D2BA73DFC00477E68 /* CarousalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalView.swift; sourceTree = "<group>"; };
+		C32AA0302BA73EA300477E68 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,14 +75,15 @@
 		3D27CED72B66CAAE003C81C5 /* Ideas-for-office-environment */ = {
 			isa = PBXGroup;
 			children = (
-				C3FC5E012B9E23E400F0D8D7 /* Models */,
-				C3FC5E002B9E23D700F0D8D7 /* ViewModels */,
-				3DC71B212B93424A00AA98C3 /* Extensions */,
-				3D27CEDE2B66CAAF003C81C5 /* Preview Content */,
-				3D27CEEA2B66CD1E003C81C5 /* Resources */,
-				3D27CEE72B66CCEA003C81C5 /* Delegate */,
-				3D27CEE62B66CCDA003C81C5 /* Views */,
+				C32AA02F2BA73E9500477E68 /* Protocols */,
+				C32AA0252BA73D3800477E68 /* Helpers */,
 				3DC71B162B927C8B00AA98C3 /* Constants.swift */,
+				3D27CEEA2B66CD1E003C81C5 /* Resources */,
+				3D27CEE72B66CCEA003C81C5 /* App */,
+				3D27CEDE2B66CAAF003C81C5 /* Preview Content */,
+				3DC71B212B93424A00AA98C3 /* Extensions */,
+				C3FC5E012B9E23E400F0D8D7 /* Models */,
+				C32AA0202BA73C6900477E68 /* Screens */,
 				3DC71B1A2B931DEB00AA98C3 /* Localizable.strings */,
 				3DC71B1C2B9328D000AA98C3 /* Strings+Generated.swift */,
 			);
@@ -95,25 +98,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		3D27CEE62B66CCDA003C81C5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3D1B64C22B66CF5600FC720E /* SigninView.swift */,
-				3DC71B142B926DBD00AA98C3 /* SignupView.swift */,
-				3DC71B182B9319B900AA98C3 /* HybridTextField.swift */,
-				C3FC5E022B9E242600F0D8D7 /* SignUpNextView.swift */,
-				C3FC5E042B9E4FB600F0D8D7 /* CustomTextField.swift */,
-				C3FC5E112B9F872400F0D8D7 /* CarousalViewContainer.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		3D27CEE72B66CCEA003C81C5 /* Delegate */ = {
+		3D27CEE72B66CCEA003C81C5 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				3D27CED82B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift */,
 			);
-			path = Delegate;
+			path = App;
 			sourceTree = "<group>";
 		};
 		3D27CEEA2B66CD1E003C81C5 /* Resources */ = {
@@ -133,11 +123,56 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C3FC5E002B9E23D700F0D8D7 /* ViewModels */ = {
+		C32AA0202BA73C6900477E68 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C32AA0282BA73D7C00477E68 /* SignUpNextScreen */,
+				C32AA0222BA73CDA00477E68 /* SignUpScreen */,
+				C32AA0212BA73CB500477E68 /* SignInScreen */,
 			);
-			path = ViewModels;
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C32AA0212BA73CB500477E68 /* SignInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3D1B64C22B66CF5600FC720E /* SignInView.swift */,
+			);
+			path = SignInScreen;
+			sourceTree = "<group>";
+		};
+		C32AA0222BA73CDA00477E68 /* SignUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C32AA0232BA73D1700477E68 /* SignUpView.swift */,
+			);
+			path = SignUpScreen;
+			sourceTree = "<group>";
+		};
+		C32AA0252BA73D3800477E68 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C32AA0262BA73D6100477E68 /* HybridTextField.swift */,
+				C32AA02B2BA73DC700477E68 /* CustomTextField.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C32AA0282BA73D7C00477E68 /* SignUpNextScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C32AA0292BA73D9D00477E68 /* SignUpNextView.swift */,
+				C32AA02D2BA73DFC00477E68 /* CarousalView.swift */,
+			);
+			path = SignUpNextScreen;
+			sourceTree = "<group>";
+		};
+		C32AA02F2BA73E9500477E68 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C32AA0302BA73EA300477E68 /* Coordinator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		C3FC5E012B9E23E400F0D8D7 /* Models */ = {
@@ -219,16 +254,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32AA02C2BA73DC700477E68 /* CustomTextField.swift in Sources */,
 				3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */,
-				3DC71B152B926DBD00AA98C3 /* SignupView.swift in Sources */,
-				3D1B64C32B66CF5600FC720E /* SigninView.swift in Sources */,
+				C32AA0312BA73EA300477E68 /* Coordinator.swift in Sources */,
+				C32AA02A2BA73D9D00477E68 /* SignUpNextView.swift in Sources */,
+				3D1B64C32B66CF5600FC720E /* SignInView.swift in Sources */,
 				C304BC872BA1081400256450 /* Office.swift in Sources */,
-				C3FC5E032B9E242600F0D8D7 /* SignUpNextView.swift in Sources */,
-				C3FC5E052B9E4FB600F0D8D7 /* CustomTextField.swift in Sources */,
 				3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */,
-				C3FC5E122B9F872400F0D8D7 /* CarousalViewContainer.swift in Sources */,
+				C32AA0272BA73D6100477E68 /* HybridTextField.swift in Sources */,
+				C32AA02E2BA73DFC00477E68 /* CarousalView.swift in Sources */,
+				C32AA0242BA73D1700477E68 /* SignUpView.swift in Sources */,
 				3D27CED92B66CAAE003C81C5 /* Ideas_for_office_environmentApp.swift in Sources */,
-				3DC71B192B9319B900AA98C3 /* HybridTextField.swift in Sources */,
 				3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */,
 				3DC71B172B927C8B00AA98C3 /* Constants.swift in Sources */,
 			);

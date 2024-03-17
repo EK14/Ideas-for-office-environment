@@ -1,5 +1,5 @@
 //
-//  AboutMeView.swift
+//  SignUpNextView.swift
 //  Ideas-for-office-environment
 //
 //  Created by Elina Karapetian on 10.03.2024.
