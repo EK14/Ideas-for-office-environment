@@ -64,7 +64,7 @@ struct SignUpNextView: View, KeyboardReadable {
                 CarousalViewContainer()
                 
                 NavigationLink {
-                    Text("hello")
+                    // Вернуться на экран SignIn
                 } label: {
                     Text("Завершить регистрацию")
                         .foregroundStyle(.white)

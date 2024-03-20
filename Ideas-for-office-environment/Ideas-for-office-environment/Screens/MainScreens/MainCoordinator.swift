@@ -40,7 +40,13 @@ class MainCoordinator: Coordinator {
         let myOfficeVC = myOfficeCoordinator.rootViewController
         setup(vc: myOfficeVC, title: "Мой офис", imageName: "briefcase", selectedImageName: "briefcase.fill")
         
-        self.rootViewController.viewControllers = [homeVC, favoritesVC, myOfficeVC]
+        let profileCoordinator = ProfileCoordinator()
+        profileCoordinator.start()
+        self.childCoordinator.append(profileCoordinator)
+        let profileVC = profileCoordinator.rootViewController
+        setup(vc: profileVC, title: "Профиль", imageName: "person", selectedImageName: "person.fill")
+        
+        self.rootViewController.viewControllers = [homeVC, favoritesVC, myOfficeVC, profileVC]
     }
     
     //TO DO

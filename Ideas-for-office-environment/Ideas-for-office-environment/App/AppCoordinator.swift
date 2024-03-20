@@ -24,7 +24,7 @@ class AppCoordinator: Coordinator {
     
     func start() {
         
-        setUpLogInValue()
+//        setUpLogInValue()
         
         hasLoggedIn
             .removeDuplicates()
