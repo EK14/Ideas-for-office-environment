@@ -1,5 +1,5 @@
 //
-//  SignupView.swift
+//  SignUpView.swift
 //  Ideas-for-office-environment
 //
 //  Created by Elina Karapetian on 01.03.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignupView: View, KeyboardReadable {
+struct SignUpView: View, KeyboardReadable {
     @State var email: String = ""
     @State var password: String = ""
     @State var passwordRepete: String = ""
@@ -79,5 +79,5 @@ struct SignupView: View, KeyboardReadable {
 }
 
 #Preview {
-    SignupView()
+    SignUpView()
 }

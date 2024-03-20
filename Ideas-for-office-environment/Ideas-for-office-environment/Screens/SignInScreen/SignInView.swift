@@ -1,5 +1,5 @@
 //
-//  SigninView.swift
+//  SignInView.swift
 //  Ideas-for-office-environment
 //
 //  Created by Elina Karapetian on 28.01.2024.
@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct SigninView: View {
+struct SignInView: View {
     @State var email: String = ""
     @State var password: String = ""
+    var signIn: () -> ()
     
     var body: some View {
         NavigationView {
@@ -33,22 +34,22 @@ struct SigninView: View {
                     HybridTextField(text: $password, titleKey: S.password)
                 }
                 VStack(spacing: Constants.Spacing.verticalStack) {
-                    NavigationLink {
-                        Text(S.signin)
-                    } label: {
+                    Button(action: {
+                        signIn()
+                    }, label: {
                         Text(S.signin)
                             .foregroundStyle(.white)
                             .padding(.horizontal, Constants.Button.Padding.horizontal)
                             .padding(.vertical, Constants.Button.Padding.vertical)
                             .background(.blue)
                             .clipShape(Capsule())
-                    }
+                    })
                     
                     HStack {
                         Text(S.notHaveAccount)
                             .font(.callout)
                         NavigationLink {
-                            SignupView()
+                            SignUpView()
                         } label: {
                             Text(S.signup)
                                 .font(.callout)
@@ -66,5 +67,7 @@ struct SigninView: View {
 }
 
 #Preview {
-    SigninView()
+    SignInView {
+        print("hello")
+    }
 }
