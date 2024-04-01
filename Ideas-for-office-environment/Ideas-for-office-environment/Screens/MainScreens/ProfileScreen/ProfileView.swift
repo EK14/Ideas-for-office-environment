@@ -8,11 +8,138 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var photo = "person"
+    @State var name = "Дмитрий Комарницкий"
+    @State var position = "Сотрудник Tinkoff"
+//    let signOut: () -> ()
+    
     var body: some View {
-        Text("Profile View")
+        VStack {
+            VStack {
+                Image(systemName: photo)
+                    .font(.headline)
+                    .imageScale(.large)
+                    .foregroundStyle(.blue)
+                    .frame(width: 150, height: 150)
+                    .background(.blue.opacity(0.25))
+                    .cornerRadius(50)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 50)
+                            .stroke(.blue, lineWidth: 1)
+                    )
+                    .padding(1)
+                
+                Text(name)
+                    .font(.system(size: 24))
+                
+                Text(position)
+                    .font(.system(size: 15))
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(LinearGradient(colors: [.white, .gray], startPoint: .top, endPoint: .bottom), lineWidth: 1)
+            )
+            .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
+            
+            VStack() {
+                HStack(spacing: 20) {
+                    Image("settings")
+                        .frame(width: 30)
+                    Text("Настроить профиль")
+                        .font(.system(size: 16))
+                }
+                .padding(.vertical, 5)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .onTapGesture {
+                    print("Настроить профиль")
+                }
+                
+                HStack(spacing: 20) {
+                    Image("myoffice")
+                        .frame(width: 30)
+                    Text("Мой офис")
+                        .font(.system(size: 16))
+                }
+                .padding(.vertical, 5)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .onTapGesture {
+                    print("Мой офис")
+                }
+                
+                HStack(spacing: 20) {
+                    Image("myideas")
+                        .frame(width: 30)
+                    Text("Мой идеи")
+                        .font(.system(size: 16))
+                }
+                .padding(.vertical, 5)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .onTapGesture {
+                    print("Мой идеи")
+                }
+            }
+            .padding(.vertical, 16)
+            .padding(.horizontal, 20)
+            
+            Button(action: {
+//                signOut()
+            }, label: {
+                Text("Выйти")
+                    .font(.system(size: 15))
+            })
+            .padding(.vertical, 10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.vertical, 10)
+            .border(width: 1, edges: [.top], color: .blue)
+            .padding(.horizontal, 20)
+            
+            Spacer()
+            
+        }
     }
 }
 
 #Preview {
     ProfileView()
+}
+
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+}
+
+struct RoundedCorner: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
+
+extension View {
+    func border(width: CGFloat, edges: [Edge], color: Color) -> some View {
+        overlay(EdgeBorder(width: width, edges: edges).foregroundColor(color))
+    }
+}
+
+struct EdgeBorder: Shape {
+    var width: CGFloat
+    var edges: [Edge]
+
+    func path(in rect: CGRect) -> Path {
+        edges.map { edge -> Path in
+            switch edge {
+            case .top: return Path(.init(x: rect.minX, y: rect.minY, width: rect.width, height: width))
+            case .bottom: return Path(.init(x: rect.minX, y: rect.maxY - width, width: rect.width, height: width))
+            case .leading: return Path(.init(x: rect.minX, y: rect.minY, width: width, height: rect.height))
+            case .trailing: return Path(.init(x: rect.maxX - width, y: rect.minY, width: width, height: rect.height))
+            }
+        }.reduce(into: Path()) { $0.addPath($1) }
+    }
 }

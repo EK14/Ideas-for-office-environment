@@ -25,6 +25,7 @@
 		C32221B82BAB3A880063DDF2 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221B72BAB3A880063DDF2 /* ProfileCoordinator.swift */; };
 		C32221BA2BAB3ACD0063DDF2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221B92BAB3ACD0063DDF2 /* ProfileView.swift */; };
 		C32221BD2BAB3CBB0063DDF2 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221BC2BAB3CBB0063DDF2 /* PostView.swift */; };
+		C32221E02BB372AE0063DDF2 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221DF2BB372AE0063DDF2 /* CommentView.swift */; };
 		C32AA0242BA73D1700477E68 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0232BA73D1700477E68 /* SignUpView.swift */; };
 		C32AA0272BA73D6100477E68 /* HybridTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0262BA73D6100477E68 /* HybridTextField.swift */; };
 		C32AA02A2BA73D9D00477E68 /* SignUpNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0292BA73D9D00477E68 /* SignUpNextView.swift */; };
@@ -59,6 +60,7 @@
 		C32221B72BAB3A880063DDF2 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		C32221B92BAB3ACD0063DDF2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C32221BC2BAB3CBB0063DDF2 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		C32221DF2BB372AE0063DDF2 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		C32AA0232BA73D1700477E68 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C32AA0262BA73D6100477E68 /* HybridTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridTextField.swift; sourceTree = "<group>"; };
 		C32AA0292BA73D9D00477E68 /* SignUpNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				C32221BC2BAB3CBB0063DDF2 /* PostView.swift */,
+				C32221DF2BB372AE0063DDF2 /* CommentView.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */,
 				C32221B52BAB2DAF0063DDF2 /* SignInCoordinator.swift in Sources */,
 				C32221BD2BAB3CBB0063DDF2 /* PostView.swift in Sources */,
+				C32221E02BB372AE0063DDF2 /* CommentView.swift in Sources */,
 				3DC71B172B927C8B00AA98C3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
