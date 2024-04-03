@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @ObservedObject var viewModel: SignInViewModel = SignInViewModel()
     var signIn: () -> ()
     
     var body: some View {
@@ -22,7 +21,7 @@ struct SignInView: View {
                     HStack {
                         Image(systemName: S.envelope)
                             .foregroundColor(.gray)
-                        TextField(S.email, text: $email)
+                        TextField(S.email, text: $viewModel.email)
                             .padding(.vertical, Constants.TextField.verticalPadding)
                     }
                     .padding(.leading, Constants.TextField.horizontalPadding)
@@ -31,11 +30,11 @@ struct SignInView: View {
                             .stroke(Color.gray)
                             .padding(.horizontal, Constants.Padding.main)
                     )
-                    HybridTextField(text: $password, titleKey: S.password)
+                    HybridTextField(text: $viewModel.password, titleKey: S.password)
                 }
                 VStack(spacing: Constants.Spacing.verticalStack) {
                     Button(action: {
-                        signIn()
+                        viewModel.signIn()
                     }, label: {
                         Text(S.signin)
                             .foregroundStyle(.white)

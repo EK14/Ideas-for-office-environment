@@ -34,6 +34,11 @@
 		C32AA0312BA73EA300477E68 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0302BA73EA300477E68 /* Coordinator.swift */; };
 		C32AA0332BA74EC500477E68 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0322BA74EC500477E68 /* AppCoordinator.swift */; };
 		C32AA0362BA75A4600477E68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0352BA75A4600477E68 /* SceneDelegate.swift */; };
+		C3A3AAF82BBDC470008C707D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAF72BBDC470008C707D /* SignInViewModel.swift */; };
+		C3A3AAFA2BBDC606008C707D /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAF92BBDC606008C707D /* SignInRequest.swift */; };
+		C3A3AAFC2BBDC90A008C707D /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAFB2BBDC90A008C707D /* SignInResponse.swift */; };
+		C3A3AAFE2BBDC99B008C707D /* SignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAFD2BBDC99B008C707D /* SignInAction.swift */; };
+		C3A3AB012BBDF297008C707D /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = C3A3AB002BBDF297008C707D /* SwiftKeychainWrapper */; };
 		C3CBD4892BA76E47005968EF /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBD4882BA76E47005968EF /* SignUpCoordinator.swift */; };
 		C3CBD48C2BA77EE5005968EF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBD48B2BA77EE5005968EF /* MainCoordinator.swift */; };
 		C3CBD4922BA7800A005968EF /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBD4912BA7800A005968EF /* HomeCoordinator.swift */; };
@@ -70,6 +75,10 @@
 		C32AA0322BA74EC500477E68 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C32AA0342BA7596000477E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32AA0352BA75A4600477E68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C3A3AAF72BBDC470008C707D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		C3A3AAF92BBDC606008C707D /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		C3A3AAFB2BBDC90A008C707D /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		C3A3AAFD2BBDC99B008C707D /* SignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAction.swift; sourceTree = "<group>"; };
 		C3CBD4882BA76E47005968EF /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		C3CBD48B2BA77EE5005968EF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		C3CBD4912BA7800A005968EF /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A3AB012BBDF297008C707D /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +193,8 @@
 			children = (
 				3D1B64C22B66CF5600FC720E /* SignInView.swift */,
 				C32221B42BAB2DAF0063DDF2 /* SignInCoordinator.swift */,
+				C3A3AAF72BBDC470008C707D /* SignInViewModel.swift */,
+				C3A3AAFD2BBDC99B008C707D /* SignInAction.swift */,
 			);
 			path = SignInScreen;
 			sourceTree = "<group>";
@@ -274,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				C304BC862BA1081400256450 /* Office.swift */,
+				C3A3AAF92BBDC606008C707D /* SignInRequest.swift */,
+				C3A3AAFB2BBDC90A008C707D /* SignInResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +308,9 @@
 			dependencies = (
 			);
 			name = "Ideas-for-office-environment";
+			packageProductDependencies = (
+				C3A3AB002BBDF297008C707D /* SwiftKeychainWrapper */,
+			);
 			productName = "Ideas-for-office-environment";
 			productReference = 3D27CED52B66CAAE003C81C5 /* Ideas-for-office-environment.app */;
 			productType = "com.apple.product-type.application";
@@ -322,6 +339,9 @@
 				Base,
 			);
 			mainGroup = 3D27CECC2B66CAAE003C81C5;
+			packageReferences = (
+				C3A3AAFF2BBDF297008C707D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+			);
 			productRefGroup = 3D27CED62B66CAAE003C81C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3CBD48C2BA77EE5005968EF /* MainCoordinator.swift in Sources */,
+				C3A3AAFA2BBDC606008C707D /* SignInRequest.swift in Sources */,
 				C32AA02C2BA73DC700477E68 /* CustomTextField.swift in Sources */,
 				3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */,
 				C32221B82BAB3A880063DDF2 /* ProfileCoordinator.swift in Sources */,
@@ -367,12 +388,15 @@
 				C32221AF2BAB220D0063DDF2 /* FavoritesView.swift in Sources */,
 				C3CBD4922BA7800A005968EF /* HomeCoordinator.swift in Sources */,
 				C32AA02E2BA73DFC00477E68 /* CarousalView.swift in Sources */,
+				C3A3AAFE2BBDC99B008C707D /* SignInAction.swift in Sources */,
 				C32221AD2BAB21A00063DDF2 /* HomeView.swift in Sources */,
 				C32AA0242BA73D1700477E68 /* SignUpView.swift in Sources */,
 				C3CBD4892BA76E47005968EF /* SignUpCoordinator.swift in Sources */,
 				3D27CED92B66CAAE003C81C5 /* AppDelegate.swift in Sources */,
 				C3CBD4942BA78039005968EF /* FavoritesCoordinator.swift in Sources */,
 				3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */,
+				C3A3AAF82BBDC470008C707D /* SignInViewModel.swift in Sources */,
+				C3A3AAFC2BBDC90A008C707D /* SignInResponse.swift in Sources */,
 				C32221B52BAB2DAF0063DDF2 /* SignInCoordinator.swift in Sources */,
 				C32221BD2BAB3CBB0063DDF2 /* PostView.swift in Sources */,
 				C32221E02BB372AE0063DDF2 /* CommentView.swift in Sources */,
@@ -584,6 +608,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3A3AAFF2BBDF297008C707D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3A3AB002BBDF297008C707D /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3A3AAFF2BBDF297008C707D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D27CECD2B66CAAE003C81C5 /* Project object */;
 }
