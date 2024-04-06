@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SignInView: View {
     @ObservedObject var viewModel: SignInViewModel = SignInViewModel()
-//    var signIn: () -> ()
+    @State var emptyEmail = false
+    @State var emptyPassword = false
     
     var body: some View {
         NavigationView {
@@ -18,22 +19,49 @@ struct SignInView: View {
                     .font(.largeTitle)
                 
                 VStack(spacing: Constants.Spacing.verticalStack) {
-                    HStack {
-                        Image(systemName: S.envelope)
-                            .foregroundColor(.gray)
-                        TextField(S.email, text: $viewModel.email)
-                            .padding(.vertical, Constants.TextField.verticalPadding)
-                    }
-                    .padding(.leading, Constants.TextField.horizontalPadding)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: Constants.TextField.radius)
-                            .stroke(Color.gray)
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Image(systemName: S.envelope)
+                                .foregroundColor(emptyEmail ? .red: .gray)
+ 
+                            TextField("", text: $viewModel.email, prompt: Text(S.email).foregroundColor(emptyEmail ? .red: .gray))
+                                .padding(.vertical, Constants.TextField.verticalPadding)
+                        }
+                        .padding(.leading, Constants.TextField.horizontalPadding)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: Constants.TextField.radius)
+                                .stroke(emptyEmail ? .red: .gray)
+                                .padding(.horizontal, Constants.Padding.main)
+                        )
+                        
+                        Text(S.emptyEmail)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
                             .padding(.horizontal, Constants.Padding.main)
-                    )
-                    HybridTextField(text: $viewModel.password, titleKey: S.password)
+                            .opacity(emptyEmail ? 1: 0)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        HybridTextField(text: $viewModel.password, emptyField: $emptyPassword, titleKey: S.password)
+                        
+                        Text(S.emptyPassword)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                            .opacity(emptyPassword ? 1: 0)
+                    }
                 }
                 VStack(spacing: Constants.Spacing.verticalStack) {
                     Button(action: {
+                        guard !viewModel.email.isEmpty else {
+                            emptyEmail = true
+                            guard !viewModel.password.isEmpty else {
+                                emptyPassword = true
+                                return
+                            }
+                            emptyPassword = false
+                            return
+                        }
                         viewModel.signIn()
                     }, label: {
                         Text(S.signin)

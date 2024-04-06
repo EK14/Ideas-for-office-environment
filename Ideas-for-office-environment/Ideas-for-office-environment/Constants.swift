@@ -24,7 +24,7 @@ enum Constants {
     }
     
     enum Spacing {
-        static let verticalStack = 30.0
+        static let verticalStack = 20.0
     }
     
     enum TextField {

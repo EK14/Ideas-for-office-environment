@@ -36,9 +36,9 @@ struct SignUpView: View, KeyboardReadable {
                         .padding(.horizontal, Constants.Padding.main)
                 )
                 
-                HybridTextField(text: $password, titleKey: S.password)
-                
-                HybridTextField(text: $passwordRepete, titleKey: S.repeatPassword)
+//                HybridTextField(text: $password, emptyField: <#Binding<Bool>#>, titleKey: S.password)
+//                
+//                HybridTextField(text: $passwordRepete, titleKey: S.repeatPassword)
             }
             VStack(spacing: Constants.Spacing.verticalStack) {
                 NavigationLink {

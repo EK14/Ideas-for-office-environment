@@ -19,3 +19,5 @@
 "lock" = "lock";
 "eye.slash" = "eye.slash";
 "eye" = "eye";
+"emptyEmail" = "Email не может быть пустым";
+"emptyPassword" = "Пароль не может быть пустым";

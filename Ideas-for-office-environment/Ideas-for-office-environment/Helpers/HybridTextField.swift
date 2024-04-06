@@ -9,19 +9,20 @@ import SwiftUI
 
 struct HybridTextField: View {
     @Binding var text: String
+    @Binding var emptyField: Bool
     @State var isSecure: Bool = true
     var titleKey: String
     
     var body: some View {
         HStack{
             Image(systemName: S.lock)
-                .foregroundColor(.gray)
+                .foregroundColor(emptyField ? .red: .gray)
             Group{
                 if isSecure{
-                    SecureField(titleKey, text: $text)
-                    
+                    SecureField(titleKey, text: $text, prompt: Text(titleKey).foregroundColor(emptyField ? .red: .gray))
+//                    SecureField(titleKey, text: $text)
                 }else{
-                    TextField(titleKey, text: $text)
+                    TextField("", text: $text, prompt: Text(titleKey).foregroundColor(emptyField ? .red: .gray))
                 }
             }
             .animation(.easeInOut(duration: Constants.Duration.fast), value: isSecure)
@@ -31,13 +32,14 @@ struct HybridTextField: View {
                 isSecure.toggle()
             }, label: {
                 Image(systemName: !isSecure ? S.Eye.slash : S.eye )
+                    .foregroundColor(emptyField ? .red: .gray)
             })
             .padding(.trailing, Constants.TextField.horizontalPadding)
         }
         .padding(.leading, Constants.TextField.horizontalPadding)
         .overlay(
             RoundedRectangle(cornerRadius: Constants.TextField.radius)
-                .stroke(Color.gray)
+                .stroke(emptyField ? .red: .gray)
                 .padding(.horizontal, Constants.Padding.main)
         )
     }
@@ -46,6 +48,7 @@ struct HybridTextField: View {
 
 #Preview {
     @State var text = ""
+    @State var emptyField = false
     
-    return HybridTextField(text: $text, titleKey: "Preview placeholder")
+    return HybridTextField(text: $text, emptyField: $emptyField, titleKey: "Preview placeholder")
 }

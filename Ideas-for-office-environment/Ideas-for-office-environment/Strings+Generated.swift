@@ -12,6 +12,10 @@ import Foundation
 internal enum S {
   /// Email
   internal static let email = S.tr("Localizable", "email", fallback: "Email")
+  /// Email не может быть пустым
+  internal static let emptyEmail = S.tr("Localizable", "emptyEmail", fallback: "Email не может быть пустым")
+  /// Пароль не может быть пустым
+  internal static let emptyPassword = S.tr("Localizable", "emptyPassword", fallback: "Пароль не может быть пустым")
   /// Вход
   internal static let entry = S.tr("Localizable", "entry", fallback: "Вход")
   /// envelope
