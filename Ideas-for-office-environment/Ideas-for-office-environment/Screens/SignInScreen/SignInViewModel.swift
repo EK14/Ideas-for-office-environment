@@ -10,6 +10,7 @@ import Foundation
 class SignInViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var wrongUser: Bool = false
     
     func signIn() {
         SignInAction(
@@ -18,10 +19,19 @@ class SignInViewModel: ObservableObject {
                 password: password
             )
         ).call { response in
-            Auth.shared.setCredentials(
-                accessToken: response.accessToken,
-                refreshToken: response.refreshToken
-            )
+            switch response {
+            case .success(let response):
+                Auth.shared.setCredentials(
+                    accessToken: response.accessToken,
+                    refreshToken: response.refreshToken
+                )
+            case .failure(let error):
+                self.wrongUser = true
+            }
         }
+    }
+    
+    func signUp() {
+        
     }
 }

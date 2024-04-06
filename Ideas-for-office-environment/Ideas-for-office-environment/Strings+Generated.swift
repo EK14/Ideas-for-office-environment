@@ -41,6 +41,8 @@ internal enum S {
   internal static let signin = S.tr("Localizable", "signin", fallback: "Войти")
   /// Зарегистрироваться
   internal static let signup = S.tr("Localizable", "signup", fallback: "Зарегистрироваться")
+  /// Неправильный логин или пароль
+  internal static let wrongUser = S.tr("Localizable", "wrongUser", fallback: "Неправильный логин или пароль")
   internal enum Eye {
     /// eye.slash
     internal static let slash = S.tr("Localizable", "eye.slash", fallback: "eye.slash")

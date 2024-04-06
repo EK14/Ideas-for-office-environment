@@ -12,18 +12,14 @@ class SignInCoordinator: Coordinator {
     
     var rootViewController = UIViewController()
     
-//    var hasLoggedIn: CurrentValueSubject<Bool, Never>
-    
-//    init(hasLoggedIn: CurrentValueSubject<Bool, Never>) {
-//        self.hasLoggedIn = hasLoggedIn
-//    }
+    var childCoordinator = SignUpCoordinator()
     
     func start() {
-//        let view = SignInView { [weak self] in
-////            self?.hasLoggedIn.send(true)
-//            Aut
-//        }
-        let view = SignInView()
+        let view = SignInView(coordinator: self)
         rootViewController = UIHostingController(rootView: view)
+    }
+    
+    func navigateToSignUp() {
+        
     }
 }

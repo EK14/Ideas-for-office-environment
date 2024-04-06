@@ -9,90 +9,101 @@ import SwiftUI
 
 struct SignInView: View {
     @ObservedObject var viewModel: SignInViewModel = SignInViewModel()
+    var coordinator: SignInCoordinator
     @State var emptyEmail = false
     @State var emptyPassword = false
     
     var body: some View {
-        NavigationView {
+        VStack(spacing: Constants.Spacing.verticalStack) {
+            Text(S.entry)
+                .font(.largeTitle)
+            
             VStack(spacing: Constants.Spacing.verticalStack) {
-                Text(S.entry)
-                    .font(.largeTitle)
-                
-                VStack(spacing: Constants.Spacing.verticalStack) {
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Image(systemName: S.envelope)
-                                .foregroundColor(emptyEmail ? .red: .gray)
- 
-                            TextField("", text: $viewModel.email, prompt: Text(S.email).foregroundColor(emptyEmail ? .red: .gray))
-                                .padding(.vertical, Constants.TextField.verticalPadding)
-                        }
-                        .padding(.leading, Constants.TextField.horizontalPadding)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: Constants.TextField.radius)
-                                .stroke(emptyEmail ? .red: .gray)
-                                .padding(.horizontal, Constants.Padding.main)
-                        )
+                VStack(alignment: .leading) {
+                    HStack {
+                        Image(systemName: S.envelope)
+                            .foregroundColor(emptyEmail ? .red: .gray)
                         
-                        Text(S.emptyEmail)
-                            .foregroundStyle(.red)
-                            .font(.footnote)
-                            .padding(.horizontal, Constants.Padding.main)
-                            .opacity(emptyEmail ? 1: 0)
+                        TextField("", text: $viewModel.email, prompt: Text(S.email).foregroundColor(emptyEmail ? .red: .gray))
+                            .padding(.vertical, Constants.TextField.verticalPadding)
                     }
+                    .padding(.leading, Constants.TextField.horizontalPadding)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: Constants.TextField.radius)
+                            .stroke(emptyEmail ? .red: .gray)
+                            .padding(.horizontal, Constants.Padding.main)
+                    )
                     
-                    VStack(alignment: .leading) {
-                        HybridTextField(text: $viewModel.password, emptyField: $emptyPassword, titleKey: S.password)
-                        
-                        Text(S.emptyPassword)
-                            .foregroundStyle(.red)
-                            .font(.footnote)
-                            .padding(.horizontal, Constants.Padding.main)
-                            .opacity(emptyPassword ? 1: 0)
-                    }
+                    Text(S.emptyEmail)
+                        .foregroundStyle(.red)
+                        .font(.footnote)
+                        .padding(.horizontal, Constants.Padding.main)
+                        .opacity(emptyEmail ? 1: 0)
                 }
-                VStack(spacing: Constants.Spacing.verticalStack) {
-                    Button(action: {
-                        guard !viewModel.email.isEmpty else {
-                            emptyEmail = true
-                            guard !viewModel.password.isEmpty else {
-                                emptyPassword = true
-                                return
-                            }
-                            emptyPassword = false
+                
+                VStack(alignment: .leading) {
+                    HybridTextField(text: $viewModel.password, emptyField: $emptyPassword, titleKey: S.password)
+                    
+                    Text(S.emptyPassword)
+                        .foregroundStyle(.red)
+                        .font(.footnote)
+                        .padding(.horizontal, Constants.Padding.main)
+                        .opacity(emptyPassword ? 1: 0)
+                }
+            }
+            VStack(spacing: Constants.Spacing.verticalStack) {
+                Button(action: {
+                    guard !viewModel.email.isEmpty else {
+                        emptyEmail = true
+                        guard !viewModel.password.isEmpty else {
+                            emptyPassword = true
                             return
                         }
-                        viewModel.signIn()
-                    }, label: {
-                        Text(S.signin)
-                            .foregroundStyle(.white)
-                            .padding(.horizontal, Constants.Button.Padding.horizontal)
-                            .padding(.vertical, Constants.Button.Padding.vertical)
-                            .background(.blue)
-                            .clipShape(Capsule())
-                    })
-                    
-                    HStack {
-                        Text(S.notHaveAccount)
+                        emptyPassword = false
+                        return
+                    }
+                    guard !viewModel.password.isEmpty else {
+                        emptyEmail = false
+                        emptyPassword = true
+                        return
+                    }
+                    viewModel.signIn()
+                }, label: {
+                    Text(S.signin)
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, Constants.Button.Padding.horizontal)
+                        .padding(.vertical, Constants.Button.Padding.vertical)
+                        .background(.blue)
+                        .clipShape(Capsule())
+                })
+                
+                HStack {
+                    Text(S.notHaveAccount)
+                        .font(.callout)
+                    Button(action: {
+                        coordinator.navigateToSignUp()
+                    }) {
+                        Text(S.signup)
                             .font(.callout)
-                        NavigationLink {
-                            SignUpView()
-                        } label: {
-                            Text(S.signup)
-                                .font(.callout)
-                        }
                     }
                 }
             }
-            .navigationBarHidden(true)
-            .contentShape(Rectangle())
-            .onTapGesture {
-                hideKeyboard()
+        }
+        .navigationBarHidden(true)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            hideKeyboard()
+        }
+        .alert(S.wrongUser, isPresented: $viewModel.wrongUser) {
+            Button("OK", role: .cancel) { 
+                viewModel.wrongUser = false
             }
         }
     }
 }
 
 #Preview {
-    SignInView()
+    var coordinator = SignInCoordinator()
+    
+    return SignInView(coordinator: coordinator)
 }
