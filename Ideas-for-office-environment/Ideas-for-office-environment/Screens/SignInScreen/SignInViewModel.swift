@@ -17,8 +17,11 @@ class SignInViewModel: ObservableObject {
                 email: email,
                 password: password
             )
-        ).call { _ in
-            // Login successful, navigate to the Home screen
+        ).call { response in
+            Auth.shared.setCredentials(
+                accessToken: response.accessToken,
+                refreshToken: response.refreshToken
+            )
         }
     }
 }

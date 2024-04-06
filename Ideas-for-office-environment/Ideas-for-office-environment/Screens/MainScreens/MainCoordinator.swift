@@ -14,14 +14,15 @@ class MainCoordinator: Coordinator {
     var childCoordinator = [Coordinator]()
     
     init() {
-        self.rootViewController = UITabBarController()
-        rootViewController.tabBar.isTranslucent = true
-        rootViewController.tabBar.backgroundColor = .white
-        rootViewController.tabBar.layer.borderWidth = 1.0
-        rootViewController.tabBar.layer.borderColor = UIColor(.gray).cgColor
+        rootViewController = UITabBarController()
+        self.rootViewController.tabBar.isTranslucent = true
+        self.rootViewController.tabBar.backgroundColor = .white
+        self.rootViewController.tabBar.layer.borderWidth = 1.0
+        self.rootViewController.tabBar.layer.borderColor = UIColor(.gray).cgColor
     }
     
     func start() {
+//        configureTabBar()
         let homeCoordinator = HomeCoordinator()
         homeCoordinator.start()
         self.childCoordinator.append(homeCoordinator)
@@ -55,5 +56,14 @@ class MainCoordinator: Coordinator {
         let selectedImage = UIImage(systemName: selectedImageName)
         let tabBarItem = UITabBarItem(title: title, image: defaultImage, selectedImage: selectedImage)
         vc.tabBarItem = tabBarItem
+    }
+    
+    private func configureTabBar() {
+        DispatchQueue.main.async {
+            self.rootViewController.tabBar.isTranslucent = true
+            self.rootViewController.tabBar.backgroundColor = .white
+            self.rootViewController.tabBar.layer.borderWidth = 1.0
+            self.rootViewController.tabBar.layer.borderColor = UIColor(.gray).cgColor
+        }
     }
 }

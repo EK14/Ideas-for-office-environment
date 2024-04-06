@@ -84,7 +84,7 @@ struct ProfileView: View {
             .padding(.horizontal, 20)
             
             Button(action: {
-//                signOut()
+                Auth.shared.logout()
             }, label: {
                 Text("Выйти")
                     .font(.system(size: 15))

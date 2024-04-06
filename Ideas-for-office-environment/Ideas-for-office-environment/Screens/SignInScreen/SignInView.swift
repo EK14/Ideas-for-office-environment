@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     @ObservedObject var viewModel: SignInViewModel = SignInViewModel()
-    var signIn: () -> ()
+//    var signIn: () -> ()
     
     var body: some View {
         NavigationView {
@@ -66,7 +66,5 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView {
-        print("hello")
-    }
+    SignInView()
 }

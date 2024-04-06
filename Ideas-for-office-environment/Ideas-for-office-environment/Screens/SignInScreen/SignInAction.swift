@@ -11,7 +11,7 @@ struct SignInAction: Encodable {
     
     var parameters: SignInRequest
     
-    func call(completion: @escaping (SignInResponse?) -> Void) {
+    func call(completion: @escaping (SignInResponse) -> Void) {
         
         let scheme: String = "http"
         let host: String = "localhost"
@@ -48,14 +48,14 @@ struct SignInAction: Encodable {
                     completion(response)
                 } else {
                     // Error: Unable to decode response JSON
-                    completion(nil)
+//                    completion(nil)
                 }
             } else {
                 // Error: API request failed
                 if let error = error {
                     print("Error: \(error.localizedDescription)")
                 }
-                completion(nil)
+//                completion(nil)
             }
         }
         task.resume()

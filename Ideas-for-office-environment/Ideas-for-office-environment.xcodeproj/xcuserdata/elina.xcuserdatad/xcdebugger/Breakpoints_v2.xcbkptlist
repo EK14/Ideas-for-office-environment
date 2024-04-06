@@ -247,7 +247,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B77DC680-3ECE-41EF-8CF2-CB2665DE18FE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
