@@ -17,6 +17,6 @@ class FavoritesCoordinator: Coordinator {
     }()
     
     func start() {
-        rootViewController.setViewControllers([favoritesVC], animated: false)
+        rootViewController.setViewControllers([favoritesVC], animated: true)
     }
 }

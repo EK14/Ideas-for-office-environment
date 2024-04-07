@@ -45,6 +45,8 @@
 		C3CBD4922BA7800A005968EF /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBD4912BA7800A005968EF /* HomeCoordinator.swift */; };
 		C3CBD4942BA78039005968EF /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBD4932BA78039005968EF /* FavoritesCoordinator.swift */; };
 		C3E7F6CE2BC1E933002F68EA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6CD2BC1E933002F68EA /* NetworkError.swift */; };
+		C3E7F6D02BC2DDEA002F68EA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6CF2BC2DDEA002F68EA /* SignUpViewModel.swift */; };
+		C3E7F6D22BC2E96E002F68EA /* SignUpNextViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6D12BC2E96E002F68EA /* SignUpNextViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,8 @@
 		C3CBD4912BA7800A005968EF /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		C3CBD4932BA78039005968EF /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
 		C3E7F6CD2BC1E933002F68EA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C3E7F6CF2BC2DDEA002F68EA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		C3E7F6D12BC2E96E002F68EA /* SignUpNextViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,7 @@
 			children = (
 				C32AA0232BA73D1700477E68 /* SignUpView.swift */,
 				C3CBD4882BA76E47005968EF /* SignUpCoordinator.swift */,
+				C3E7F6CF2BC2DDEA002F68EA /* SignUpViewModel.swift */,
 			);
 			path = SignUpScreen;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			children = (
 				C32AA0292BA73D9D00477E68 /* SignUpNextView.swift */,
 				C32AA02D2BA73DFC00477E68 /* CarousalView.swift */,
+				C3E7F6D12BC2E96E002F68EA /* SignUpNextViewCoordinator.swift */,
 			);
 			path = SignUpNextScreen;
 			sourceTree = "<group>";
@@ -418,8 +424,10 @@
 				C3CBD4892BA76E47005968EF /* SignUpCoordinator.swift in Sources */,
 				3D27CED92B66CAAE003C81C5 /* AppDelegate.swift in Sources */,
 				C3CBD4942BA78039005968EF /* FavoritesCoordinator.swift in Sources */,
+				C3E7F6D02BC2DDEA002F68EA /* SignUpViewModel.swift in Sources */,
 				3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */,
 				C3A3AAF82BBDC470008C707D /* SignInViewModel.swift in Sources */,
+				C3E7F6D22BC2E96E002F68EA /* SignUpNextViewCoordinator.swift in Sources */,
 				C3A3AAFC2BBDC90A008C707D /* SignInResponse.swift in Sources */,
 				C32221B52BAB2DAF0063DDF2 /* SignInCoordinator.swift in Sources */,
 				C32221BD2BAB3CBB0063DDF2 /* PostView.swift in Sources */,

@@ -17,7 +17,6 @@ class ProfileCoordinator: Coordinator {
     }()
     
     func start() {
-        rootViewController.setViewControllers([ProfileVC], animated: false)
-        rootViewController.navigationBar.isHidden = true
+        rootViewController.setViewControllers([ProfileVC], animated: true)
     }
 }

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SignUpView: View, KeyboardReadable {
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var passwordRepete: String = ""
-    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var viewModel = SignUpViewModel()
+    var coordinator: SignUpCoordinator
     @State var isKeyboardVisible = false
+    @State var emptyEmail = false
+    @State var emptyPassword = false
+    @State var emptyPasswordRepeat = false
     
     var body: some View {
         VStack(spacing: Constants.Spacing.verticalStack) {
@@ -23,26 +24,59 @@ struct SignUpView: View, KeyboardReadable {
             }
             
             VStack(spacing: Constants.Spacing.verticalStack) {
-                HStack {
-                    Image(systemName: S.envelope)
-                        .foregroundColor(.gray)
-                    TextField(S.email, text: $email)
-                        .padding(.vertical, Constants.TextField.verticalPadding)
+                VStack(alignment: .leading) {
+                    HStack {
+                        Image(systemName: S.envelope)
+                            .foregroundColor(emptyEmail ? .red: .gray)
+                        TextField("", text: $viewModel.email, prompt: Text(S.email).foregroundColor(emptyEmail ? .red: .gray))
+                            .padding(.vertical, Constants.TextField.verticalPadding)
+                    }
+                    .padding(.leading, Constants.TextField.horizontalPadding)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: Constants.TextField.radius)
+                            .stroke(emptyEmail ? .red: .gray)
+                            .padding(.horizontal, Constants.Padding.main)
+                    )
+                    
+                    if emptyEmail {
+                        Text(S.emptyEmail)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                    }
                 }
-                .padding(.leading, Constants.TextField.horizontalPadding)
-                .overlay(
-                    RoundedRectangle(cornerRadius: Constants.TextField.radius)
-                        .stroke(Color.gray)
-                        .padding(.horizontal, Constants.Padding.main)
-                )
                 
-//                HybridTextField(text: $password, emptyField: <#Binding<Bool>#>, titleKey: S.password)
-//                
-//                HybridTextField(text: $passwordRepete, titleKey: S.repeatPassword)
+                VStack(alignment: .leading) {
+                    HybridTextField(text: $viewModel.password, emptyField: $emptyPassword, titleKey: S.password)
+                    
+                    if emptyPassword {
+                        Text(S.emptyPassword)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                    }
+                }
+
+                VStack(alignment: .leading) {
+                    HybridTextField(text: $viewModel.passwordRepete, emptyField: $emptyPasswordRepeat, titleKey: S.repeatPassword)
+                    
+                    if emptyPasswordRepeat {
+                        Text(S.emptyPassword)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                    }
+                }
             }
             VStack(spacing: Constants.Spacing.verticalStack) {
-                NavigationLink {
-                    SignUpNextView()
+                Button {
+                    emptyEmail = viewModel.email.isEmpty
+                    emptyPassword = viewModel.password.isEmpty
+                    emptyPasswordRepeat = viewModel.passwordRepete.isEmpty
+                    
+                    if !emptyEmail && !emptyPassword && !emptyPasswordRepeat {
+                        coordinator.navigateToSignUpNextView()
+                    }
                 } label: {
                     Text(S.signup)
                         .foregroundStyle(.white)
@@ -51,12 +85,13 @@ struct SignUpView: View, KeyboardReadable {
                         .background(.blue)
                         .clipShape(Capsule())
                 }
+
                 HStack {
                     Text(S.haveAccount)
                         .font(.callout)
                     
                     Button(action: {
-                        presentationMode.wrappedValue.dismiss()
+                        coordinator.navigateToSignInView()
                     }, label: {
                         Text(S.signin)
                             .font(.callout)
@@ -64,8 +99,6 @@ struct SignUpView: View, KeyboardReadable {
                 }
             }
         }
-        .navigationBarBackButtonHidden()
-        .navigationBarHidden(true)
         .contentShape(Rectangle())
         .onTapGesture {
             hideKeyboard()
@@ -75,9 +108,14 @@ struct SignUpView: View, KeyboardReadable {
                 self.isKeyboardVisible = isKeyboardVisible
             }
         }
+        .navigationBarHidden(true)
+        .navigationTitle(S.registration)
     }
 }
 
 #Preview {
-    SignUpView()
+    var nav = UINavigationController()
+    var coordinator = SignUpCoordinator(navigationController: nav)
+    
+    return SignUpView(coordinator: coordinator)
 }

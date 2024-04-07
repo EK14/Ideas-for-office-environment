@@ -9,7 +9,6 @@ import SwiftUI
 import PhotosUI
 
 struct SignUpNextView: View, KeyboardReadable {
-    @Environment(\.presentationMode) var presentationMode
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var image: Image?
@@ -63,8 +62,8 @@ struct SignUpNextView: View, KeyboardReadable {
                 
                 CarousalViewContainer()
                 
-                NavigationLink {
-                    // Вернуться на экран SignIn
+                Button {
+                    
                 } label: {
                     Text("Завершить регистрацию")
                         .foregroundStyle(.white)
@@ -76,21 +75,7 @@ struct SignUpNextView: View, KeyboardReadable {
             }
             .padding(.bottom, 30)
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    HStack {
-                        Image(systemName: "arrow.backward")
-                        Text("Сведения о себе")
-                            .foregroundStyle(.black)
-                    }
-                }
-            }
-        }
+        .navigationBarHidden(false)
         .onTapGesture {
             hideKeyboard()
         }

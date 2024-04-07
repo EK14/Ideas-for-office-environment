@@ -17,6 +17,6 @@ class MyOfficeCoordinator: Coordinator {
     }()
     
     func start() {
-        rootViewController.setViewControllers([MyOfficeVC], animated: false)
+        rootViewController.setViewControllers([MyOfficeVC], animated: true)
     }
 }

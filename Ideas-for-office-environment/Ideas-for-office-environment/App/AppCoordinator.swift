@@ -14,8 +14,6 @@ class AppCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     
-//    let hasLoggedIn = CurrentValueSubject<Bool, Never>(false)
-    
     let hasLoggedIn = Auth.shared.loggedIn
     
     var subscriptions = Set<AnyCancellable>()
@@ -25,9 +23,6 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        
-//        setUpLogInValue()
-        
         hasLoggedIn
             .removeDuplicates()
             .sink { [weak self] hasLoggedIn in
@@ -47,17 +42,4 @@ class AppCoordinator: Coordinator {
             }
             .store(in: &subscriptions)
     }
-    
-//    func setUpLogInValue() {
-//        let key = "hasLoggedIn"
-//        let value = UserDefaults.standard.bool(forKey: key)
-//        hasLoggedIn.send(value)
-//        
-//        hasLoggedIn
-//            .filter { $0 }
-//            .sink { value in
-//                UserDefaults.standard.setValue(value, forKey: key)
-//            }
-//            .store(in: &subscriptions)
-//    }
 }

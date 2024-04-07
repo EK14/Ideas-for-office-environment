@@ -10,16 +10,23 @@ import Combine
 
 class SignInCoordinator: Coordinator {
     
-    var rootViewController = UIViewController()
+    var rootViewController = UINavigationController()
     
-    var childCoordinator = SignUpCoordinator()
+    lazy var SignInVC: UIHostingController = {
+        var vc = UIHostingController(rootView: SignInView(coordinator: self))
+        return vc
+    }()
     
     func start() {
-        let view = SignInView(coordinator: self)
-        rootViewController = UIHostingController(rootView: view)
+        rootViewController = UINavigationController(rootViewController: SignInVC)
     }
     
     func navigateToSignUp() {
-        
+        let signUpCoordinator = SignUpCoordinator(navigationController: rootViewController)
+        signUpCoordinator.start()
+    }
+    
+    @objc func popViewController() {
+        rootViewController.popViewController(animated: true)
     }
 }

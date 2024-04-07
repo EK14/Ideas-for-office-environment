@@ -9,10 +9,25 @@ import SwiftUI
 
 class SignUpCoordinator: Coordinator {
     
-    var rootViewController = UIViewController()
-    
+    var navigationController: UINavigationController
+
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+
     func start() {
-        let view = SignUpView()
-        rootViewController = UIHostingController(rootView: view)
+        let view = SignUpView(coordinator: self)
+        let hostingController = UIHostingController(rootView: view)
+        navigationController.pushViewController(hostingController, animated: true)
+    }
+
+    func navigateToSignUpNextView() {
+        let signUpNextViewCoordinator = SignUpNextViewCoordinator()
+        signUpNextViewCoordinator.start()
+        navigationController.pushViewController(signUpNextViewCoordinator.rootViewController, animated: true)
+    }
+    
+    func navigateToSignInView() {
+        navigationController.popViewController(animated: true)
     }
 }

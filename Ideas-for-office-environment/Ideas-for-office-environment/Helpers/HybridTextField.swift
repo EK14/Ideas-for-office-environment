@@ -20,7 +20,6 @@ struct HybridTextField: View {
             Group{
                 if isSecure{
                     SecureField(titleKey, text: $text, prompt: Text(titleKey).foregroundColor(emptyField ? .red: .gray))
-//                    SecureField(titleKey, text: $text)
                 }else{
                     TextField("", text: $text, prompt: Text(titleKey).foregroundColor(emptyField ? .red: .gray))
                 }

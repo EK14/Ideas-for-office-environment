@@ -15,10 +15,10 @@ class MainCoordinator: Coordinator {
     
     init() {
         rootViewController = UITabBarController()
-        self.rootViewController.tabBar.isTranslucent = true
-        self.rootViewController.tabBar.backgroundColor = .white
-        self.rootViewController.tabBar.layer.borderWidth = 1.0
-        self.rootViewController.tabBar.layer.borderColor = UIColor(.gray).cgColor
+        rootViewController.tabBar.isTranslucent = true
+        rootViewController.tabBar.backgroundColor = .white
+        rootViewController.tabBar.layer.borderWidth = 1.0
+        rootViewController.tabBar.layer.borderColor = UIColor(.gray).cgColor
     }
     
     func start() {

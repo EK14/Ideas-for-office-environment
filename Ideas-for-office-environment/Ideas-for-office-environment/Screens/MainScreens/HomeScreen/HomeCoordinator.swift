@@ -17,6 +17,6 @@ class HomeCoordinator: Coordinator {
     }()
     
     func start() {
-        rootViewController.setViewControllers([homeVC], animated: false)
+        rootViewController.setViewControllers([homeVC], animated: true)
     }
 }
