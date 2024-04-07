@@ -28,6 +28,8 @@ internal enum S {
   internal static let lock = S.tr("Localizable", "lock", fallback: "lock")
   /// Нет аккаунта?
   internal static let notHaveAccount = S.tr("Localizable", "notHaveAccount", fallback: "Нет аккаунта?")
+  /// OK
+  internal static let ok = S.tr("Localizable", "OK", fallback: "OK")
   /// Пароль
   internal static let password = S.tr("Localizable", "password", fallback: "Пароль")
   /// Регистрация

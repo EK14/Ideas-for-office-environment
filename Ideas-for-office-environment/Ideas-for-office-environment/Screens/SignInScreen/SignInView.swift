@@ -53,21 +53,12 @@ struct SignInView: View {
             }
             VStack(spacing: Constants.Spacing.verticalStack) {
                 Button(action: {
-                    guard !viewModel.email.isEmpty else {
-                        emptyEmail = true
-                        guard !viewModel.password.isEmpty else {
-                            emptyPassword = true
-                            return
-                        }
-                        emptyPassword = false
-                        return
+                    emptyEmail = viewModel.email.isEmpty
+                    emptyPassword = viewModel.password.isEmpty
+
+                    if !emptyEmail && !emptyPassword {
+                        viewModel.signIn()
                     }
-                    guard !viewModel.password.isEmpty else {
-                        emptyEmail = false
-                        emptyPassword = true
-                        return
-                    }
-                    viewModel.signIn()
                 }, label: {
                     Text(S.signin)
                         .foregroundStyle(.white)
@@ -95,7 +86,7 @@ struct SignInView: View {
             hideKeyboard()
         }
         .alert(S.wrongUser, isPresented: $viewModel.wrongUser) {
-            Button("OK", role: .cancel) { 
+            Button(S.ok, role: .cancel) {
                 viewModel.wrongUser = false
             }
         }
