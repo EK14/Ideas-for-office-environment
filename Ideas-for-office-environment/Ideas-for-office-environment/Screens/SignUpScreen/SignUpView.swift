@@ -100,9 +100,6 @@ struct SignUpView: View, KeyboardReadable {
             }
         }
         .contentShape(Rectangle())
-        .onTapGesture {
-            hideKeyboard()
-        }
         .onReceive(keyboardPublisher) { isKeyboardVisible in
             withAnimation {
                 self.isKeyboardVisible = isKeyboardVisible

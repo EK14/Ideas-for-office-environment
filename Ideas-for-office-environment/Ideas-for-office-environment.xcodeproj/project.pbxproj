@@ -47,6 +47,7 @@
 		C3E7F6CE2BC1E933002F68EA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6CD2BC1E933002F68EA /* NetworkError.swift */; };
 		C3E7F6D02BC2DDEA002F68EA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6CF2BC2DDEA002F68EA /* SignUpViewModel.swift */; };
 		C3E7F6D22BC2E96E002F68EA /* SignUpNextViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6D12BC2E96E002F68EA /* SignUpNextViewCoordinator.swift */; };
+		C3E7F6D42BC33730002F68EA /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6D32BC33730002F68EA /* SignUpRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		C3E7F6CD2BC1E933002F68EA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C3E7F6CF2BC2DDEA002F68EA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C3E7F6D12BC2E96E002F68EA /* SignUpNextViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextViewCoordinator.swift; sourceTree = "<group>"; };
+		C3E7F6D32BC33730002F68EA /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 				C304BC862BA1081400256450 /* Office.swift */,
 				C3A3AAF92BBDC606008C707D /* SignInRequest.swift */,
 				C3A3AAFB2BBDC90A008C707D /* SignInResponse.swift */,
+				C3E7F6D32BC33730002F68EA /* SignUpRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */,
 				C32221B82BAB3A880063DDF2 /* ProfileCoordinator.swift in Sources */,
 				C32AA0312BA73EA300477E68 /* Coordinator.swift in Sources */,
+				C3E7F6D42BC33730002F68EA /* SignUpRequest.swift in Sources */,
 				C32221B12BAB254A0063DDF2 /* MyOfficeCoordinator.swift in Sources */,
 				C32AA02A2BA73D9D00477E68 /* SignUpNextView.swift in Sources */,
 				3D1B64C32B66CF5600FC720E /* SignInView.swift in Sources */,

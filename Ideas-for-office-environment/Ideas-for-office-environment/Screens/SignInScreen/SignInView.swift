@@ -34,21 +34,23 @@ struct SignInView: View {
                             .padding(.horizontal, Constants.Padding.main)
                     )
                     
-                    Text(S.emptyEmail)
-                        .foregroundStyle(.red)
-                        .font(.footnote)
-                        .padding(.horizontal, Constants.Padding.main)
-                        .opacity(emptyEmail ? 1: 0)
+                    if emptyEmail {
+                        Text(S.emptyEmail)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                    }
                 }
                 
                 VStack(alignment: .leading) {
                     HybridTextField(text: $viewModel.password, emptyField: $emptyPassword, titleKey: S.password)
                     
-                    Text(S.emptyPassword)
-                        .foregroundStyle(.red)
-                        .font(.footnote)
-                        .padding(.horizontal, Constants.Padding.main)
-                        .opacity(emptyPassword ? 1: 0)
+                    if emptyPassword {
+                        Text(S.emptyPassword)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                    }
                 }
             }
             VStack(spacing: Constants.Spacing.verticalStack) {
@@ -82,9 +84,6 @@ struct SignInView: View {
         }
         .navigationBarHidden(true)
         .contentShape(Rectangle())
-        .onTapGesture {
-            hideKeyboard()
-        }
         .alert(S.wrongUser, isPresented: $viewModel.wrongUser) {
             Button(S.ok, role: .cancel) {
                 viewModel.wrongUser = false
