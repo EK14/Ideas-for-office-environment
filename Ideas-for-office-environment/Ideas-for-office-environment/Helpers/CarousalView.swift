@@ -14,7 +14,7 @@ struct CarousalViewContainer: View {
     @ObservedObject var viewModel: SignUpViewModel
     
     var body: some View {
-        CarousalView(isSelected: $isSelected, itemHeight: 500, offices: getViews())
+        CarousalView(viewModel: viewModel, isSelected: $isSelected, itemHeight: 500, offices: getViews())
     }
     
     func imageView(name: String) -> some View {
@@ -43,10 +43,11 @@ struct CarousalViewContainer: View {
                             .onTapGesture {
                                 withAnimation {
                                     self.isSelected = index
+                                    viewModel.office = viewModel.offices[isSelected % viewModel.offices.count].id
+                                    print(viewModel.office)
                                 }
                             }
                         Text(office.address)
-                            .foregroundStyle(isSelected < 0 && (viewModel.offices.count + isSelected) == index  || isSelected >= 0 && isSelected == index ? .blue: .black)
                         
                         Spacer()
                     }
@@ -83,6 +84,7 @@ enum DragState {
 struct CarousalView: View {
     
     @GestureState private var dragState = DragState.inactive
+    @ObservedObject var viewModel: SignUpViewModel
     @Binding var isSelected: Int
     
     var itemHeight: CGFloat
@@ -125,11 +127,11 @@ struct CarousalView: View {
         let dragThreshold: CGFloat = 180
         if drag.predictedEndTranslation.width > dragThreshold || drag.translation.width > dragThreshold {
             isSelected = (isSelected - 1) % offices.count
-            print(isSelected)
         } else if (drag.predictedEndTranslation.width) < (-1 * dragThreshold) || (drag.translation.width) < (-1 * dragThreshold) {
             isSelected = (isSelected + 1) % offices.count
-            print(isSelected)
         }
+        viewModel.office = viewModel.offices[isSelected >= 0 ? isSelected % viewModel.offices.count: (isSelected + viewModel.offices.count * 2) % viewModel.offices.count].id
+        print(viewModel.office)
     }
     
     func relativeLoc() -> Int {
