@@ -18,11 +18,9 @@ struct SignUpView: View, KeyboardReadable {
     
     var body: some View {
         VStack(spacing: Constants.Spacing.verticalStack) {
-            if !isKeyboardVisible {
-                Text(S.registration)
-                    .font(.largeTitle)
-                    .transition(.scale)
-            }
+            Text(S.registration)
+                .font(.largeTitle)
+                .transition(.scale)
             
             VStack(spacing: Constants.Spacing.verticalStack) {
                 VStack(alignment: .leading) {

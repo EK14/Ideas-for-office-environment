@@ -47,6 +47,7 @@ struct SignUpNextView: View, KeyboardReadable {
                 }
                 .sheet(isPresented: $showingImagePicker) {
                     ImagePicker(image: $inputImage)
+                        .ignoresSafeArea()
                 }
                 
                 CustomTextField(text: $viewModel.name, lable: "Имя", titleKey: "Ваше имя")
