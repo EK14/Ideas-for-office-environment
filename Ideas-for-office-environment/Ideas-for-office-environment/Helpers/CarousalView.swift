@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CarousalViewContainer: View {
     
     @State var isSelected: Int = 0
+    @ObservedObject var viewModel: SignUpViewModel
     
     var body: some View {
         CarousalView(isSelected: $isSelected, itemHeight: 500, offices: getViews())
@@ -21,40 +23,30 @@ struct CarousalViewContainer: View {
     }
     
     func getViews() -> [AnyView] {
-        let offices: [Office] = [
-            Office(name: "ул. Гагарина 6", image: "Office_1"),
-            Office(name: "ул. Нижнегорская 2А", image: "Office_2"),
-            Office(name: "ул. Кутузова 8", image: "Office_3"),
-            Office(name: "ул. Гагарина 6", image: "Office_1"),
-            Office(name: "ул. Нижнегорская 2А", image: "Office_2"),
-            Office(name: "ул. Кутузова 8", image: "Office_3"),
-            Office(name: "ул. Гагарина 6", image: "Office_1"),
-            Office(name: "ул. Нижнегорская 2А", image: "Office_2"),
-            Office(name: "ул. Кутузова 8", image: "Office_3"),
-        ]
         
         var views : [AnyView] = []
         
-        for (index, office) in offices.enumerated() {
+        for (index, office) in viewModel.offices.enumerated() {
             views.append(
                 AnyView(
                     VStack {
-                        imageView(name: office.image)
+                        AnimatedImage(url: URL(string: office.imageUrl))
+                            .resizable()
+                            .scaledToFill()
                             .frame(width: 180, height: 200)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 20)
-                                    .stroke(isSelected < 0 && (offices.count + isSelected) == index  || isSelected >= 0 && isSelected == index ? .blue: .clear, lineWidth: 8)
+                                    .stroke(isSelected < 0 && (viewModel.offices.count + isSelected) == index  || isSelected >= 0 && isSelected == index ? .blue: .clear, lineWidth: 8)
                             )
                             .background(.white)
                             .cornerRadius(20)
                             .onTapGesture {
                                 withAnimation {
                                     self.isSelected = index
-                                    print(index)
                                 }
                             }
-                        Text(office.name)
-                            .foregroundStyle(isSelected < 0 && (offices.count + isSelected) == index  || isSelected >= 0 && isSelected == index ? .blue: .black)
+                        Text(office.address)
+                            .foregroundStyle(isSelected < 0 && (viewModel.offices.count + isSelected) == index  || isSelected >= 0 && isSelected == index ? .blue: .black)
                         
                         Spacer()
                     }
@@ -182,8 +174,4 @@ struct CarousalView: View {
         return 0
     }
 
-}
-
-#Preview {
-    CarousalViewContainer()
 }

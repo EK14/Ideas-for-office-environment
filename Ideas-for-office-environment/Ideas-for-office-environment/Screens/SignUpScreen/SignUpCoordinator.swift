@@ -21,8 +21,8 @@ class SignUpCoordinator: Coordinator {
         navigationController.pushViewController(hostingController, animated: true)
     }
 
-    func navigateToSignUpNextView() {
-        let signUpNextViewVC = UIHostingController(rootView: SignUpNextView())
+    func navigateToSignUpNextView(viewModel: SignUpViewModel) {
+        let signUpNextViewVC = UIHostingController(rootView: SignUpNextView(viewModel: viewModel))
         navigationController.pushViewController(signUpNextViewVC, animated: true)
     }
     

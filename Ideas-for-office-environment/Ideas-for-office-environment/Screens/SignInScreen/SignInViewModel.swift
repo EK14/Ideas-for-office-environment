@@ -25,7 +25,7 @@ class SignInViewModel: ObservableObject {
                     accessToken: response.accessToken,
                     refreshToken: response.refreshToken
                 )
-            case .failure(let error):
+            case .failure(_):
                 self.wrongUser = true
             }
         }

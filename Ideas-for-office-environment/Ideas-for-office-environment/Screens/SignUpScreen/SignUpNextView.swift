@@ -12,9 +12,7 @@ struct SignUpNextView: View, KeyboardReadable {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var image: Image?
-    @State private var name: String = ""
-    @State private var surname: String = ""
-    @State private var position: String = ""
+    @ObservedObject var viewModel: SignUpViewModel
     
     var body: some View {
         ScrollView {
@@ -51,16 +49,16 @@ struct SignUpNextView: View, KeyboardReadable {
                     ImagePicker(image: $inputImage)
                 }
                 
-                CustomTextField(text: $name, lable: "Имя", titleKey: "Ваше имя")
+                CustomTextField(text: $viewModel.name, lable: "Имя", titleKey: "Ваше имя")
                 
-                CustomTextField(text: $surname, lable: "Фамилия", titleKey: "Ваша фамилия")
+                CustomTextField(text: $viewModel.surname, lable: "Фамилия", titleKey: "Ваша фамилия")
                 
-                CustomTextField(text: $position, lable: "Должность", titleKey: "Ваша должность")
+                CustomTextField(text: $viewModel.job, lable: "Должность", titleKey: "Ваша должность")
                 
                 Text("Офис")
                     .font(.title3)
                 
-                CarousalViewContainer()
+                CarousalViewContainer(viewModel: viewModel)
                 
                 Button {
                     
@@ -128,7 +126,9 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 #Preview {
-    SignUpNextView()
+    let vm = SignUpViewModel()
+    
+    return SignUpNextView(viewModel: vm)
 }
 
 

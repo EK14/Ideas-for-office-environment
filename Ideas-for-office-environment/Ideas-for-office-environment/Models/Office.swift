@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Office {
-    var name: String
-    var image: String
+struct Office: Decodable {
+    let id: Int
+    let imageUrl: String
+    let address: String
 }

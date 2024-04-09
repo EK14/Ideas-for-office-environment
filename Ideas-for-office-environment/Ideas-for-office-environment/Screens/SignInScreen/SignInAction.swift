@@ -12,7 +12,6 @@ struct SignInAction: Encodable {
     var parameters: SignInRequest
     
     func call(completion: @escaping (Result<SignInResponse, NetworkError>) -> Void) {
-        
         let scheme: String = "http"
         let host: String = "localhost"
         let port: Int = 8189
@@ -55,7 +54,6 @@ struct SignInAction: Encodable {
                 if let error = error {
                     print("Error: \(error.localizedDescription)")
                 }
-//                completion(nil)
             }
         }
         task.resume()

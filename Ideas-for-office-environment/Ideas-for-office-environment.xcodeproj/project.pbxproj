@@ -47,6 +47,8 @@
 		C3E7F6CE2BC1E933002F68EA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6CD2BC1E933002F68EA /* NetworkError.swift */; };
 		C3E7F6D02BC2DDEA002F68EA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6CF2BC2DDEA002F68EA /* SignUpViewModel.swift */; };
 		C3E7F6D42BC33730002F68EA /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6D32BC33730002F68EA /* SignUpRequest.swift */; };
+		C3E7F6F62BC4898F002F68EA /* SignUpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6F52BC4898F002F68EA /* SignUpAction.swift */; };
+		C3E7F6F92BC48CC2002F68EA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C3E7F6F82BC48CC2002F68EA /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,7 @@
 		C3E7F6CD2BC1E933002F68EA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C3E7F6CF2BC2DDEA002F68EA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C3E7F6D32BC33730002F68EA /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		C3E7F6F52BC4898F002F68EA /* SignUpAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E7F6F92BC48CC2002F68EA /* SDWebImageSwiftUI in Frameworks */,
 				C3A3AB012BBDF297008C707D /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +219,7 @@
 				C32AA0232BA73D1700477E68 /* SignUpView.swift */,
 				C3CBD4882BA76E47005968EF /* SignUpCoordinator.swift */,
 				C3E7F6CF2BC2DDEA002F68EA /* SignUpViewModel.swift */,
+				C3E7F6F52BC4898F002F68EA /* SignUpAction.swift */,
 			);
 			path = SignUpScreen;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			name = "Ideas-for-office-environment";
 			packageProductDependencies = (
 				C3A3AB002BBDF297008C707D /* SwiftKeychainWrapper */,
+				C3E7F6F82BC48CC2002F68EA /* SDWebImageSwiftUI */,
 			);
 			productName = "Ideas-for-office-environment";
 			productReference = 3D27CED52B66CAAE003C81C5 /* Ideas-for-office-environment.app */;
@@ -361,6 +367,7 @@
 			mainGroup = 3D27CECC2B66CAAE003C81C5;
 			packageReferences = (
 				C3A3AAFF2BBDF297008C707D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				C3E7F6F72BC48CC2002F68EA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 3D27CED62B66CAAE003C81C5 /* Products */;
 			projectDirPath = "";
@@ -410,6 +417,7 @@
 				C3E7F6CE2BC1E933002F68EA /* NetworkError.swift in Sources */,
 				C3A3AB0A2BBDF5D2008C707D /* Auth.swift in Sources */,
 				C3CBD4922BA7800A005968EF /* HomeCoordinator.swift in Sources */,
+				C3E7F6F62BC4898F002F68EA /* SignUpAction.swift in Sources */,
 				C32AA02E2BA73DFC00477E68 /* CarousalView.swift in Sources */,
 				C3A3AAFE2BBDC99B008C707D /* SignInAction.swift in Sources */,
 				C32221AD2BAB21A00063DDF2 /* HomeView.swift in Sources */,
@@ -642,6 +650,14 @@
 				minimumVersion = 4.0.1;
 			};
 		};
+		C3E7F6F72BC48CC2002F68EA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -649,6 +665,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C3A3AAFF2BBDF297008C707D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
 			productName = SwiftKeychainWrapper;
+		};
+		C3E7F6F82BC48CC2002F68EA /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3E7F6F72BC48CC2002F68EA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

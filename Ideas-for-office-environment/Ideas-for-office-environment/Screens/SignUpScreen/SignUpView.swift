@@ -14,6 +14,7 @@ struct SignUpView: View, KeyboardReadable {
     @State var emptyEmail = false
     @State var emptyPassword = false
     @State var emptyPasswordRepeat = false
+    @State var wrongPassword: Bool = false
     
     var body: some View {
         VStack(spacing: Constants.Spacing.verticalStack) {
@@ -58,24 +59,20 @@ struct SignUpView: View, KeyboardReadable {
                 }
 
                 VStack(alignment: .leading) {
-                    HybridTextField(text: $viewModel.passwordRepete, emptyField: $emptyPasswordRepeat, titleKey: S.repeatPassword)
+                    HybridTextField(text: $viewModel.passwordRepeate, emptyField: $emptyPasswordRepeat, titleKey: S.repeatPassword)
                     
-                    if emptyPasswordRepeat {
-                        Text(S.emptyPassword)
-                            .foregroundStyle(.red)
-                            .font(.footnote)
-                            .padding(.horizontal, Constants.Padding.main)
-                    }
                 }
             }
             VStack(spacing: Constants.Spacing.verticalStack) {
                 Button {
                     emptyEmail = viewModel.email.isEmpty
                     emptyPassword = viewModel.password.isEmpty
-                    emptyPasswordRepeat = viewModel.passwordRepete.isEmpty
+                    wrongPassword = viewModel.password != viewModel.passwordRepeate
                     
-                    if !emptyEmail && !emptyPassword && !emptyPasswordRepeat {
-                        coordinator.navigateToSignUpNextView()
+                    if !emptyEmail && !emptyPassword {
+                        if !wrongPassword {
+                            coordinator.navigateToSignUpNextView(viewModel: viewModel)
+                        }
                     }
                 } label: {
                     Text(S.signup)
@@ -107,6 +104,11 @@ struct SignUpView: View, KeyboardReadable {
         }
         .navigationBarHidden(true)
         .navigationTitle(S.registration)
+        .alert(S.wrongPassword, isPresented: $wrongPassword) {
+            Button(S.ok, role: .cancel) {
+                wrongPassword = false
+            }
+        }
     }
 }
 
