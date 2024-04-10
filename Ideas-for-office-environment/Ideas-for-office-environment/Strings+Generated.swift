@@ -14,8 +14,14 @@ internal enum S {
   internal static let email = S.tr("Localizable", "email", fallback: "Email")
   /// Email не может быть пустым
   internal static let emptyEmail = S.tr("Localizable", "emptyEmail", fallback: "Email не может быть пустым")
+  /// Должность не может быть пустой
+  internal static let emptyJob = S.tr("Localizable", "emptyJob", fallback: "Должность не может быть пустой")
+  /// Имя не может быть пустым
+  internal static let emptyName = S.tr("Localizable", "emptyName", fallback: "Имя не может быть пустым")
   /// Пароль не может быть пустым
   internal static let emptyPassword = S.tr("Localizable", "emptyPassword", fallback: "Пароль не может быть пустым")
+  /// Фамилия не может быть пустой
+  internal static let emptySurname = S.tr("Localizable", "emptySurname", fallback: "Фамилия не может быть пустой")
   /// Вход
   internal static let entry = S.tr("Localizable", "entry", fallback: "Вход")
   /// envelope

@@ -13,6 +13,9 @@ struct SignUpNextView: View, KeyboardReadable {
     @State private var inputImage: UIImage?
     @State private var image: Image?
     @ObservedObject var viewModel: SignUpViewModel
+    @State var emptyName = false
+    @State var emptySurname = false
+    @State var emptyJob = false
     
     var body: some View {
         ScrollView {
@@ -50,11 +53,38 @@ struct SignUpNextView: View, KeyboardReadable {
                         .ignoresSafeArea()
                 }
                 
-                CustomTextField(text: $viewModel.name, lable: "Имя", titleKey: "Ваше имя")
+                VStack(alignment: .leading) {
+                    CustomTextField(text: $viewModel.name, empty: $emptyName, lable: "Имя", titleKey: "Ваше имя")
+                    
+                    if emptyName {
+                        Text(S.emptyName)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                    }
+                }
                 
-                CustomTextField(text: $viewModel.surname, lable: "Фамилия", titleKey: "Ваша фамилия")
+                VStack(alignment: .leading) {
+                    CustomTextField(text: $viewModel.surname, empty: $emptySurname, lable: "Фамилия", titleKey: "Ваша фамилия")
+                    
+                    if emptySurname {
+                        Text(S.emptySurname)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                    }
+                }
                 
-                CustomTextField(text: $viewModel.job, lable: "Должность", titleKey: "Ваша должность")
+                VStack(alignment: .leading) {
+                    CustomTextField(text: $viewModel.job, empty: $emptyJob, lable: "Должность", titleKey: "Ваша должность")
+                    
+                    if emptyJob {
+                        Text(S.emptyJob)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
+                    }
+                }
                 
                 Text("Офис")
                     .font(.title3)
@@ -62,7 +92,13 @@ struct SignUpNextView: View, KeyboardReadable {
                 CarousalViewContainer(viewModel: viewModel)
                 
                 Button {
+                    emptyName = viewModel.name.isEmpty
+                    emptySurname = viewModel.surname.isEmpty
+                    emptyJob = viewModel.job.isEmpty
                     
+                    if !emptyName && !emptySurname && !emptyJob {
+                        print("Завершить регистрацию")
+                    }
                 } label: {
                     Text("Завершить регистрацию")
                         .foregroundStyle(.white)

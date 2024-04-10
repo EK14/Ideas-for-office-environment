@@ -9,7 +9,7 @@ import Foundation
 
 struct SignUpAction: Encodable {
     
-    var parameters: SignInRequest
+    var parameters: SignUpRequest
     
     func call(completion: @escaping (Result<SignInResponse, NetworkError>) -> Void) {
         

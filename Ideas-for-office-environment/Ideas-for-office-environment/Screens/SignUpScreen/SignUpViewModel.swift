@@ -30,7 +30,17 @@ class SignUpViewModel: ObservableObject {
     }
     
     func signUp() {
-        
+        SignUpAction(
+            parameters: SignUpRequest(
+                email: self.email,
+                password: self.password,
+                userInfo: UserDto(name: self.name,
+                                  surname: self.surname,
+                                  job: self.job,
+                                  photo: self.photo,
+                                  office: self.office))).call { response in
+                                      
+                                  }
     }
     
     func fetchOfficesData(completion: @escaping (Result<[Office], NetworkError>) -> Void){
