@@ -66,10 +66,9 @@ struct SignUpView: View, KeyboardReadable {
                     emptyEmail = viewModel.email.isEmpty
                     emptyPassword = viewModel.password.isEmpty
                     wrongPassword = viewModel.password != viewModel.passwordRepeate
-                    
-                    if !emptyEmail && !emptyPassword {
-                        if !wrongPassword {
-                            coordinator.navigateToSignUpNextView(viewModel: viewModel)
+                    viewModel.checkEmailValidation() { 
+                        if !emptyEmail && !emptyPassword && !viewModel.emailNotValid && !wrongPassword {
+                                coordinator.navigateToSignUpNextView(viewModel: viewModel)
                         }
                     }
                 } label: {
@@ -103,9 +102,10 @@ struct SignUpView: View, KeyboardReadable {
         .navigationBarHidden(true)
         .navigationTitle(S.registration)
         .alert(S.wrongPassword, isPresented: $wrongPassword) {
-            Button(S.ok, role: .cancel) {
-                wrongPassword = false
-            }
+            Button(S.ok, role: .cancel) {}
+        }
+        .alert(S.emailNotValid, isPresented: $viewModel.emailNotValid) {
+            Button(S.ok, role: .cancel) {}
         }
     }
 }

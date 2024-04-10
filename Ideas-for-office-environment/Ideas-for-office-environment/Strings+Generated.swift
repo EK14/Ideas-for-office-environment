@@ -12,6 +12,8 @@ import Foundation
 internal enum S {
   /// Email
   internal static let email = S.tr("Localizable", "email", fallback: "Email")
+  /// Пользователь c таким email уже существует
+  internal static let emailNotValid = S.tr("Localizable", "emailNotValid", fallback: "Пользователь c таким email уже существует")
   /// Email не может быть пустым
   internal static let emptyEmail = S.tr("Localizable", "emptyEmail", fallback: "Email не может быть пустым")
   /// Должность не может быть пустой

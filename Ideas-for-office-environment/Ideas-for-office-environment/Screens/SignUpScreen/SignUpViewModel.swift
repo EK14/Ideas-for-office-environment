@@ -17,6 +17,7 @@ class SignUpViewModel: ObservableObject {
     @Published var photo: String? = nil
     @Published var office: Int = .zero
     @Published var offices = [Office]()
+    @Published var emailNotValid = false
     
     init() {
         fetchOfficesData { [weak self] response in
@@ -81,5 +82,18 @@ class SignUpViewModel: ObservableObject {
             }
         }
         task.resume()
+    }
+    
+    func checkEmailValidation(completion: @escaping () -> Void) {
+        ValidationAction().call(email: email) { [weak self] result in
+            switch result {
+            case .success(_):
+                self?.emailNotValid = false
+                completion()
+            case .failure(_):
+                self?.emailNotValid = true
+                completion()
+            }
+        }
     }
 }
