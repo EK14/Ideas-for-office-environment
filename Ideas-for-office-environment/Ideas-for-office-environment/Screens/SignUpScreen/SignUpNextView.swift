@@ -97,7 +97,7 @@ struct SignUpNextView: View, KeyboardReadable {
                     emptyJob = viewModel.job.isEmpty
                     
                     if !emptyName && !emptySurname && !emptyJob {
-                        print("Завершить регистрацию")
+                        viewModel.signUp()
                     }
                 } label: {
                     Text("Завершить регистрацию")

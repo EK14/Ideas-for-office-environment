@@ -41,7 +41,15 @@ class SignUpViewModel: ObservableObject {
                                   job: self.job,
                                   photo: self.photo,
                                   office: self.office))).call { response in
-                                      
+                                      switch response {
+                                      case .success(let response):
+                                          Auth.shared.setCredentials(
+                                              accessToken: response.accessToken,
+                                              refreshToken: response.refreshToken
+                                          )
+                                      case .failure(_):
+                                          print("registration error")
+                                      }
                                   }
     }
     

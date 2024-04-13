@@ -44,7 +44,6 @@ struct CarousalViewContainer: View {
                                 withAnimation {
                                     self.isSelected = index
                                     viewModel.office = viewModel.offices[isSelected % viewModel.offices.count].id
-                                    print(viewModel.office)
                                 }
                             }
                         Text(office.address)
@@ -131,7 +130,6 @@ struct CarousalView: View {
             isSelected = (isSelected + 1) % offices.count
         }
         viewModel.office = viewModel.offices[isSelected >= 0 ? isSelected % viewModel.offices.count: (isSelected + viewModel.offices.count * 2) % viewModel.offices.count].id
-        print(viewModel.office)
     }
     
     func relativeLoc() -> Int {
