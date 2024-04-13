@@ -27,4 +27,5 @@
 "OK" = "OK";
 "wrongUser" = "Неправильный логин или пароль";
 "wrongPassword" = "Пароли не совпадают";
-"emailNotValid" = "Пользователь c таким email уже существует";
+"emailIsInUse" = "Пользователь c таким email уже существует";
+"emailNotValid" = "Ваш email неправильного формата";

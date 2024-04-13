@@ -42,6 +42,11 @@ struct SignUpView: View, KeyboardReadable {
                             .foregroundStyle(.red)
                             .font(.footnote)
                             .padding(.horizontal, Constants.Padding.main)
+                    } else if viewModel.emailFormatNotValid {
+                        Text(S.emailNotValid)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                            .padding(.horizontal, Constants.Padding.main)
                     }
                 }
                 
@@ -66,8 +71,9 @@ struct SignUpView: View, KeyboardReadable {
                     emptyEmail = viewModel.email.isEmpty
                     emptyPassword = viewModel.password.isEmpty
                     wrongPassword = viewModel.password != viewModel.passwordRepeate
-                    viewModel.checkEmailValidation() { 
-                        if !emptyEmail && !emptyPassword && !viewModel.emailNotValid && !wrongPassword {
+                    
+                    viewModel.checkEmailValidation() {
+                        if !emptyEmail && !emptyPassword && !viewModel.emailIsUsed && !wrongPassword && !viewModel.emailFormatNotValid {
                                 coordinator.navigateToSignUpNextView(viewModel: viewModel)
                         }
                     }
@@ -104,7 +110,7 @@ struct SignUpView: View, KeyboardReadable {
         .alert(S.wrongPassword, isPresented: $wrongPassword) {
             Button(S.ok, role: .cancel) {}
         }
-        .alert(S.emailNotValid, isPresented: $viewModel.emailNotValid) {
+        .alert(S.emailIsInUse, isPresented: $viewModel.emailIsUsed) {
             Button(S.ok, role: .cancel) {}
         }
     }

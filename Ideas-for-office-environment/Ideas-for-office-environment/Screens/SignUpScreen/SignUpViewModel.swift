@@ -17,7 +17,8 @@ class SignUpViewModel: ObservableObject {
     @Published var photo: String? = nil
     @Published var office: Int = .zero
     @Published var offices = [Office]()
-    @Published var emailNotValid = false
+    @Published var emailIsUsed = false
+    @Published var emailFormatNotValid = false
     
     init() {
         fetchOfficesData { [weak self] response in
@@ -85,15 +86,29 @@ class SignUpViewModel: ObservableObject {
     }
     
     func checkEmailValidation(completion: @escaping () -> Void) {
+        checkEmailFormat()
+        guard self.emailFormatNotValid else {
+            completion()
+            return
+        }
+        
         ValidationAction().call(email: email) { [weak self] result in
             switch result {
             case .success(_):
-                self?.emailNotValid = false
+                    self?.emailIsUsed = false
                 completion()
             case .failure(_):
-                self?.emailNotValid = true
+                self?.emailIsUsed = true
                 completion()
             }
         }
+    }
+    
+    func checkEmailFormat() {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        
+        self.emailFormatNotValid = emailPred.evaluate(with: email) ? false: true
     }
 }
