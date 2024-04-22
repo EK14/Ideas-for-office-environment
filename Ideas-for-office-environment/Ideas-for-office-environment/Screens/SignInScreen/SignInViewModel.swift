@@ -11,8 +11,10 @@ class SignInViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var wrongUser: Bool = false
+    @Published var isLoading = false
     
-    func signIn() {
+    func signIn(completion: @escaping () -> ()) {
+        isLoading = true
         SignInAction(
             parameters: SignInRequest(
                 email: email,
@@ -21,17 +23,16 @@ class SignInViewModel: ObservableObject {
         ).call { response in
             switch response {
             case .success(let response):
-                Auth.shared.setCredentials(
-                    accessToken: response.accessToken,
-                    refreshToken: response.refreshToken
-                )
+                    Auth.shared.setCredentials(
+                        accessToken: response.accessToken,
+                        refreshToken: response.refreshToken
+                    )
             case .failure(_):
-                self.wrongUser = true
+                DispatchQueue.main.async {
+                    self.wrongUser = true
+                    completion()
+                }
             }
         }
-    }
-    
-    func signUp() {
-        
     }
 }

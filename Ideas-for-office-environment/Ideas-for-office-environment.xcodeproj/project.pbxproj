@@ -35,6 +35,7 @@
 		C32AA0332BA74EC500477E68 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0322BA74EC500477E68 /* AppCoordinator.swift */; };
 		C32AA0362BA75A4600477E68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32AA0352BA75A4600477E68 /* SceneDelegate.swift */; };
 		C354E2BA2BCADA270071D81A /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354E2B92BCADA270071D81A /* SignUpResponse.swift */; };
+		C354E2BC2BCB13460071D81A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354E2BB2BCB13460071D81A /* LoadingView.swift */; };
 		C39118392BC72B5900A74485 /* ValidationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39118382BC72B5900A74485 /* ValidationAction.swift */; };
 		C3A3AAF82BBDC470008C707D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAF72BBDC470008C707D /* SignInViewModel.swift */; };
 		C3A3AAFA2BBDC606008C707D /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAF92BBDC606008C707D /* SignInRequest.swift */; };
@@ -84,6 +85,7 @@
 		C32AA0342BA7596000477E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32AA0352BA75A4600477E68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C354E2B92BCADA270071D81A /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		C354E2BB2BCB13460071D81A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C39118382BC72B5900A74485 /* ValidationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationAction.swift; sourceTree = "<group>"; };
 		C3A3AAF72BBDC470008C707D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C3A3AAF92BBDC606008C707D /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				C32AA02D2BA73DFC00477E68 /* CarousalView.swift */,
 				C32AA0262BA73D6100477E68 /* HybridTextField.swift */,
 				C32AA02B2BA73DC700477E68 /* CustomTextField.swift */,
+				C354E2BB2BCB13460071D81A /* LoadingView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				C32221B32BAB25570063DDF2 /* MyOfficeView.swift in Sources */,
 				C32AA0362BA75A4600477E68 /* SceneDelegate.swift in Sources */,
 				C39118392BC72B5900A74485 /* ValidationAction.swift in Sources */,
+				C354E2BC2BCB13460071D81A /* LoadingView.swift in Sources */,
 				C304BC872BA1081400256450 /* Office.swift in Sources */,
 				C32AA0332BA74EC500477E68 /* AppCoordinator.swift in Sources */,
 				3DC71B1D2B9328D000AA98C3 /* Strings+Generated.swift in Sources */,
