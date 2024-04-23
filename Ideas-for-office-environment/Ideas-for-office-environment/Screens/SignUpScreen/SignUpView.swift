@@ -42,7 +42,7 @@ struct SignUpView: View, KeyboardReadable {
                             .foregroundStyle(.red)
                             .font(.footnote)
                             .padding(.horizontal, Constants.Padding.main)
-                    } else if viewModel.emailFormatNotValid {
+                    } else if !viewModel.emailFormatValid {
                         Text(S.emailNotValid)
                             .foregroundStyle(.red)
                             .font(.footnote)
@@ -73,7 +73,7 @@ struct SignUpView: View, KeyboardReadable {
                     wrongPassword = viewModel.password != viewModel.passwordRepeate
                     
                     viewModel.checkEmailValidation() {
-                        if !emptyEmail && !emptyPassword && !viewModel.emailIsUsed && !wrongPassword && !viewModel.emailFormatNotValid {
+                        if !emptyEmail && !emptyPassword && !viewModel.emailIsUsed && !wrongPassword && viewModel.emailFormatValid {
                                 coordinator.navigateToSignUpNextView(viewModel: viewModel)
                         }
                     }

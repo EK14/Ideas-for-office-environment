@@ -18,7 +18,7 @@ class SignUpViewModel: ObservableObject {
     @Published var office: Int = .zero
     @Published var offices = [Office]()
     @Published var emailIsUsed = false
-    @Published var emailFormatNotValid = false
+    @Published var emailFormatValid = true
     
     init() {
         fetchOfficesData { [weak self] response in
@@ -95,7 +95,9 @@ class SignUpViewModel: ObservableObject {
     
     func checkEmailValidation(completion: @escaping () -> Void) {
         checkEmailFormat()
-        guard self.emailFormatNotValid else {
+        guard self.emailFormatValid else {
+            self.emailIsUsed = false
+            self.emailFormatValid = false
             completion()
             return
         }
@@ -103,7 +105,7 @@ class SignUpViewModel: ObservableObject {
         ValidationAction().call(email: email) { [weak self] result in
             switch result {
             case .success(_):
-                    self?.emailIsUsed = false
+                self?.emailIsUsed = false
                 completion()
             case .failure(_):
                 self?.emailIsUsed = true
@@ -117,6 +119,6 @@ class SignUpViewModel: ObservableObject {
         
         let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         
-        self.emailFormatNotValid = emailPred.evaluate(with: email) ? false: true
+        self.emailFormatValid = emailPred.evaluate(with: email) ? true: false
     }
 }
