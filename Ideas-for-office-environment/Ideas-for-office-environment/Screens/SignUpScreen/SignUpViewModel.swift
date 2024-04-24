@@ -5,7 +5,7 @@
 //  Created by Elina Karapetian on 07.04.2024.
 //
 
-import Foundation
+import UIKit
 
 class SignUpViewModel: ObservableObject {
     @Published var email: String = ""
@@ -14,7 +14,7 @@ class SignUpViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var surname: String = ""
     @Published var job: String = ""
-    @Published var photo: String? = nil
+    @Published var photo = UIImage(systemName: "camera")
     @Published var office: Int = .zero
     @Published var offices = [Office]()
     @Published var emailIsUsed = false
@@ -32,25 +32,29 @@ class SignUpViewModel: ObservableObject {
     }
     
     func signUp() {
-        SignUpAction(
-            parameters: SignUpRequest(
-                email: self.email,
-                password: self.password,
-                userInfo: UserDto(name: self.name,
-                                  surname: self.surname,
-                                  job: self.job,
-                                  photo: self.photo,
-                                  office: self.office))).call { response in
-                                      switch response {
-                                      case .success(let response):
-                                          Auth.shared.setCredentials(
-                                              accessToken: response.accessToken,
-                                              refreshToken: response.refreshToken
-                                          )
-                                      case .failure(_):
-                                          print("registration error")
-                                      }
-                                  }
+        if let photo = photo {
+            uploadImageToImgur(image: photo) { photoUrl in
+                        SignUpAction(
+                            parameters: SignUpRequest(
+                                email: self.email,
+                                password: self.password,
+                                userInfo: UserDto(name: self.name,
+                                                  surname: self.surname,
+                                                  job: self.job,
+                                                  photo: photoUrl,
+                                                  office: self.office))).call() { response in
+                                                      switch response {
+                                                      case .success(let response):
+                                                          Auth.shared.setCredentials(
+                                                            accessToken: response.accessToken,
+                                                            refreshToken: response.refreshToken
+                                                          )
+                                                      case .failure(_):
+                                                          print("registration error")
+                                                      }
+                                                  }
+            }
+        }
     }
     
     func fetchOfficesData(completion: @escaping (Result<[Office], NetworkError>) -> Void){
@@ -120,5 +124,56 @@ class SignUpViewModel: ObservableObject {
         let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         
         self.emailFormatValid = emailPred.evaluate(with: email) ? true: false
+    }
+    
+    func uploadImageToImgur(image: UIImage, completion: @escaping (String) -> ()) {
+        let base64Image = image.base64
+        let clientID = "c2dfea4ef4fa0fc"
+        let boundary = "Boundary-\(UUID().uuidString)"
+        
+        var request = URLRequest(url: URL(string: "https://api.imgur.com/3/image")!)
+        request.addValue("Client-ID \(clientID)", forHTTPHeaderField: "Authorization")
+        request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        request.httpMethod = "POST"
+        
+        var body = ""
+        body += "--\(boundary)\r\n"
+        body += "Content-Disposition:form-data; name=\"image\""
+        body += "\r\n\r\n\(base64Image ?? "")\r\n"
+        body += "--\(boundary)--\r\n"
+        let postData = body.data(using: .utf8)
+        
+        request.httpBody = postData
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("failed with error: \(error)")
+                return
+            }
+            guard let response = response as? HTTPURLResponse,
+                  (200...299).contains(response.statusCode) else {
+                print("server error")
+                return
+            }
+            if let mimeType = response.mimeType, mimeType == "application/json", let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("imgur upload results: \(dataString)")
+                
+                let parsedResult: [String: AnyObject]
+                do {
+                    parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: AnyObject]
+                    if let dataJson = parsedResult["data"] as? [String: Any] {
+                        if let url = dataJson["link"] as? String {
+                            completion(url)
+                        } else {
+                            print("Link not found")
+                        }
+                    }
+                } catch {
+                    // Display an error
+                }
+            }
+        }
+        .resume()
     }
 }

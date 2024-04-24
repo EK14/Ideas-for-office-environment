@@ -33,6 +33,7 @@ class Auth: ObservableObject {
     }
     
     func getCredentials() -> Credentials {
+        print(keychain.string(forKey: KeychainKey.accessToken.rawValue))
         return Credentials(
             accessToken: keychain.string(forKey: KeychainKey.accessToken.rawValue),
             refreshToken: keychain.string(forKey: KeychainKey.refreshToken.rawValue)
@@ -47,6 +48,16 @@ class Auth: ObservableObject {
             loggedIn.send(true)
         }
     }
+    
+    func saveUsernameInfo(name: String, surname: String, job: String) {
+        UserDefaults.standard.setValue(name, forKey: "name")
+        UserDefaults.standard.setValue(surname, forKey: "surname")
+        UserDefaults.standard.setValue(job, forKey: "job")
+    }
+    
+//    func getUsernameInfo() {
+//        UserDefaults.standard.get
+//    }
     
     func hasAccessToken() -> Bool {
         return getCredentials().accessToken != nil

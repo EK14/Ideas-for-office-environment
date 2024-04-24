@@ -6,103 +6,123 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProfileView: View {
-    @State var photo = "person"
-    @State var name = "Дмитрий Комарницкий"
-    @State var position = "Сотрудник Tinkoff"
-//    let signOut: () -> ()
+    @ObservedObject var viewModel = ProfileViewModel()
     
     var body: some View {
-        VStack {
+        ZStack {
             VStack {
-                Image(systemName: photo)
-                    .font(.headline)
-                    .imageScale(.large)
-                    .foregroundStyle(.blue)
-                    .frame(width: 150, height: 150)
-                    .background(.blue.opacity(0.25))
-                    .cornerRadius(50)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 50)
-                            .stroke(.blue, lineWidth: 1)
-                    )
-                    .padding(1)
+                VStack {
+                    if let photo = viewModel.photo {
+                        AnimatedImage(url: URL(string: photo))
+                            .resizable()
+                            .scaledToFill()
+                            .foregroundStyle(.blue)
+                            .frame(width: 150, height: 150)
+                            .background(.blue.opacity(0.25))
+                            .cornerRadius(50)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 50)
+                                    .stroke(.blue, lineWidth: 1)
+                            )
+                            .padding(1)
+                    } else {
+                        Image(systemName: "camera")
+                            .font(.headline)
+                            .imageScale(.large)
+                            .foregroundStyle(.blue)
+                            .frame(width: 150, height: 150)
+                            .background(.blue.opacity(0.25))
+                            .cornerRadius(50)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 50)
+                                    .stroke(.blue, lineWidth: 1)
+                            )
+                            .padding(1)
+                    }
+                    
+                    Text(viewModel.name)
+                        .font(.system(size: 24))
+                    
+                    Text(viewModel.position)
+                        .font(.system(size: 15))
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(LinearGradient(colors: [.white, .gray], startPoint: .top, endPoint: .bottom), lineWidth: 1)
+                )
+                .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 
-                Text(name)
-                    .font(.system(size: 24))
+                VStack() {
+                    HStack(spacing: 20) {
+                        Image("settings")
+                            .frame(width: 30)
+                        Text("Настроить профиль")
+                            .font(.system(size: 16))
+                    }
+                    .padding(.vertical, 5)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .onTapGesture {
+                        print("Настроить профиль")
+                    }
+                    
+                    HStack(spacing: 20) {
+                        Image("myoffice")
+                            .frame(width: 30)
+                        Text("Мой офис")
+                            .font(.system(size: 16))
+                    }
+                    .padding(.vertical, 5)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .onTapGesture {
+                        print("Мой офис")
+                    }
+                    
+                    HStack(spacing: 20) {
+                        Image("myideas")
+                            .frame(width: 30)
+                        Text("Мой идеи")
+                            .font(.system(size: 16))
+                    }
+                    .padding(.vertical, 5)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .onTapGesture {
+                        print("Мой идеи")
+                    }
+                }
+                .padding(.vertical, 16)
+                .padding(.horizontal, 20)
                 
-                Text(position)
-                    .font(.system(size: 15))
+                Button(action: {
+                    Auth.shared.logout()
+                }, label: {
+                    Text("Выйти")
+                        .font(.system(size: 15))
+                })
+                .padding(.vertical, 10)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+                .border(width: 1, edges: [.top], color: .blue)
+                .padding(.horizontal, 20)
+                
+                Spacer()
+                
             }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(LinearGradient(colors: [.white, .gray], startPoint: .top, endPoint: .bottom), lineWidth: 1)
-            )
-            .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
-            
-            VStack() {
-                HStack(spacing: 20) {
-                    Image("settings")
-                        .frame(width: 30)
-                    Text("Настроить профиль")
-                        .font(.system(size: 16))
-                }
-                .padding(.vertical, 5)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .onTapGesture {
-                    print("Настроить профиль")
-                }
-                
-                HStack(spacing: 20) {
-                    Image("myoffice")
-                        .frame(width: 30)
-                    Text("Мой офис")
-                        .font(.system(size: 16))
-                }
-                .padding(.vertical, 5)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .onTapGesture {
-                    print("Мой офис")
-                }
-                
-                HStack(spacing: 20) {
-                    Image("myideas")
-                        .frame(width: 30)
-                    Text("Мой идеи")
-                        .font(.system(size: 16))
-                }
-                .padding(.vertical, 5)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .onTapGesture {
-                    print("Мой идеи")
+            .onAppear {
+                viewModel.getUserInfo() {
+                    viewModel.isLoading = false
                 }
             }
-            .padding(.vertical, 16)
-            .padding(.horizontal, 20)
             
-            Button(action: {
-                Auth.shared.logout()
-            }, label: {
-                Text("Выйти")
-                    .font(.system(size: 15))
-            })
-            .padding(.vertical, 10)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.vertical, 10)
-            .border(width: 1, edges: [.top], color: .blue)
-            .padding(.horizontal, 20)
-            
-            Spacer()
-            
+            if viewModel.isLoading {
+                LoadingView()
+            }
         }
     }
-}
-
-#Preview {
-    ProfileView()
 }
 
 extension View {

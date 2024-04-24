@@ -119,6 +119,7 @@ struct SignUpNextView: View, KeyboardReadable {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
+        viewModel.photo = inputImage
     }
 }
 

@@ -49,7 +49,6 @@ class MainCoordinator: Coordinator {
         self.rootViewController.viewControllers = [homeVC, favoritesVC, myOfficeVC, profileVC]
     }
     
-    //TO DO
     func setup(vc: UIViewController, title: String, imageName: String, selectedImageName: String) {
         let defaultImage = UIImage(systemName: imageName)
         let selectedImage = UIImage(systemName: selectedImageName)
