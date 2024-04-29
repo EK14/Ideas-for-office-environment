@@ -9,7 +9,7 @@ import Foundation
 import SDWebImageSwiftUI
 
 class ProfileViewModel: ObservableObject {
-    @Published var photo: String? = nil
+    @Published var photo = ""
     @Published var name = ""
     @Published var surname = ""
     @Published var job = ""
@@ -38,7 +38,24 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
-    func saveUserInfo() {
-        
+    func saveUserInfo(completion: @escaping () -> ()) {
+        print(UserDto(name: name,
+                      surname: surname,
+                      job: job,
+                      photo: "",
+                      office: office.id))
+        SaveUserInfoAction(parameters: UserDto(name: name,
+                                               surname: surname,
+                                               job: job,
+                                               photo: "",
+                                               office: office.id)).call { result in
+            switch result {
+            case .success(let success):
+                print("success")
+            case .failure(let failure):
+                print("failure")
+            }
+            completion()
+        }
     }
 }

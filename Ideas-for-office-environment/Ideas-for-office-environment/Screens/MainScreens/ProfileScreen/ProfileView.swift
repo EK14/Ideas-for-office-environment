@@ -16,8 +16,8 @@ struct ProfileView: View {
         ZStack {
             VStack {
                 VStack {
-                    if let photo = viewModel.photo {
-                        AnimatedImage(url: URL(string: photo))
+                    if viewModel.photo != "" {
+                        AnimatedImage(url: URL(string: viewModel.photo))
                             .resizable()
                             .scaledToFill()
                             .foregroundStyle(.blue)

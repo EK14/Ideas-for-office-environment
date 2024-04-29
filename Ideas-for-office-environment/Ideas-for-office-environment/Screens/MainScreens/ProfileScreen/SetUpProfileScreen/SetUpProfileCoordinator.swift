@@ -18,8 +18,12 @@ class SetUpProfileCoordinator: Coordinator {
     }
     
     func start() {
-        let view = SetUpProfileView(viewModel: SignUpViewModel(), setupProfileViewModel: setupProfileViewModel)
+        let view = SetUpProfileView(viewModel: SignUpViewModel(), setupProfileViewModel: setupProfileViewModel, coordinator: self)
         let hostingController = UIHostingController(rootView: view)
         navigationController.pushViewController(hostingController, animated: true)
+    }
+    
+    func didTapSaveInfo() {
+        navigationController.popViewController(animated: true)
     }
 }

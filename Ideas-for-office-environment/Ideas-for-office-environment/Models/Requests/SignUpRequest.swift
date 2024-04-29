@@ -17,6 +17,6 @@ struct UserDto: Encodable {
     let name: String
     let surname: String
     let job: String
-    let photo: String?
+    let photo: String
     let office: Int
 }

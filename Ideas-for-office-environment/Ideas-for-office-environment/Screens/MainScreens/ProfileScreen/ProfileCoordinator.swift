@@ -18,11 +18,16 @@ class ProfileCoordinator: Coordinator {
         return vc
     }()
     
+    lazy var setupProfileCoordinator: SetUpProfileCoordinator = {
+        var coordinator = SetUpProfileCoordinator(navigationController: rootViewController, setupProfileViewModel: profileViewModel)
+        return coordinator
+    }()
+    
     func start() {
         rootViewController.setViewControllers([ProfileVC], animated: true)
     }
     
     func setupProfile() {
-        rootViewController.pushViewController(UIHostingController(rootView: SetUpProfileView(viewModel: viewModel, setupProfileViewModel: profileViewModel)), animated: true)
+        setupProfileCoordinator.start()
     }
 }

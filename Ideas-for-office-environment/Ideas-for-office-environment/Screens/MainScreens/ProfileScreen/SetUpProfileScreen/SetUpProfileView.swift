@@ -18,6 +18,7 @@ struct SetUpProfileView: View, KeyboardReadable {
     @State var emptyName = false
     @State var emptySurname = false
     @State var emptyJob = false
+    var coordinator: SetUpProfileCoordinator
     
     var body: some View {
         ZStack {
@@ -38,9 +39,9 @@ struct SetUpProfileView: View, KeyboardReadable {
                                     .imageScale(.large)
                                     .foregroundStyle(.blue)
                             }
-                        }else if let image = setupProfileViewModel.photo {
+                        }else if setupProfileViewModel.photo != "" {
                             ZStack {
-                                AnimatedImage(url: URL(string: image))
+                                AnimatedImage(url: URL(string: setupProfileViewModel.photo))
                                     .resizable()
                                     .scaledToFill()
                                 
@@ -120,8 +121,9 @@ struct SetUpProfileView: View, KeyboardReadable {
                         emptyJob = setupProfileViewModel.job.isEmpty
                         
                         if !emptyName && !emptySurname && !emptyJob {
-                            setupProfileViewModel.saveUserInfo()
-                            print(setupProfileViewModel.office)
+                            setupProfileViewModel.saveUserInfo {
+                                coordinator.didTapSaveInfo()
+                            }
                         }
                     } label: {
                         Text("Сохранить")
