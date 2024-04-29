@@ -19,17 +19,7 @@ class SignUpViewModel: ObservableObject {
     @Published var offices = [Office]()
     @Published var emailIsUsed = false
     @Published var emailFormatValid = true
-    
-    init() {
-        fetchOfficesData { [weak self] response in
-            switch response {
-            case .success(let data):
-                self?.offices = data + data
-            case .failure(_):
-                print("Could not fetch offices")
-            }
-        }
-    }
+    @Published var isLoading = false
     
     func signUp() {
         if let photo = photo {
@@ -53,6 +43,21 @@ class SignUpViewModel: ObservableObject {
                                                           print("registration error")
                                                       }
                                                   }
+            }
+        }
+    }
+    
+    func fetchOffices(completion: @escaping () -> ()) {
+        isLoading = true
+        fetchOfficesData { [weak self] response in
+            switch response {
+            case .success(let data):
+                self?.offices = data + data
+            case .failure(_):
+                print("Could not fetch offices")
+            }
+            DispatchQueue.main.async {
+                completion()
             }
         }
     }

@@ -12,9 +12,13 @@ struct CarousalViewContainer: View {
     
     @State var isSelected: Int = 0
     @ObservedObject var viewModel: SignUpViewModel
+    @State var id: Int = 0
     
     var body: some View {
         CarousalView(viewModel: viewModel, isSelected: $isSelected, itemHeight: 500, offices: getViews())
+            .onAppear {
+                self.isSelected = self.id
+            }
     }
     
     func imageView(name: String) -> some View {
@@ -94,8 +98,6 @@ struct CarousalView: View {
             ZStack {
                 ForEach(0..<offices.count) { i in
                     VStack {
-                        Spacer()
-
                         VStack {
                             self.offices[i]
                                 .frame(width: 180)
@@ -107,8 +109,6 @@ struct CarousalView: View {
                                 .animation(.interpolatingSpring(stiffness: 180, damping: 30, initialVelocity: 10))
                             
                         }
-
-                        Spacer()
                     }
                 }
             }

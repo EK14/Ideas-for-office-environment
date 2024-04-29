@@ -11,7 +11,9 @@ import SDWebImageSwiftUI
 class ProfileViewModel: ObservableObject {
     @Published var photo: String? = nil
     @Published var name = ""
-    @Published var position = ""
+    @Published var surname = ""
+    @Published var job = ""
+    @Published var office = Office(id: 0, imageUrl: "", address: "")
     @Published var isLoading = false
     
     func getUserInfo(completion: @escaping () -> ()) {
@@ -21,8 +23,10 @@ class ProfileViewModel: ObservableObject {
             case .success(let userInfo):
                 DispatchQueue.main.async {
                     self?.photo = userInfo.photo
-                    self?.name = "\(userInfo.name) \(userInfo.surname)"
-                    self?.position = userInfo.job
+                    self?.name = userInfo.name
+                    self?.surname = userInfo.surname
+                    self?.job = userInfo.job
+                    self?.office = userInfo.office
                     completion()
                 }
             case .failure(_):
@@ -32,5 +36,9 @@ class ProfileViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func saveUserInfo() {
+        
     }
 }

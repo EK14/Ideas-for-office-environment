@@ -1,18 +1,20 @@
 //
-//  SignUpNextView.swift
+//  SetUpProfileView.swift
 //  Ideas-for-office-environment
 //
-//  Created by Elina Karapetian on 10.03.2024.
+//  Created by Elina Karapetian on 29.04.2024.
 //
 
 import SwiftUI
 import PhotosUI
+import SDWebImageSwiftUI
 
-struct SignUpNextView: View, KeyboardReadable {
+struct SetUpProfileView: View, KeyboardReadable {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var image: Image?
     @ObservedObject var viewModel: SignUpViewModel
+    @ObservedObject var setupProfileViewModel: ProfileViewModel
     @State var emptyName = false
     @State var emptySurname = false
     @State var emptyJob = false
@@ -25,10 +27,28 @@ struct SignUpNextView: View, KeyboardReadable {
                         .font(.title3)
                     
                     Group{
-                        if let image = image {
-                            image
-                                .resizable()
-                                .scaledToFill()
+                        if let photo = inputImage {
+                            ZStack {
+                                Image(uiImage: photo)
+                                    .resizable()
+                                    .scaledToFill()
+                                
+                                Image(systemName: "camera")
+                                    .font(.headline)
+                                    .imageScale(.large)
+                                    .foregroundStyle(.blue)
+                            }
+                        }else if let image = setupProfileViewModel.photo {
+                            ZStack {
+                                AnimatedImage(url: URL(string: image))
+                                    .resizable()
+                                    .scaledToFill()
+                                
+                                Image(systemName: "camera")
+                                    .font(.headline)
+                                    .imageScale(.large)
+                                    .foregroundStyle(.blue)
+                            }
                         } else {
                             Image(systemName: "camera")
                                 .font(.headline)
@@ -41,7 +61,7 @@ struct SignUpNextView: View, KeyboardReadable {
                     .cornerRadius(20)
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
-                            .stroke(image == nil ? .blue: .gray, lineWidth: 2)
+                            .stroke(.gray, lineWidth: 2)
                     )
                     .onTapGesture {
                         showingImagePicker = true
@@ -55,7 +75,7 @@ struct SignUpNextView: View, KeyboardReadable {
                     }
                     
                     VStack(alignment: .leading) {
-                        CustomTextField(text: $viewModel.name, empty: $emptyName, lable: "Имя", titleKey: "Ваше имя")
+                        CustomTextField(text: $setupProfileViewModel.name, empty: $emptyName, lable: "Имя", titleKey: "Ваше имя")
                         
                         if emptyName {
                             Text(S.emptyName)
@@ -66,7 +86,7 @@ struct SignUpNextView: View, KeyboardReadable {
                     }
                     
                     VStack(alignment: .leading) {
-                        CustomTextField(text: $viewModel.surname, empty: $emptySurname, lable: "Фамилия", titleKey: "Ваша фамилия")
+                        CustomTextField(text: $setupProfileViewModel.surname, empty: $emptySurname, lable: "Фамилия", titleKey: "Ваша фамилия")
                         
                         if emptySurname {
                             Text(S.emptySurname)
@@ -77,7 +97,7 @@ struct SignUpNextView: View, KeyboardReadable {
                     }
                     
                     VStack(alignment: .leading) {
-                        CustomTextField(text: $viewModel.job, empty: $emptyJob, lable: "Должность", titleKey: "Ваша должность")
+                        CustomTextField(text: $setupProfileViewModel.job, empty: $emptyJob, lable: "Должность", titleKey: "Ваша должность")
                         
                         if emptyJob {
                             Text(S.emptyJob)
@@ -91,19 +111,20 @@ struct SignUpNextView: View, KeyboardReadable {
                         .font(.title3)
                     
                     if !viewModel.isLoading {
-                        CarousalViewContainer(viewModel: viewModel)
+                        CarousalViewContainer(viewModel: viewModel, id: setupProfileViewModel.office.id - 1)
                     }
                     
                     Button {
-                        emptyName = viewModel.name.isEmpty
-                        emptySurname = viewModel.surname.isEmpty
-                        emptyJob = viewModel.job.isEmpty
+                        emptyName = setupProfileViewModel.name.isEmpty
+                        emptySurname = setupProfileViewModel.surname.isEmpty
+                        emptyJob = setupProfileViewModel.job.isEmpty
                         
                         if !emptyName && !emptySurname && !emptyJob {
-                            viewModel.signUp()
+                            setupProfileViewModel.saveUserInfo()
+                            print(setupProfileViewModel.office)
                         }
                     } label: {
-                        Text("Завершить регистрацию")
+                        Text("Сохранить")
                             .foregroundStyle(.white)
                             .padding(.horizontal, Constants.Button.Padding.horizontal)
                             .padding(.vertical, Constants.Button.Padding.vertical)
@@ -132,54 +153,7 @@ struct SignUpNextView: View, KeyboardReadable {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-        viewModel.photo = inputImage
+//        viewModel.photo = inputImage
     }
 }
-
-struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var image: UIImage?
-
-    func makeUIViewController(context: Context) -> PHPickerViewController {
-        var config = PHPickerConfiguration()
-        config.filter = .images
-        let picker = PHPickerViewController(configuration: config)
-        picker.delegate = context.coordinator
-        return picker
-    }
-
-    func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {
-
-    }
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-
-    class Coordinator: NSObject, PHPickerViewControllerDelegate {
-        let parent: ImagePicker
-
-        init(_ parent: ImagePicker) {
-            self.parent = parent
-        }
-
-        func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            picker.dismiss(animated: true)
-
-            guard let provider = results.first?.itemProvider else { return }
-
-            if provider.canLoadObject(ofClass: UIImage.self) {
-                provider.loadObject(ofClass: UIImage.self) { image, _ in
-                    self.parent.image = image as? UIImage
-                }
-            }
-        }
-    }
-}
-
-#Preview {
-    let vm = SignUpViewModel()
-    
-    return SignUpNextView(viewModel: vm)
-}
-
 

@@ -10,13 +10,19 @@ import SwiftUI
 class ProfileCoordinator: Coordinator {
     
     var rootViewController = UINavigationController()
+    var viewModel = SignUpViewModel()
+    var profileViewModel = ProfileViewModel()
     
     lazy var ProfileVC: UIHostingController = {
-        var vc = UIHostingController(rootView: ProfileView())
+        var vc = UIHostingController(rootView: ProfileView(viewModel: profileViewModel, coordinator: self))
         return vc
     }()
     
     func start() {
         rootViewController.setViewControllers([ProfileVC], animated: true)
+    }
+    
+    func setupProfile() {
+        rootViewController.pushViewController(UIHostingController(rootView: SetUpProfileView(viewModel: viewModel, setupProfileViewModel: profileViewModel)), animated: true)
     }
 }

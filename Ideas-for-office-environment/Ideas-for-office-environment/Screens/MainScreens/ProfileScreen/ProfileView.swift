@@ -9,7 +9,8 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct ProfileView: View {
-    @ObservedObject var viewModel = ProfileViewModel()
+    @ObservedObject var viewModel: ProfileViewModel
+    var coordinator: ProfileCoordinator
     
     var body: some View {
         ZStack {
@@ -43,10 +44,10 @@ struct ProfileView: View {
                             .padding(1)
                     }
                     
-                    Text(viewModel.name)
+                    Text("\(viewModel.name) \(viewModel.surname)")
                         .font(.system(size: 24))
                     
-                    Text(viewModel.position)
+                    Text(viewModel.job)
                         .font(.system(size: 15))
                 }
                 .frame(maxWidth: .infinity)
@@ -67,7 +68,7 @@ struct ProfileView: View {
                     .padding(.vertical, 5)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .onTapGesture {
-                        print("Настроить профиль")
+                        coordinator.setupProfile()
                     }
                     
                     HStack(spacing: 20) {
