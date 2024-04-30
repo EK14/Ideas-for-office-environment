@@ -13,7 +13,7 @@ struct SetUpProfileView: View, KeyboardReadable {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var image: Image?
-    @ObservedObject var viewModel: SignUpViewModel
+//    @ObservedObject var viewModel: SignUpViewModel
     @ObservedObject var setupProfileViewModel: ProfileViewModel
     @State var emptyName = false
     @State var emptySurname = false
@@ -111,8 +111,8 @@ struct SetUpProfileView: View, KeyboardReadable {
                     Text("Офис")
                         .font(.title3)
                     
-                    if !viewModel.isLoading {
-                        CarousalViewContainer(viewModel: viewModel, id: setupProfileViewModel.office.id - 1)
+                    if !setupProfileViewModel.isLoading {
+                        CarousalViewContainer(viewModel: setupProfileViewModel, id: setupProfileViewModel.office - 1)
                     }
                     
                     Button {
@@ -141,13 +141,14 @@ struct SetUpProfileView: View, KeyboardReadable {
                 hideKeyboard()
             }
             
-            if viewModel.isLoading {
+            if setupProfileViewModel.isLoading {
                 LoadingView()
             }
         }
         .onAppear {
-            viewModel.fetchOffices {
-                viewModel.isLoading = false
+            setupProfileViewModel.fetchOffices {
+                setupProfileViewModel.isLoading = false
+                print(setupProfileViewModel.office)
             }
         }
     }

@@ -8,10 +8,15 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct CarousalViewContainer: View {
+protocol CarousalViewContainerViewModel: ObservableObject {
+    var office: Int { get set }
+    var offices: [Office] { get set }
+}
+
+struct CarousalViewContainer<ViewModel: CarousalViewContainerViewModel>: View {
     
     @State var isSelected: Int = 0
-    @ObservedObject var viewModel: SignUpViewModel
+    @ObservedObject var viewModel: ViewModel
     @State var id: Int = 0
     
     var body: some View {
@@ -84,10 +89,10 @@ enum DragState {
     }
 }
 
-struct CarousalView: View {
+struct CarousalView<ViewModel: CarousalViewContainerViewModel>: View {
     
     @GestureState private var dragState = DragState.inactive
-    @ObservedObject var viewModel: SignUpViewModel
+    @ObservedObject var viewModel: ViewModel
     @Binding var isSelected: Int
     
     var itemHeight: CGFloat

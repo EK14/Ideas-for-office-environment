@@ -8,12 +8,13 @@
 import Foundation
 import SDWebImageSwiftUI
 
-class ProfileViewModel: ObservableObject {
+class ProfileViewModel: CarousalViewContainerViewModel {
     @Published var photo = ""
     @Published var name = ""
     @Published var surname = ""
     @Published var job = ""
-    @Published var office = Office(id: 0, imageUrl: "", address: "")
+    @Published var office: Int = .zero
+    @Published var offices = [Office]()
     @Published var isLoading = false
     
     func getUserInfo(completion: @escaping () -> ()) {
@@ -26,7 +27,7 @@ class ProfileViewModel: ObservableObject {
                     self?.name = userInfo.name
                     self?.surname = userInfo.surname
                     self?.job = userInfo.job
-                    self?.office = userInfo.office
+                    self?.office = userInfo.office.id
                     completion()
                 }
             case .failure(_):
@@ -43,12 +44,12 @@ class ProfileViewModel: ObservableObject {
                       surname: surname,
                       job: job,
                       photo: "",
-                      office: office.id))
+                      office: office))
         SaveUserInfoAction(parameters: UserDto(name: name,
                                                surname: surname,
                                                job: job,
                                                photo: "",
-                                               office: office.id)).call { result in
+                                               office: office)).call { result in
             switch result {
             case .success(let success):
                 print("success")
@@ -56,6 +57,21 @@ class ProfileViewModel: ObservableObject {
                 print("failure")
             }
             completion()
+        }
+    }
+    
+    func fetchOffices(completion: @escaping () -> ()) {
+        isLoading = true
+        FetchOfficesAction().call { [weak self] response in
+            switch response {
+            case .success(let data):
+                self?.offices = data + data
+            case .failure(_):
+                print("Could not fetch offices")
+            }
+            DispatchQueue.main.async {
+                completion()
+            }
         }
     }
 }
