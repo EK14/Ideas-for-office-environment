@@ -9,12 +9,13 @@ import Foundation
 import SDWebImageSwiftUI
 
 class ProfileViewModel: CarousalViewContainerViewModel {
-    @Published var photo = ""
+    @Published var photoUrl = ""
     @Published var name = ""
     @Published var surname = ""
     @Published var job = ""
     @Published var office: Int = .zero
     @Published var offices = [Office]()
+    @Published var photo: UIImage?
     @Published var isLoading = false
     
     func getUserInfo(completion: @escaping () -> ()) {
@@ -23,7 +24,7 @@ class ProfileViewModel: CarousalViewContainerViewModel {
             switch result {
             case .success(let userInfo):
                 DispatchQueue.main.async {
-                    self?.photo = userInfo.photo
+                    self?.photoUrl = userInfo.photo
                     self?.name = userInfo.name
                     self?.surname = userInfo.surname
                     self?.job = userInfo.job
@@ -40,23 +41,23 @@ class ProfileViewModel: CarousalViewContainerViewModel {
     }
     
     func saveUserInfo(completion: @escaping () -> ()) {
-        print(UserDto(name: name,
-                      surname: surname,
-                      job: job,
-                      photo: "",
-                      office: office))
-        SaveUserInfoAction(parameters: UserDto(name: name,
-                                               surname: surname,
-                                               job: job,
-                                               photo: "",
-                                               office: office)).call { result in
-            switch result {
-            case .success(let success):
-                print("success")
-            case .failure(let failure):
-                print("failure")
+        isLoading = true
+        if let photo = photo {
+            UploadImageAction().call(image: photo) { photoUrl in
+                SaveUserInfoAction(parameters: UserDto(name: self.name,
+                                                       surname: self.surname,
+                                                       job: self.job,
+                                                       photo: photoUrl,
+                                                       office: self.office)).call { result in
+                    switch result {
+                    case .success(let success):
+                        print("success")
+                    case .failure(let failure):
+                        print("failure")
+                    }
+                    completion()
+                }
             }
-            completion()
         }
     }
     

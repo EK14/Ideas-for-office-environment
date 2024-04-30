@@ -13,7 +13,6 @@ struct SetUpProfileView: View, KeyboardReadable {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var image: Image?
-//    @ObservedObject var viewModel: SignUpViewModel
     @ObservedObject var setupProfileViewModel: ProfileViewModel
     @State var emptyName = false
     @State var emptySurname = false
@@ -39,9 +38,9 @@ struct SetUpProfileView: View, KeyboardReadable {
                                     .imageScale(.large)
                                     .foregroundStyle(.blue)
                             }
-                        }else if setupProfileViewModel.photo != "" {
+                        } else {
                             ZStack {
-                                AnimatedImage(url: URL(string: setupProfileViewModel.photo))
+                                AnimatedImage(url: URL(string: setupProfileViewModel.photoUrl))
                                     .resizable()
                                     .scaledToFill()
                                 
@@ -50,11 +49,6 @@ struct SetUpProfileView: View, KeyboardReadable {
                                     .imageScale(.large)
                                     .foregroundStyle(.blue)
                             }
-                        } else {
-                            Image(systemName: "camera")
-                                .font(.headline)
-                                .imageScale(.large)
-                                .foregroundStyle(.blue)
                         }
                     }
                     .frame(width: 180, height: 180)
@@ -143,6 +137,7 @@ struct SetUpProfileView: View, KeyboardReadable {
             
             if setupProfileViewModel.isLoading {
                 LoadingView()
+                    .ignoresSafeArea()
             }
         }
         .onAppear {
@@ -156,7 +151,7 @@ struct SetUpProfileView: View, KeyboardReadable {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-//        viewModel.photo = inputImage
+        setupProfileViewModel.photo = inputImage
     }
 }
 

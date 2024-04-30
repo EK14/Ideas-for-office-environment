@@ -16,33 +16,18 @@ struct ProfileView: View {
         ZStack {
             VStack {
                 VStack {
-                    if viewModel.photo != "" {
-                        AnimatedImage(url: URL(string: viewModel.photo))
-                            .resizable()
-                            .scaledToFill()
-                            .foregroundStyle(.blue)
-                            .frame(width: 150, height: 150)
-                            .background(.blue.opacity(0.25))
-                            .cornerRadius(50)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 50)
-                                    .stroke(.blue, lineWidth: 1)
-                            )
-                            .padding(1)
-                    } else {
-                        Image(systemName: "camera")
-                            .font(.headline)
-                            .imageScale(.large)
-                            .foregroundStyle(.blue)
-                            .frame(width: 150, height: 150)
-                            .background(.blue.opacity(0.25))
-                            .cornerRadius(50)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 50)
-                                    .stroke(.blue, lineWidth: 1)
-                            )
-                            .padding(1)
-                    }
+                    AnimatedImage(url: URL(string: viewModel.photoUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .foregroundStyle(.blue)
+                        .frame(width: 150, height: 150)
+                        .background(.blue.opacity(0.25))
+                        .cornerRadius(50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 50)
+                                .stroke(.gray, lineWidth: 1)
+                        )
+                        .padding(1)
                     
                     Text("\(viewModel.name) \(viewModel.surname)")
                         .font(.system(size: 24))

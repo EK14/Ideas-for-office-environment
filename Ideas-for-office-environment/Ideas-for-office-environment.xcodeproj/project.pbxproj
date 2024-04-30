@@ -46,6 +46,7 @@
 		C39CB1412BDFC66C008B8537 /* SetUpProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CB1402BDFC66C008B8537 /* SetUpProfileCoordinator.swift */; };
 		C39CB1452BDFFC76008B8537 /* SaveUserInfoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CB1442BDFFC76008B8537 /* SaveUserInfoAction.swift */; };
 		C39CB1482BE10E64008B8537 /* FetchOfficesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CB1472BE10E64008B8537 /* FetchOfficesAction.swift */; };
+		C39CB14A2BE1138D008B8537 /* UploadImageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CB1492BE1138D008B8537 /* UploadImageAction.swift */; };
 		C3A3AAF82BBDC470008C707D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAF72BBDC470008C707D /* SignInViewModel.swift */; };
 		C3A3AAFA2BBDC606008C707D /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAF92BBDC606008C707D /* SignInRequest.swift */; };
 		C3A3AAFC2BBDC90A008C707D /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAFB2BBDC90A008C707D /* SignInResponse.swift */; };
@@ -105,6 +106,7 @@
 		C39CB1402BDFC66C008B8537 /* SetUpProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfileCoordinator.swift; sourceTree = "<group>"; };
 		C39CB1442BDFFC76008B8537 /* SaveUserInfoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserInfoAction.swift; sourceTree = "<group>"; };
 		C39CB1472BE10E64008B8537 /* FetchOfficesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FetchOfficesAction.swift; path = ../../../../../../../Documents/FetchOfficesAction.swift; sourceTree = "<group>"; };
+		C39CB1492BE1138D008B8537 /* UploadImageAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageAction.swift; sourceTree = "<group>"; };
 		C3A3AAF72BBDC470008C707D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C3A3AAF92BBDC606008C707D /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		C3A3AAFB2BBDC90A008C707D /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				C3A3AAFD2BBDC99B008C707D /* SignInAction.swift */,
 				C39CB1442BDFFC76008B8537 /* SaveUserInfoAction.swift */,
 				C39CB1472BE10E64008B8537 /* FetchOfficesAction.swift */,
+				C39CB1492BE1138D008B8537 /* UploadImageAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				C3A3AAFA2BBDC606008C707D /* SignInRequest.swift in Sources */,
 				C32AA02C2BA73DC700477E68 /* CustomTextField.swift in Sources */,
 				3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */,
+				C39CB14A2BE1138D008B8537 /* UploadImageAction.swift in Sources */,
 				C39CB1412BDFC66C008B8537 /* SetUpProfileCoordinator.swift in Sources */,
 				C32221B82BAB3A880063DDF2 /* ProfileCoordinator.swift in Sources */,
 				C32AA0312BA73EA300477E68 /* Coordinator.swift in Sources */,
