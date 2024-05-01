@@ -12,11 +12,16 @@ class HomeCoordinator: Coordinator {
     var rootViewController = UINavigationController()
     
     lazy var homeVC: UIHostingController = {
-        var vc = UIHostingController(rootView: HomeView())
+        var vc = UIHostingController(rootView: HomeView(coordinator: self))
         return vc
     }()
     
     func start() {
         rootViewController.setViewControllers([homeVC], animated: true)
+    }
+    
+    func createNewIdea() {
+        let suggestIdeaCoordinator = SuggestIdeaCoordinator(rootViewController: rootViewController)
+        suggestIdeaCoordinator.start()
     }
 }
