@@ -21,7 +21,7 @@ struct SuggestIdeaView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 20) {
                 HStack {
                     Button {
                         coordinator.close()
@@ -54,7 +54,7 @@ struct SuggestIdeaView: View {
                     .font(.system(size: 24))
                     .padding(.horizontal, 20)
                 
-                VStack {
+                VStack(spacing: 5) {
                     ZStack(alignment: .leading) {
                         CustomTextView(text: $title, height: $titleHeight, placeholder: "Заголовок")
                             .focused($isFocused)
@@ -90,7 +90,7 @@ struct SuggestIdeaView: View {
                 )
                 
                 VStack(alignment: .leading) {
-                    ScrollView(.horizontal) {
+                    ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
                             ForEach(viewModel.posts) { post in
                                 ZStack(alignment: .topTrailing) {

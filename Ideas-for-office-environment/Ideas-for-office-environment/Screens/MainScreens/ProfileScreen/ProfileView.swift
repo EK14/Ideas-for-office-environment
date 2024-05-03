@@ -71,13 +71,13 @@ struct ProfileView: View {
                     HStack(spacing: 20) {
                         Image("myideas")
                             .frame(width: 30)
-                        Text("Мой идеи")
+                        Text("Мои идеи")
                             .font(.system(size: 16))
                     }
                     .padding(.vertical, 5)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .onTapGesture {
-                        print("Мой идеи")
+                        print("Мои идеи")
                     }
                 }
                 .padding(.vertical, 16)

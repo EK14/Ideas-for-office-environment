@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+enum Filter {
+    case likes
+    case dislikes
+    case comments
+}
+
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     @State var text: String = ""
+    @State var showFilterView = false
     @State var posts = [PostView(userPhoto: Image(systemName: "person"), name: "Дмитрий Комарницкий", date: "1 Янв 2024 в 8:54", title: "Растительные вставки для стола", text: "Нас окружает живая природа. Она помогает человечеству выжить. К примеру, без растений мы не смогли бы прожить и дня.Они дарят нам кислород, из них мы не смогли б прожить и дня. Также растения незаменимы для производства лекарств. Многие растения могут излечить даже самых больных людей. Я очень люблю изучать специальную литературу, в которой рассказывается о пользе растений.", photo: "Idea", address: "ул. Большая Печерская, 5/9", addressPhoto: Image("Office_1"), likes: "1.1к", dislikes: "101", comments: "342"),
         PostView(userPhoto: Image(systemName: "person"), name: "Дмитрий Комарницкий", date: "1 Янв 2024 в 8:54", title: "Растительные вставки для стола", text: "Нас окружает живая природа. Она помогает человечеству выжить. К примеру, без растений мы не смогли бы прожить и дня.Они дарят нам кислород, из них мы не смогли б прожить и дня. Также растения незаменимы для производства лекарств. Многие растения могут излечить даже самых больных людей. Я очень люблю изучать специальную литературу, в которой рассказывается о пользе растений.", photo: "Idea", address: "ул. Большая Печерская, 5/9", addressPhoto: Image("Office_1"), likes: "1.1к", dislikes: "101", comments: "342")]
     var coordinator: HomeCoordinator
@@ -17,20 +24,25 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             ScrollView {
-                ZStack {
-                    Color("gray")
+                
+                VStack {
+                    SearchableCustom(searchtxt: $text, showFilterView: $showFilterView)
                     
-                    VStack(spacing: 40) {
-                        ForEach(0..<posts.count) { i in
-                            posts[i]
-                                .background(.white)
-                                .cornerRadius(20)
+                    ZStack {
+                        Color("gray")
+                        
+                        VStack(spacing: 40) {
+                            ForEach(0..<posts.count) { i in
+                                posts[i]
+                                    .background(.white)
+                                    .cornerRadius(20)
+                            }
                         }
+                        .padding(.vertical, 20)
                     }
-                    .padding(.top, 20)
+                    .ignoresSafeArea(edges: .bottom)
                 }
             }
-            .searchable(text: $text, placement: .navigationBarDrawer(displayMode: .always), prompt: "Поиск по идеям")
             
             VStack {
                 Spacer()
@@ -54,6 +66,108 @@ struct HomeView: View {
                 .padding(.bottom, 10)
             }
         }
+    }
+}
+
+struct SearchableCustom: View {
+    
+    @State private var sheetHeight: CGFloat = .zero
+    @State var filter = Filter.comments
+    @Binding var searchtxt: String
+    @Binding var showFilterView: Bool
+    @FocusState private var isSearchFocused: Bool // Track focus state
+    
+    var body: some View {
+        HStack {
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundStyle(.gray)
+                TextField("Search", text: $searchtxt)
+                    .focused($isSearchFocused) // Track focus state
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 8)
+            }
+            .padding(.horizontal)
+            .background(Color(.secondarySystemBackground))
+            .cornerRadius(10)
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 0.5))
+            
+            if isSearchFocused {
+                Button("Cancel") {
+                    searchtxt = ""
+                    withAnimation(.easeInOut(duration: 1)) {
+                        isSearchFocused = false
+                    }
+                }
+                .transition(.move(edge: .trailing).combined(with: .opacity))
+                .animation(.easeInOut(duration: 1), value: isSearchFocused)
+            } else {
+                Button {
+                    showFilterView.toggle()
+                } label: {
+                    Text("Filter")
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal)
+        .padding(.bottom, 10)
+        .sheet(isPresented: $showFilterView) {
+                    VStack {
+                        VStack(alignment: .leading) {
+                            ZStack {
+                                HStack {
+                                    Text("Фильтр")
+                                }
+                                
+                                HStack {
+                                    Button {
+                                        
+                                    } label: {
+                                        Text("Сбросить")
+                                    }
+                                }
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                            }
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 20)
+                            .border(width: 0.5, edges: [.bottom], color: .gray)
+                            
+                            VStack(alignment: .leading, spacing: 20) {
+                                HStack {
+                                    Text("По количеству лайков")
+                                    
+                                    Picker(selection: $filter, label: Text("Avocado:")) {
+                                        Text("Sliced").tag(Filter.likes)
+                                        Text("Mashed").tag(Filter.dislikes)
+                                    }
+
+                                }
+                                
+                                Text("По количеству дизлайков")
+                                
+                                Text("По количеству комментариев")
+                            }
+                            .padding(.all, 20)
+                        }
+                    }
+                    .overlay {
+                        GeometryReader { geometry in
+                            Color.clear.preference(key: InnerHeightPreferenceKey.self, value: geometry.size.height)
+                        }
+                    }
+                    .onPreferenceChange(InnerHeightPreferenceKey.self) { newHeight in
+                        sheetHeight = newHeight
+                    }
+                    .presentationDetents([.height(sheetHeight)])
+                }
+    }
+}
+
+struct InnerHeightPreferenceKey: PreferenceKey {
+    static let defaultValue: CGFloat = .zero
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
     }
 }
 
