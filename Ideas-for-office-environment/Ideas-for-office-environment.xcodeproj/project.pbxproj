@@ -17,6 +17,7 @@
 		3DC71B232B93425700AA98C3 /* KeyboardReadable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */; };
 		3DC71B252B93CCB200AA98C3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */; };
 		C304BC872BA1081400256450 /* Office.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304BC862BA1081400256450 /* Office.swift */; };
+		C304C91E2BE5877C0003D59D /* IdeaPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304C91D2BE5877C0003D59D /* IdeaPostResponse.swift */; };
 		C32221AD2BAB21A00063DDF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221AC2BAB21A00063DDF2 /* HomeView.swift */; };
 		C32221AF2BAB220D0063DDF2 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221AE2BAB220D0063DDF2 /* FavoritesView.swift */; };
 		C32221B12BAB254A0063DDF2 /* MyOfficeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221B02BAB254A0063DDF2 /* MyOfficeCoordinator.swift */; };
@@ -80,6 +81,7 @@
 		3DC71B222B93425700AA98C3 /* KeyboardReadable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardReadable+Extensions.swift"; sourceTree = "<group>"; };
 		3DC71B242B93CCB200AA98C3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C304BC862BA1081400256450 /* Office.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office.swift; sourceTree = "<group>"; };
+		C304C91D2BE5877C0003D59D /* IdeaPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaPostResponse.swift; sourceTree = "<group>"; };
 		C32221AC2BAB21A00063DDF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C32221AE2BAB220D0063DDF2 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		C32221B02BAB254A0063DDF2 /* MyOfficeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOfficeCoordinator.swift; sourceTree = "<group>"; };
@@ -218,6 +220,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C3098E032BED5AB200692D62 /* FilterScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FilterScreen;
+			sourceTree = "<group>";
+		};
 		C32221BB2BAB3CAA0063DDF2 /* Post */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +303,7 @@
 				C354E2B92BCADA270071D81A /* SignUpResponse.swift */,
 				C3A3AAFB2BBDC90A008C707D /* SignInResponse.swift */,
 				C33FFAEA2BD801B9008D2A1C /* UserInfoResponse.swift */,
+				C304C91D2BE5877C0003D59D /* IdeaPostResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -354,6 +364,7 @@
 		C3CBD48D2BA77F6E005968EF /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				C3098E032BED5AB200692D62 /* FilterScreen */,
 				C39CB14D2BE14D4D008B8537 /* SuggestIdeaScreen */,
 				C3CBD4912BA7800A005968EF /* HomeCoordinator.swift */,
 				C32221AC2BAB21A00063DDF2 /* HomeView.swift */,
@@ -503,6 +514,7 @@
 				C39CB1452BDFFC76008B8537 /* SaveUserInfoAction.swift in Sources */,
 				C32221B32BAB25570063DDF2 /* MyOfficeView.swift in Sources */,
 				C32AA0362BA75A4600477E68 /* SceneDelegate.swift in Sources */,
+				C304C91E2BE5877C0003D59D /* IdeaPostResponse.swift in Sources */,
 				C39118392BC72B5900A74485 /* ValidationAction.swift in Sources */,
 				C354E2BC2BCB13460071D81A /* LoadingView.swift in Sources */,
 				C304BC872BA1081400256450 /* Office.swift in Sources */,

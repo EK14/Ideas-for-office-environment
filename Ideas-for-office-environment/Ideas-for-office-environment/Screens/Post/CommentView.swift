@@ -12,6 +12,8 @@ struct CommentView: View {
     @State var name: String
     @State var date: String
     @State var text: String
+    @State var didLiked = false
+    @State var didDisliked = false
     
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
@@ -25,8 +27,55 @@ struct CommentView: View {
                     .font(.system(size: 12))
                 Text(text)
                     .font(.system(size: 14))
-                Text(date)
-                    .font(.system(size: 10))
+                
+                HStack {
+                    Text(date)
+                        .font(.system(size: 10))
+                    
+                    Spacer()
+                    
+                    HStack {
+                        Button {
+                            didLiked.toggle()
+                            didDisliked = false
+                        } label: {
+                            HStack(spacing: 5) {
+                                Image(systemName: "hand.thumbsup")
+                                    .font(.system(size: 14))
+                                Text("1.1k")
+                                    .font(.system(size: 14))
+                            }
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 2.5)
+                            .if(didLiked, transform: { view in
+                                view
+                                    .foregroundStyle(.green)
+                            })
+                            .foregroundStyle(.black)
+                            .clipShape(Capsule())
+                        }
+                        
+                        Button {
+                            didDisliked.toggle()
+                            didLiked = false
+                        } label: {
+                            HStack(spacing: 5) {
+                                Image(systemName: "hand.thumbsdown")
+                                    .font(.system(size: 14))
+                                Text("1.1k")
+                                    .font(.system(size: 14))
+                            }
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 2.5)
+                            .if(didDisliked, transform: { view in
+                                view
+                                    .foregroundStyle(.red)
+                            })
+                            .foregroundStyle(.black)
+                            .clipShape(Capsule())
+                        }
+                    }
+                }
             }
         }
         .padding(.horizontal, 10)

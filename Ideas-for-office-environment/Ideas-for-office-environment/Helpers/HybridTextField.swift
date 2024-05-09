@@ -27,12 +27,12 @@ struct HybridTextField: View {
             .animation(.easeInOut(duration: Constants.Duration.fast), value: isSecure)
             .padding(.vertical, Constants.TextField.verticalPadding)
 
-            Button(action: {
+            Button {
                 isSecure.toggle()
-            }, label: {
+            } label: {
                 Image(systemName: !isSecure ? S.Eye.slash : S.eye )
                     .foregroundColor(emptyField ? .red: .gray)
-            })
+            }
             .padding(.trailing, Constants.TextField.horizontalPadding)
         }
         .padding(.leading, Constants.TextField.horizontalPadding)
