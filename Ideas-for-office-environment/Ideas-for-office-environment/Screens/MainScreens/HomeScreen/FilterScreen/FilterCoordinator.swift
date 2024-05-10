@@ -12,7 +12,7 @@ class FilterCoordinator: Coordinator {
     var rootViewController: UINavigationController
     
     lazy var filterVC: UIHostingController = {
-        var vc = UIHostingController(rootView: FilterView())
+        var vc = UIHostingController(rootView: FilterView(coordinator: self))
         return vc
     }()
     
@@ -22,5 +22,9 @@ class FilterCoordinator: Coordinator {
     
     func start() {
         rootViewController.pushViewController(filterVC, animated: true)
+    }
+    
+    func applyFilters() {
+        rootViewController.popViewController(animated: true)
     }
 }
