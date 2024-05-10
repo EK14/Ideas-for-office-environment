@@ -21,6 +21,7 @@
 		C3098E052BED5BB300692D62 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3098E042BED5BB300692D62 /* FilterView.swift */; };
 		C3098E072BEE66BA00692D62 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3098E062BEE66BA00692D62 /* FilterViewModel.swift */; };
 		C3098E092BEE66D900692D62 /* FilterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3098E082BEE66D900692D62 /* FilterCoordinator.swift */; };
+		C3098E0B2BEE7E9700692D62 /* GetPostsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3098E0A2BEE7E9700692D62 /* GetPostsAction.swift */; };
 		C32221AD2BAB21A00063DDF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221AC2BAB21A00063DDF2 /* HomeView.swift */; };
 		C32221AF2BAB220D0063DDF2 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221AE2BAB220D0063DDF2 /* FavoritesView.swift */; };
 		C32221B12BAB254A0063DDF2 /* MyOfficeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32221B02BAB254A0063DDF2 /* MyOfficeCoordinator.swift */; };
@@ -88,6 +89,7 @@
 		C3098E042BED5BB300692D62 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		C3098E062BEE66BA00692D62 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		C3098E082BEE66D900692D62 /* FilterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCoordinator.swift; sourceTree = "<group>"; };
+		C3098E0A2BEE7E9700692D62 /* GetPostsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsAction.swift; sourceTree = "<group>"; };
 		C32221AC2BAB21A00063DDF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C32221AE2BAB220D0063DDF2 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		C32221B02BAB254A0063DDF2 /* MyOfficeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOfficeCoordinator.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				C39CB1442BDFFC76008B8537 /* SaveUserInfoAction.swift */,
 				C39CB1472BE10E64008B8537 /* FetchOfficesAction.swift */,
 				C39CB1492BE1138D008B8537 /* UploadImageAction.swift */,
+				C3098E0A2BEE7E9700692D62 /* GetPostsAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				C32221AD2BAB21A00063DDF2 /* HomeView.swift in Sources */,
 				C39CB14C2BE14B0B008B8537 /* HomeViewModel.swift in Sources */,
 				C32AA0242BA73D1700477E68 /* SignUpView.swift in Sources */,
+				C3098E0B2BEE7E9700692D62 /* GetPostsAction.swift in Sources */,
 				C3CBD4892BA76E47005968EF /* SignUpCoordinator.swift in Sources */,
 				C39CB1512BE1563F008B8537 /* SuggestIdeaCoordinator.swift in Sources */,
 				3D27CED92B66CAAE003C81C5 /* AppDelegate.swift in Sources */,

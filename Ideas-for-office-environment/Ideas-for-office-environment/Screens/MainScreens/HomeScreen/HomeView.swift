@@ -66,6 +66,11 @@ struct HomeView: View {
                 .padding(.bottom, 10)
             }
         }
+        .onAppear {
+            viewModel.getPosts {
+                print("done")
+            }
+        }
     }
 }
 
