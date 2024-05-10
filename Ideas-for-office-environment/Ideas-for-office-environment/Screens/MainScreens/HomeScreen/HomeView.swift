@@ -26,7 +26,7 @@ struct HomeView: View {
             ScrollView {
                 
                 VStack {
-                    SearchableCustom(searchtxt: $text, showFilterView: $showFilterView)
+                    SearchableCustom(searchtxt: $text, showFilterView: $showFilterView, coordinator: coordinator)
                     
                     ZStack {
                         Color("gray")
@@ -76,6 +76,7 @@ struct SearchableCustom: View {
     @Binding var searchtxt: String
     @Binding var showFilterView: Bool
     @FocusState private var isSearchFocused: Bool // Track focus state
+    var coordinator: HomeCoordinator
     
     var body: some View {
         HStack {
@@ -103,7 +104,7 @@ struct SearchableCustom: View {
                 .animation(.easeInOut(duration: 1), value: isSearchFocused)
             } else {
                 Button {
-                    showFilterView.toggle()
+                    coordinator.addFilters()
                 } label: {
                     Text("Filter")
                 }
@@ -112,55 +113,6 @@ struct SearchableCustom: View {
         .frame(maxWidth: .infinity)
         .padding(.horizontal)
         .padding(.bottom, 10)
-        .sheet(isPresented: $showFilterView) {
-                    VStack {
-                        VStack(alignment: .leading) {
-                            ZStack {
-                                HStack {
-                                    Text("Фильтр")
-                                }
-                                
-                                HStack {
-                                    Button {
-                                        
-                                    } label: {
-                                        Text("Сбросить")
-                                    }
-                                }
-                                .frame(maxWidth: .infinity, alignment: .trailing)
-                            }
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 20)
-                            .border(width: 0.5, edges: [.bottom], color: .gray)
-                            
-                            VStack(alignment: .leading, spacing: 20) {
-                                HStack {
-                                    Text("По количеству лайков")
-                                    
-                                    Picker(selection: $filter, label: Text("Avocado:")) {
-                                        Text("Sliced").tag(Filter.likes)
-                                        Text("Mashed").tag(Filter.dislikes)
-                                    }
-
-                                }
-                                
-                                Text("По количеству дизлайков")
-                                
-                                Text("По количеству комментариев")
-                            }
-                            .padding(.all, 20)
-                        }
-                    }
-                    .overlay {
-                        GeometryReader { geometry in
-                            Color.clear.preference(key: InnerHeightPreferenceKey.self, value: geometry.size.height)
-                        }
-                    }
-                    .onPreferenceChange(InnerHeightPreferenceKey.self) { newHeight in
-                        sheetHeight = newHeight
-                    }
-                    .presentationDetents([.height(sheetHeight)])
-                }
     }
 }
 

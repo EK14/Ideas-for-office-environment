@@ -24,4 +24,9 @@ class HomeCoordinator: Coordinator {
         let suggestIdeaCoordinator = SuggestIdeaCoordinator(rootViewController: rootViewController)
         suggestIdeaCoordinator.start()
     }
+    
+    func addFilters() {
+        let filterCoordinator = FilterCoordinator(rootViewController: rootViewController)
+        filterCoordinator.start()
+    }
 }
