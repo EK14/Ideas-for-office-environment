@@ -14,7 +14,7 @@ enum Filter {
 }
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     @State var showFilterView = false
     var coordinator: HomeCoordinator
     
@@ -24,6 +24,7 @@ struct HomeView: View {
                 
                 VStack {
                     SearchableCustom(searchtxt: $viewModel.searchText, showFilterView: $showFilterView, coordinator: coordinator)
+                        .background(.white)
                     
                     ZStack {
                         Color("gray")
@@ -45,9 +46,7 @@ struct HomeView: View {
                 }
             }
             .refreshable {
-                viewModel.getPosts {
-                    print("appeared")
-                }
+                viewModel.refresh()
             }
             
             VStack {
@@ -131,9 +130,4 @@ struct InnerHeightPreferenceKey: PreferenceKey {
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
         value = nextValue()
     }
-}
-
-#Preview {
-    var coordinator = HomeCoordinator()
-    return HomeView(coordinator: coordinator)
 }

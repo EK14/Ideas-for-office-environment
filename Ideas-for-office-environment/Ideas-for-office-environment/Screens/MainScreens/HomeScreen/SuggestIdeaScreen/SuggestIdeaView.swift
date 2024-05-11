@@ -15,7 +15,7 @@ struct SuggestIdeaView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @FocusState var isFocused: Bool
-    @ObservedObject var viewModel = SuggestIdeaViewModel()
+    @ObservedObject var viewModel: SuggestIdeaViewModel
     
     var body: some View {
         ZStack {
@@ -158,12 +158,6 @@ struct SuggestIdeaView: View {
         guard let inputImage = inputImage else { return }
         viewModel.posts.append(Post(image: inputImage))
     }
-}
-
-#Preview {
-    var coordinator = SuggestIdeaCoordinator(rootViewController: UINavigationController())
-    
-    return SuggestIdeaView(coordinator: coordinator)
 }
 
 struct CustomTextView: UIViewRepresentable {

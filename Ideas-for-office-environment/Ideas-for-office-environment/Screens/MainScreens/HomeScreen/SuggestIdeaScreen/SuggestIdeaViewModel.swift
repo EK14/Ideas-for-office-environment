@@ -18,6 +18,11 @@ class SuggestIdeaViewModel: ObservableObject {
     @Published var content = ""
     @Published var attachedImages = [String]()
     @Published var isLoading = false
+    @ObservedObject var parentViewModel: HomeViewModel
+    
+    init(parentViewModel: HomeViewModel) {
+        self.parentViewModel = parentViewModel
+    }
 
     func deletePhoto(post: Post) {
         if let index = posts.firstIndex(where: { $0.id == post.id }) {
@@ -33,6 +38,7 @@ class SuggestIdeaViewModel: ObservableObject {
                 switch result {
                 case .success(_):
                     DispatchQueue.main.async {
+                        self.parentViewModel.refresh()
                         completion()
                     }
                 case .failure(_):

@@ -11,8 +11,10 @@ class HomeCoordinator: Coordinator {
     
     var rootViewController = UINavigationController()
     
+    @ObservedObject var viewModel = HomeViewModel()
+    
     lazy var homeVC: UIHostingController = {
-        var vc = UIHostingController(rootView: HomeView(coordinator: self))
+        var vc = UIHostingController(rootView: HomeView(viewModel: viewModel, coordinator: self))
         return vc
     }()
     
@@ -21,7 +23,7 @@ class HomeCoordinator: Coordinator {
     }
     
     func createNewIdea() {
-        let suggestIdeaCoordinator = SuggestIdeaCoordinator(rootViewController: rootViewController)
+        let suggestIdeaCoordinator = SuggestIdeaCoordinator(rootViewController: rootViewController, parentViewModel: viewModel)
         suggestIdeaCoordinator.start()
     }
     

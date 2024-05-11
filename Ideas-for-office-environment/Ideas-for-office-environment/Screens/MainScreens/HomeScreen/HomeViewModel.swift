@@ -47,4 +47,10 @@ class HomeViewModel: ObservableObject {
             print("done")
         }
     }
+    
+    func refresh() {
+        page = 1
+        posts.removeAll()
+        getPosts {}
+    }
 }

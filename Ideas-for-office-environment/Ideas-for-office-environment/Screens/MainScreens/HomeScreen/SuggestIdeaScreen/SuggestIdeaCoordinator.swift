@@ -11,13 +11,18 @@ class SuggestIdeaCoordinator: Coordinator {
     
     var rootViewController: UINavigationController
     
+    @ObservedObject var parentViewModel: HomeViewModel
+    @ObservedObject var viewModel: SuggestIdeaViewModel
+    
     lazy var suggestIdeaView: UIHostingController = {
-        var vc = UIHostingController(rootView: SuggestIdeaView(coordinator: self))
+        var vc = UIHostingController(rootView: SuggestIdeaView(coordinator: self, viewModel: viewModel))
         return vc
     }()
     
-    init(rootViewController: UINavigationController) {
+    init(rootViewController: UINavigationController, parentViewModel: HomeViewModel) {
         self.rootViewController = rootViewController
+        self.parentViewModel = parentViewModel
+        viewModel = SuggestIdeaViewModel(parentViewModel: parentViewModel)
     }
     
     func start() {
