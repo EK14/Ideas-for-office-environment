@@ -17,8 +17,6 @@ struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     @State var text: String = ""
     @State var showFilterView = false
-    @State var posts = [PostView(userPhoto: Image(systemName: "person"), name: "Дмитрий Комарницкий", date: "1 Янв 2024 в 8:54", title: "Растительные вставки для стола", text: "Нас окружает живая природа. Она помогает человечеству выжить. К примеру, без растений мы не смогли бы прожить и дня.Они дарят нам кислород, из них мы не смогли б прожить и дня. Также растения незаменимы для производства лекарств. Многие растения могут излечить даже самых больных людей. Я очень люблю изучать специальную литературу, в которой рассказывается о пользе растений.", photo: ["Idea", "Idea"], address: "ул. Большая Печерская, 5/9", addressPhoto: Image("Office_1"), likes: "1.1к", dislikes: "101", comments: "342"),
-        PostView(userPhoto: Image(systemName: "person"), name: "Дмитрий Комарницкий", date: "1 Янв 2024 в 8:54", title: "Растительные вставки для стола", text: "Нас окружает живая природа. Она помогает человечеству выжить. К примеру, без растений мы не смогли бы прожить и дня.Они дарят нам кислород, из них мы не смогли б прожить и дня. Также растения незаменимы для производства лекарств. Многие растения могут излечить даже самых больных людей. Я очень люблю изучать специальную литературу, в которой рассказывается о пользе растений.", photo: ["Idea", "Idea", "Idea"], address: "ул. Большая Печерская, 5/9", addressPhoto: Image("Office_1"), likes: "1.1к", dislikes: "101", comments: "342")]
     var coordinator: HomeCoordinator
     
     var body: some View {
@@ -32,8 +30,8 @@ struct HomeView: View {
                         Color("gray")
                         
                         VStack(spacing: 40) {
-                            ForEach(0..<posts.count) { i in
-                                posts[i]
+                            ForEach(viewModel.posts.indices, id: \.self) { index in
+                                PostView(postInfo: viewModel.posts[index])
                                     .background(.white)
                                     .cornerRadius(20)
                             }

@@ -35,23 +35,6 @@ struct GetPostsAction {
             queryItems.append(URLQueryItem(name: "sorting_filter", value: ""))
         }
 
-        print(path)
-//        var queryItems = [URLQueryItem(name: "office", value: "\(office)"),
-//                          URLQueryItem(name: "page", value: "\(page)"),
-//                          URLQueryItem(name: "page_size", value: "\(pageSize)")]
-//        
-////        if let search = search {
-////            queryItems.append(URLQueryItem(name: "search", value: "\(search)"))
-////        }
-////        
-////        if let sortingFilter = sortingFilter {
-////            queryItems.append(URLQueryItem(name: "sorting_filter", value: "\(sortingFilter)"))
-////        }
-//        
-//        queryItems.append(URLQueryItem(name: "search", value: ""))
-//        
-//        queryItems.append(URLQueryItem(name: "sorting_filter", value: ""))
-
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
@@ -63,7 +46,6 @@ struct GetPostsAction {
             return
         }
         
-        print(url)
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

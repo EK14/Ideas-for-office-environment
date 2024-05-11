@@ -6,35 +6,31 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct PostView: View {
-    @State var userPhoto: Image
-    @State var name: String
-    @State var date: String
-    @State var title: String
-    @State var text: String
-    @State var photo: [String]
-    @State var address: String
-    @State var addressPhoto: Image
-    @State var likes: String
-    @State var dislikes: String
-    @State var comments: String
     @State var dotsButtonDidTouched = false
     @State var didLiked = false
     @State var didDisliked = false
+    @State var likes = 0
+    @State var dislikes = 0
+    @State var date = ""
+    var postInfo: IdeaPostResponse
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
             VStack(alignment: .leading, spacing: 10) {
                 HStack(alignment: .top) {
                     HStack {
-                        userPhoto
+                        AnimatedImage(url: URL(string: postInfo.ideaAuthor.photo))
+                            .resizable()
+                            .scaledToFill()
                             .frame(width: 60, height: 60)
                             .background(.gray)
                             .clipShape(Circle())
                         
                         VStack(alignment: .leading) {
-                            Text(name)
+                            Text(postInfo.ideaAuthor.name)
                             Text(date)
                                 .font(.caption)
                         }
@@ -51,37 +47,38 @@ struct PostView: View {
                 }
                 .padding(.horizontal, 20)
                 
-                Text(title)
+                Text(postInfo.title)
                     .font(.title3.bold())
                     .padding(.vertical, 10)
                     .padding(.horizontal, 20)
                 
-                Text(text)
+                Text(postInfo.content)
                     .lineLimit(5)
                     .padding(.horizontal, 20)
                 
-                TabView {
-                    ForEach(0..<photo.count) { i in
-                        Image(photo[i])
-                            .resizable()
-                            .frame(height: UIScreen.main.bounds.height / 3)
-                            .scaledToFill()
-                            .cornerRadius(20)
-                            .padding(.horizontal, 10)
+                if(postInfo.attachedImages.count > 0) {
+                    TabView {
+                        ForEach(postInfo.attachedImages.indices, id: \.self) { index in
+                            AnimatedImage(url: URL(string: postInfo.attachedImages[index]))
+                                .resizable()
+                                .frame(height: UIScreen.main.bounds.height / 3)
+                                .scaledToFill()
+                                .cornerRadius(20)
+                                .padding(.horizontal, 10)
+                        }
                     }
+                    .frame(height: UIScreen.main.bounds.height / 3)
+                    .tabViewStyle(PageTabViewStyle())
                 }
-                .frame(height: UIScreen.main.bounds.height / 3)
-
-                .tabViewStyle(PageTabViewStyle())
                 
                 HStack(spacing: 0) {
-                    addressPhoto
+                    AnimatedImage(url: URL(string: postInfo.office.imageUrl))
                         .resizable()
                         .frame(width: 50, height: 50)
                         .background(.gray)
                         .clipShape(Circle())
                     
-                    Text(address)
+                    Text(postInfo.office.address)
                         .padding(.horizontal, 20)
                 }
                 .background(.blue.opacity(0.2))
@@ -96,10 +93,12 @@ struct PostView: View {
                     Button {
                         didLiked.toggle()
                         didDisliked = false
+                        likes = likes == postInfo.likesCount ? postInfo.likesCount + 1: postInfo.likesCount
+                        dislikes = postInfo.dislikesCount
                     } label: {
                         HStack {
                             Image(systemName: "hand.thumbsup")
-                            Text(likes)
+                            Text("\(likes)")
                         }
                         .padding(.horizontal, 10)
                         .padding(.vertical, 5)
@@ -114,10 +113,12 @@ struct PostView: View {
                     Button {
                         didDisliked.toggle()
                         didLiked = false
+                        dislikes = dislikes == postInfo.dislikesCount ? postInfo.dislikesCount + 1: postInfo.dislikesCount
+                        likes = postInfo.likesCount
                     } label: {
                         HStack {
                             Image(systemName: "hand.thumbsdown")
-                            Text(dislikes)
+                            Text("\(dislikes)")
                         }
                         .padding(.horizontal, 10)
                         .padding(.vertical, 5)
@@ -134,7 +135,7 @@ struct PostView: View {
                     } label: {
                         HStack {
                             Image(systemName: "message")
-                            Text(comments)
+                            Text("\(postInfo.commentsCount)")
                         }
                         .padding(.horizontal, 10)
                         .padding(.vertical, 5)
@@ -194,9 +195,22 @@ struct PostView: View {
                 .padding(.top, 10)
             }
         }
+        .onAppear {
+            likes = postInfo.likesCount
+            dislikes = postInfo.dislikesCount
+            date = dateFormatter(date: postInfo.date)
+        }
     }
-}
-
-#Preview {
-    PostView(userPhoto: Image(systemName: "person"), name: "Дмитрий Комарницкий", date: "1 Янв 2024 в 8:54", title: "Растительные вставки для стола", text: "Нас окружает живая природа. Она помогает человечеству выжить. К примеру, без растений мы не смогли бы прожить и дня.Они дарят нам кислород, из них мы не смогли б прожить и дня. Также растения незаменимы для производства лекарств. Многие растения могут излечить даже самых больных людей. Я очень люблю изучать специальную литературу, в которой рассказывается о пользе растений.", photo: ["Idea", "Idea"], address: "ул. Большая Печерская, 5/9", addressPhoto: Image("Office_1"), likes: "1.1к", dislikes: "101", comments: "342")
+    
+    func dateFormatter(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ru_RU") // устанавливаем локаль для корректного парсинга даты
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ" // устанавливаем формат исходной даты
+        if let date = dateFormatter.date(from: date) {
+            dateFormatter.dateFormat = "d MMMM yyyy 'в' HH:mm" // устанавливаем формат целевой даты
+            let formattedDate = dateFormatter.string(from: date)
+            return formattedDate // выводим отформатированную дату
+        }
+        return ""
+    }
 }

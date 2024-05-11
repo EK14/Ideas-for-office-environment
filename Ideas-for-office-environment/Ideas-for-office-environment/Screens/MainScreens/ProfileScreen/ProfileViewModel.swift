@@ -50,9 +50,9 @@ class ProfileViewModel: CarousalViewContainerViewModel {
                                                        photo: photoUrl,
                                                        office: self.office)).call { result in
                     switch result {
-                    case .success(let success):
+                    case .success(_):
                         print("success")
-                    case .failure(let failure):
+                    case .failure(_):
                         print("failure")
                     }
                     completion()
