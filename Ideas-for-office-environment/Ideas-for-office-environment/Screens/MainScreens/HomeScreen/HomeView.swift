@@ -15,7 +15,6 @@ enum Filter {
 
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
-    @State var text: String = ""
     @State var showFilterView = false
     var coordinator: HomeCoordinator
     
@@ -24,21 +23,30 @@ struct HomeView: View {
             ScrollView {
                 
                 VStack {
-                    SearchableCustom(searchtxt: $text, showFilterView: $showFilterView, coordinator: coordinator)
+                    SearchableCustom(searchtxt: $viewModel.searchText, showFilterView: $showFilterView, coordinator: coordinator)
                     
                     ZStack {
                         Color("gray")
                         
-                        VStack(spacing: 40) {
+                        LazyVStack(spacing: 40) {
                             ForEach(viewModel.posts.indices, id: \.self) { index in
                                 PostView(postInfo: viewModel.posts[index])
                                     .background(.white)
                                     .cornerRadius(20)
+                                    .onAppear {
+                                        print("\(viewModel.page)")
+                                        viewModel.loadMore()
+                                    }
                             }
                         }
                         .padding(.vertical, 20)
                     }
                     .ignoresSafeArea(edges: .bottom)
+                }
+            }
+            .refreshable {
+                viewModel.getPosts {
+                    print("appeared")
                 }
             }
             
@@ -65,9 +73,8 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            viewModel.getPosts {
-                print("done")
-            }
+            print("\(viewModel.page)")
+            viewModel.loadMore()
         }
     }
 }
