@@ -30,7 +30,7 @@ struct PostView: View {
                             .clipShape(Circle())
                         
                         VStack(alignment: .leading) {
-                            Text(postInfo.ideaAuthor.name)
+                            Text("\(postInfo.ideaAuthor.name) \(postInfo.ideaAuthor.surname)")
                             Text(date)
                                 .font(.caption)
                         }
@@ -59,12 +59,11 @@ struct PostView: View {
                 if(postInfo.attachedImages.count > 0) {
                     TabView {
                         ForEach(postInfo.attachedImages.indices, id: \.self) { index in
-                            AnimatedImage(url: URL(string: postInfo.attachedImages[index]))
+                            AnimatedImage(url: URL(string: postInfo.attachedImages[index] + "jpeg"))
                                 .resizable()
-                                .frame(height: UIScreen.main.bounds.height / 3)
+                                .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height / 3, alignment: .center)
                                 .scaledToFill()
                                 .cornerRadius(20)
-                                .padding(.horizontal, 10)
                         }
                     }
                     .frame(height: UIScreen.main.bounds.height / 3)

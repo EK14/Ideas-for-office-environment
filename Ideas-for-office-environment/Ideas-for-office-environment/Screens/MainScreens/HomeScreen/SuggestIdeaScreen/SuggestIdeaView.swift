@@ -9,8 +9,6 @@ import SwiftUI
 import Combine
 
 struct SuggestIdeaView: View {
-    @State var title = ""
-    @State var text = ""
     var coordinator: SuggestIdeaCoordinator
     @State var titleHeight: CGFloat = 56.0
     @State var textHeight: CGFloat = 56.0
@@ -20,136 +18,145 @@ struct SuggestIdeaView: View {
     @ObservedObject var viewModel = SuggestIdeaViewModel()
     
     var body: some View {
-        ScrollView(.vertical) {
-            VStack(alignment: .leading, spacing: 20) {
-                HStack {
-                    Button {
-                        coordinator.close()
-                    } label: {
-                        Image(systemName: "xmark")
-                            .imageScale(.large)
-                            .font(.title2)
-                    }
-                    
-                    Spacer()
-                    
-                    Button {
+        ZStack {
+            ScrollView(.vertical) {
+                VStack(alignment: .leading, spacing: 20) {
+                    HStack {
+                        Button {
+                            coordinator.close()
+                        } label: {
+                            Image(systemName: "xmark")
+                                .imageScale(.large)
+                                .font(.title2)
+                        }
                         
-                    } label: {
-                        Text("Опубликовать")
-                            .padding(.vertical, 7)
-                            .padding(.horizontal, 14)
-                            .background(.blue.opacity(0.3))
-                            .clipShape(Capsule())
-                            .overlay(
-                                Capsule()
-                                    .stroke(.blue, lineWidth: 1)
-                            )
-                            .font(.system(size: 16))
-                    }
-                }
-                .padding(.horizontal, 20)
-                
-                Text("Предложить идею")
-                    .font(.system(size: 24))
-                    .padding(.horizontal, 20)
-                
-                VStack(spacing: 5) {
-                    ZStack(alignment: .leading) {
-                        CustomTextView(text: $title, height: $titleHeight, placeholder: "Заголовок")
-                            .focused($isFocused)
-                            .onAppear {
-                                isFocused = true
+                        Spacer()
+                        
+                        Button {
+                            viewModel.suggestIdea {
+                                viewModel.isLoading = false
+                                coordinator.close()
                             }
-                            .frame(height: titleHeight)
-                            .border(width: 1, edges: [.bottom], color: .gray)
-                            .padding(.horizontal, 20)
-                        
-                        if title.isEmpty {
-                            Text("Заголовок")
-                                .padding(.leading, 20)
-                                .foregroundStyle(Color(uiColor: UIColor.black.withAlphaComponent(0.3)))
+                        } label: {
+                            Text("Опубликовать")
+                                .padding(.vertical, 7)
+                                .padding(.horizontal, 14)
+                                .background(.blue.opacity(0.3))
+                                .clipShape(Capsule())
+                                .overlay(
+                                    Capsule()
+                                        .stroke(.blue, lineWidth: 1)
+                                )
+                                .font(.system(size: 16))
                         }
                     }
+                    .padding(.horizontal, 20)
                     
-                    ZStack(alignment: .leading) {
-                        CustomTextView(text: $text, height: $textHeight, placeholder: "Описание")
-                            .frame(height: textHeight)
-                            .padding(.horizontal, 20)
+                    Text("Предложить идею")
+                        .font(.system(size: 24))
+                        .padding(.horizontal, 20)
+                    
+                    VStack(spacing: 5) {
+                        ZStack(alignment: .leading) {
+                            CustomTextView(text: $viewModel.title, height: $titleHeight, placeholder: "Заголовок")
+                                .focused($isFocused)
+                                .onAppear {
+                                    isFocused = true
+                                }
+                                .frame(height: titleHeight)
+                                .border(width: 1, edges: [.bottom], color: .gray)
+                                .padding(.horizontal, 20)
+                            
+                            if viewModel.title.isEmpty {
+                                Text("Заголовок")
+                                    .padding(.leading, 20)
+                                    .foregroundStyle(Color(uiColor: UIColor.black.withAlphaComponent(0.3)))
+                            }
+                        }
                         
-                        if text.isEmpty {
-                            Text("Описание")
-                                .padding(.leading, 20)
-                                .foregroundStyle(Color(uiColor: UIColor.black.withAlphaComponent(0.3)))
+                        ZStack(alignment: .leading) {
+                            CustomTextView(text: $viewModel.content, height: $textHeight, placeholder: "Описание")
+                                .frame(height: textHeight)
+                                .padding(.horizontal, 20)
+                            
+                            if viewModel.content.isEmpty {
+                                Text("Описание")
+                                    .padding(.leading, 20)
+                                    .foregroundStyle(Color(uiColor: UIColor.black.withAlphaComponent(0.3)))
+                            }
                         }
                     }
-                }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(LinearGradient(colors: [.white, .gray], startPoint: .bottom, endPoint: .top), lineWidth: 1)
-                )
-                
-                VStack(alignment: .leading) {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(viewModel.posts) { post in
-                                ZStack(alignment: .topTrailing) {
-                                    post.image
-                                        .resizable()
-                                        .frame(width: 250, height: 250)
-                                        .scaledToFill()
-                                        .cornerRadius(10)
-                                    
-                                    Button {
-                                        withAnimation {
-                                            viewModel.deletePhoto(post: post)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(LinearGradient(colors: [.white, .gray], startPoint: .bottom, endPoint: .top), lineWidth: 1)
+                    )
+                    
+                    VStack(alignment: .leading) {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 20) {
+                                ForEach(viewModel.posts) { post in
+                                    ZStack(alignment: .topTrailing) {
+                                        Image(uiImage: post.image)
+                                            .resizable()
+                                            .frame(width: 250, height: 250)
+                                            .scaledToFill()
+                                            .cornerRadius(10)
+                                        
+                                        Button {
+                                            withAnimation {
+                                                viewModel.deletePhoto(post: post)
+                                            }
+                                        } label: {
+                                            Image(systemName: "xmark")
+                                                .imageScale(.medium)
+                                                .foregroundStyle(.blue)
+                                                .padding(5)
+                                                .background(.white)
+                                                .clipShape(Circle())
+                                                .padding(.trailing, 10)
+                                                .padding(.top, 10)
                                         }
-                                    } label: {
-                                        Image(systemName: "xmark")
-                                            .imageScale(.medium)
-                                            .foregroundStyle(.blue)
-                                            .padding(5)
-                                            .background(.white)
-                                            .clipShape(Circle())
-                                            .padding(.trailing, 10)
-                                            .padding(.top, 10)
                                     }
                                 }
                             }
+                            .padding(.horizontal, 20)
                         }
-                        .padding(.horizontal, 20)
+                        
+                        Button {
+                            showingImagePicker = true
+                        } label: {
+                            Image(systemName: "photo")
+                                .imageScale(.large)
+                                .foregroundStyle(.blue)
+                                .padding(8)
+                                .background(Color("gray"))
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                        }
+                        .padding(.leading, 30)
+                        .padding(.top, 10)
                     }
                     
-                    Button {
-                        showingImagePicker = true
-                    } label: {
-                        Image(systemName: "photo")
-                            .imageScale(.large)
-                            .foregroundStyle(.blue)
-                            .padding(8)
-                            .background(Color("gray"))
-                            .clipShape(RoundedRectangle(cornerRadius: 5))
-                    }
-                    .padding(.leading, 30)
-                    .padding(.top, 10)
                 }
-                
+                .padding(.top, 20)
+                .ignoresSafeArea(edges: .bottom)
             }
-            .padding(.top, 20)
-            .ignoresSafeArea(edges: .bottom)
-        }
-        .onChange(of: inputImage) { _ in
-            loadImage()
-        }
-        .sheet(isPresented: $showingImagePicker) {
-            ImagePicker(image: $inputImage)
-                .ignoresSafeArea()
+            .onChange(of: inputImage) { _ in
+                loadImage()
+            }
+            .sheet(isPresented: $showingImagePicker) {
+                ImagePicker(image: $inputImage)
+                    .ignoresSafeArea()
+            }
+            
+            if(viewModel.isLoading)  {
+                LoadingView()
+            }
         }
     }
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        viewModel.posts.append(Post(image: Image(uiImage: inputImage)))
+        viewModel.posts.append(Post(image: inputImage))
     }
 }
 

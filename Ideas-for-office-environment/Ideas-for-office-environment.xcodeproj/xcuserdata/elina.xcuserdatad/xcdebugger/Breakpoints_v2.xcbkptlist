@@ -7,1046 +7,76 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "22D0F4B1-B0BD-411F-A2CA-4C51CF979850"
+            uuid = "2A4E1C3F-CECB-44F6-9D57-D3BFF8D85323"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/App/AppDelegate.swift"
+            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "application(_:configurationForConnecting:options:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "suggestIdea(completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "22D0F4B1-B0BD-411F-A2CA-4C51CF979850 - 36d0da5feb3994d4"
+                  uuid = "2A4E1C3F-CECB-44F6-9D57-D3BFF8D85323 - 161c703e0a72e69"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.AppDelegate.application(_: __C.UIApplication, configurationForConnecting: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; __C.UISceneConfiguration"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in closure #1 () -&gt; () in Ideas_for_office_environment.SuggestIdeaViewModel.suggestIdea(completion: () -&gt; ()) -&gt; ()"
                   moduleName = "Ideas-for-office-environment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/App/AppDelegate.swift"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "144">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "208">
                </Location>
                <Location
-                  uuid = "22D0F4B1-B0BD-411F-A2CA-4C51CF979850 - 36d0da5feb3994d4"
+                  uuid = "2A4E1C3F-CECB-44F6-9D57-D3BFF8D85323 - 2c3dfa75ed6a75ed"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.AppDelegate.application(_: __C.UIApplication, configurationForConnecting: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; __C.UISceneConfiguration"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 () -&gt; () in Ideas_for_office_environment.SuggestIdeaViewModel.suggestIdea(completion: () -&gt; ()) -&gt; ()"
                   moduleName = "Ideas-for-office-environment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/App/AppDelegate.swift"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "56">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "60">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A39CD0F7-EC71-4D4E-AB45-CEB7B23931A6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/App/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BAB5DF0E-410C-45D0-B7A8-B0B148EA426A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignInScreen/SignInViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "signIn(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FF3F34AE-7D67-416E-83D3-DBE5D0BBA858"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "FF3F34AE-7D67-416E-83D3-DBE5D0BBA858 - 4a44707659c1bd90"
+                  uuid = "2A4E1C3F-CECB-44F6-9D57-D3BFF8D85323 - 936d1c628ad8d99e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.SignInAction.call(completion: (Ideas_for_office_environment.SignInResponse) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 () -&gt; () in Ideas_for_office_environment.SuggestIdeaViewModel.suggestIdea(completion: () -&gt; ()) -&gt; ()"
                   moduleName = "Ideas-for-office-environment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "716">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "208">
                </Location>
                <Location
-                  uuid = "FF3F34AE-7D67-416E-83D3-DBE5D0BBA858 - 4a44707659c1bb26"
+                  uuid = "2A4E1C3F-CECB-44F6-9D57-D3BFF8D85323 - ec268baf6cafe4b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.SignInAction.call(completion: (Ideas_for_office_environment.SignInResponse) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in Ideas_for_office_environment.SuggestIdeaViewModel.suggestIdea(completion: () -&gt; ()) -&gt; ()"
                   moduleName = "Ideas-for-office-environment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "1028">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "05E41358-058A-4443-A014-9D9C32D2BF7A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "05E41358-058A-4443-A014-9D9C32D2BF7A - 4a44707659c1b915"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.SignInAction.call(completion: (Ideas_for_office_environment.SignInResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "2700">
-               </Location>
-               <Location
-                  uuid = "05E41358-058A-4443-A014-9D9C32D2BF7A - 6e5894122bed45d2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SignInAction.call(completion: (Ideas_for_office_environment.SignInResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "180">
-               </Location>
-               <Location
-                  uuid = "05E41358-058A-4443-A014-9D9C32D2BF7A - 6e5894122bed4533"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SignInAction.call(completion: (Ideas_for_office_environment.SignInResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "180">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B77DC680-3ECE-41EF-8CF2-CB2665DE18FE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B77DC680-3ECE-41EF-8CF2-CB2665DE18FE - 6e5894122bed4594"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SignInAction.call(completion: (Ideas_for_office_environment.SignInResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "596">
-               </Location>
-               <Location
-                  uuid = "B77DC680-3ECE-41EF-8CF2-CB2665DE18FE - 6e5894122bed4594"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SignInAction.call(completion: (Ideas_for_office_environment.SignInResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "612">
-               </Location>
-               <Location
-                  uuid = "B77DC680-3ECE-41EF-8CF2-CB2665DE18FE - a921a24ee6e9889c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SignInAction.call(completion: (Swift.Optional&lt;Ideas_for_office_environment.SignInResponse&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "596">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CB30DFCA-8A2A-4C83-97EA-6B20771B3FF8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8E6FF3E1-0848-4E82-8C90-7E7D685A099A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "8E6FF3E1-0848-4E82-8C90-7E7D685A099A - 87750d750feb7199"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.CarousalView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "464">
-               </Location>
-               <Location
-                  uuid = "8E6FF3E1-0848-4E82-8C90-7E7D685A099A - 69f92f8b9660d9c9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.gesture&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Gesture&gt;(_: &#x3c4;_1_0, including: SwiftUI.GestureMask) -&gt; some&gt;&gt;.0 in Ideas_for_office_environment.CarousalView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "628">
-               </Location>
-               <Location
-                  uuid = "8E6FF3E1-0848-4E82-8C90-7E7D685A099A - 407821eba4f92274"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in closure #1 (Swift.Int) -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.gesture&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Gesture&gt;(_: &#x3c4;_1_0, including: SwiftUI.GestureMask) -&gt; some&gt;&gt;.0 in Ideas_for_office_environment.CarousalView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "324">
-               </Location>
-               <Location
-                  uuid = "8E6FF3E1-0848-4E82-8C90-7E7D685A099A - 407821eba4f92236"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in closure #1 (Swift.Int) -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.gesture&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Gesture&gt;(_: &#x3c4;_1_0, including: SwiftUI.GestureMask) -&gt; some&gt;&gt;.0 in Ideas_for_office_environment.CarousalView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "324">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "716168F7-FDA8-478B-822E-39F1F3F2C1E7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "getViews()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9118472C-CBD2-42D9-8F0E-39E8CA2CF72D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "getViews()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9118472C-CBD2-42D9-8F0E-39E8CA2CF72D - fc9d43491c17d6a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.CarousalViewContainer.getViews() -&gt; Swift.Array&lt;SwiftUI.AnyView&gt;"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
                   endingLineNumber = "32"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  uuid = "9118472C-CBD2-42D9-8F0E-39E8CA2CF72D - fc9d43491c17d6a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.CarousalViewContainer.getViews() -&gt; Swift.Array&lt;SwiftUI.AnyView&gt;"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "296">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DAF2FFDC-EA42-4021-B9F2-826872016E40"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C6B5039A-D39C-42CB-A4C4-D6E4A36B7B43"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "imageView(name:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DEC6A917-9477-4FF0-A502-2055ADCAA979"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "DEC6A917-9477-4FF0-A502-2055ADCAA979 - 158ddfc698a0ada2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.CarousalViewContainer.init(viewModel: Ideas_for_office_environment.SignUpViewModel) -&gt; Ideas_for_office_environment.CarousalViewContainer"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "204">
-               </Location>
-               <Location
-                  uuid = "DEC6A917-9477-4FF0-A502-2055ADCAA979 - 158ddfc698a0ada2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.CarousalViewContainer.init(viewModel: Ideas_for_office_environment.SignUpViewModel) -&gt; Ideas_for_office_environment.CarousalViewContainer"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "140">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "89098918-9919-4F1F-8411-245355FCA208"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "onDragEnded(drag:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "89098918-9919-4F1F-8411-245355FCA208 - d158844b9007294f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.CarousalView.onDragEnded(drag: SwiftUI.DragGesture.Value) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "1648">
-               </Location>
-               <Location
-                  uuid = "89098918-9919-4F1F-8411-245355FCA208 - d158844b900729a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.CarousalView.onDragEnded(drag: SwiftUI.DragGesture.Value) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "1604">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DA81AFCF-D286-4D59-8848-BFB775BA4863"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "onDragEnded(drag:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9CF108A5-24B9-4B8A-819F-4520A106E435"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "checkEmailFormat()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "34705EE8-3B53-4C09-B574-CFBC4251C88D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "34705EE8-3B53-4C09-B574-CFBC4251C88D - c371200cbfc1ced2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.transition(SwiftUI.AnyTransition) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(Ideas_for_office_environment.HybridTextField, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, SwiftUI.VStack&lt;Ideas_for_office_environment.HybridTextField&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt;&gt;)&gt; in Ideas_for_office_environment.SignUpView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignUpScreen/SignUpView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "456">
-               </Location>
-               <Location
-                  uuid = "34705EE8-3B53-4C09-B574-CFBC4251C88D - c371200cbfc1ced2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.transition(SwiftUI.AnyTransition) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(Ideas_for_office_environment.HybridTextField, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, SwiftUI.VStack&lt;Ideas_for_office_environment.HybridTextField&gt;)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt;&gt;)&gt; in Ideas_for_office_environment.SignUpView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignUpScreen/SignUpView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "416">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8E363E88-97F6-4814-9482-DFDD29724482"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignInScreen/SignInView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E716536C-703C-4E33-BDF5-DD8C10CF29B1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignInScreen/SignInViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "signIn(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E716536C-703C-4E33-BDF5-DD8C10CF29B1 - b37252414224e3e6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Ideas_for_office_environment.SignInResponse, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.SignInViewModel.signIn(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "468">
-               </Location>
-               <Location
-                  uuid = "E716536C-703C-4E33-BDF5-DD8C10CF29B1 - 8529a91f59ee9031"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Ideas_for_office_environment.SignInResponse, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.SignInViewModel.signIn(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "E716536C-703C-4E33-BDF5-DD8C10CF29B1 - 8529a91f59ee9031"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Ideas_for_office_environment.SignInResponse, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.SignInViewModel.signIn(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignInScreen/SignInViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E5029652-E3A5-4F5D-BAE9-C467287F3A71"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "81D80F84-8113-4F51-8BDA-99D5A1C84FD1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "checkEmailValidation(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8BE69E9D-E34B-4D4E-9887-405BE1A3C6A0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpNextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8D25B286-C8F9-45AC-A5AF-89BD4C737289"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C7A63735-AB71-48B4-B24E-D995167D2719"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B0928836-F81E-4A6C-89AC-8727EA5CA23B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Models/Responses/UserInfoResponse.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
-            landmarkName = "UserInfoResponse"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "14AEADBC-1B3D-4457-8617-7D859D7D488C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D4995EFE-4C4A-4097-8AE1-464CE46C9F6E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2156AF40-3440-437A-847F-BA3D0505E2CE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "584DEFE5-A9BE-49FB-A3B8-D1543A4B1A2D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "53F498AD-968B-401B-8FA9-C38269EEECBA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B8E792D9-067B-4292-88FA-A171E9F509A0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B8E792D9-067B-4292-88FA-A171E9F509A0 - d4910ae88594ccc1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.GetUserInfoAction.call(completion: (Swift.Result&lt;Ideas_for_office_environment.UserInfoResponse, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "1260">
-               </Location>
-               <Location
-                  uuid = "B8E792D9-067B-4292-88FA-A171E9F509A0 - d4910ae88594ccc1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.GetUserInfoAction.call(completion: (Swift.Result&lt;Ideas_for_office_environment.UserInfoResponse, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "1232">
-               </Location>
-               <Location
-                  uuid = "B8E792D9-067B-4292-88FA-A171E9F509A0 - d4910ae88594ccc1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.GetUserInfoAction.call(completion: (Swift.Result&lt;Ideas_for_office_environment.UserInfoResponse, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "1264">
-               </Location>
-               <Location
-                  uuid = "B8E792D9-067B-4292-88FA-A171E9F509A0 - d4910ae88594cb20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.GetUserInfoAction.call(completion: (Swift.Result&lt;Ideas_for_office_environment.UserInfoResponse, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/GetUserInfoAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "1200">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BDEF6316-9BEF-4833-B7BF-38BE7FFBD54E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpNextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "loadImage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9622E47B-FBD0-45E8-9508-F27DA0D55B6A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpNextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "loadImage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E638B6A6-63E2-4224-BCBC-ED9ECC6834C5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/SignUpScreen/SignUpViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "signUp()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E638B6A6-63E2-4224-BCBC-ED9ECC6834C5 - 9c0e01e22616ffa7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.SignUpViewModel.signUp() -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignUpScreen/SignUpViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  uuid = "E638B6A6-63E2-4224-BCBC-ED9ECC6834C5 - 9c0e01e22616fd0b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ideas_for_office_environment.SignUpViewModel.signUp() -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignUpScreen/SignUpViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "E638B6A6-63E2-4224-BCBC-ED9ECC6834C5 - e0f94c7daac2ed40"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; () in Ideas_for_office_environment.SignUpViewModel.signUp() -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/SignUpScreen/SignUpViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
                   offsetFromSymbolStart = "60">
                </Location>
             </Locations>
@@ -1055,233 +85,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2DB00272-EC82-4EB0-B901-733F5084C1AD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SetUpProfileView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C3C92024-DC9B-4872-BD6F-3AA15A761B51"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CB3D1E86-DD6F-4E00-AA77-135ED6BC1E51"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Helpers/CarousalView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "CB3D1E86-DD6F-4E00-AA77-135ED6BC1E51 - f3b1b426da9f32bf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.VStack&lt;SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.gesture&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Gesture&gt;(_: &#x3c4;_1_0, including: SwiftUI.GestureMask) -&gt; some&gt;&gt;.0 in Ideas_for_office_environment.CarousalView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "200">
-               </Location>
-               <Location
-                  uuid = "CB3D1E86-DD6F-4E00-AA77-135ED6BC1E51 - 91932a5a3e9decc1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int) -&gt; SwiftUI.VStack&lt;SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.VStack&lt;SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.gesture&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Gesture&gt;(_: &#x3c4;_1_0, including: SwiftUI.GestureMask) -&gt; some&gt;&gt;.0 in Ideas_for_office_environment.CarousalView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "456">
-               </Location>
-               <Location
-                  uuid = "CB3D1E86-DD6F-4E00-AA77-135ED6BC1E51 - f3b1b426da9f3179"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.VStack&lt;SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.gesture&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Gesture&gt;(_: &#x3c4;_1_0, including: SwiftUI.GestureMask) -&gt; some&gt;&gt;.0 in Ideas_for_office_environment.CarousalView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "200">
-               </Location>
-               <Location
-                  uuid = "CB3D1E86-DD6F-4E00-AA77-135ED6BC1E51 - 91932a5a3e9def03"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int) -&gt; SwiftUI.VStack&lt;SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.VStack&lt;SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.animation(Swift.Optional&lt;SwiftUI.Animation&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.gesture&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Gesture&gt;(_: &#x3c4;_1_0, including: SwiftUI.GestureMask) -&gt; some&gt;&gt;.0 in Ideas_for_office_environment.CarousalView.body.getter : some"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Helpers/CarousalView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "404">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A3571AA-D7FC-4DC9-A399-5FCCE7E7A6D3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4BCDA0DB-1B10-46AD-884B-2AEDCA7D9F07"
+            uuid = "F4CC2674-D717-47A6-BD87-9BBB86D45923"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4BCDA0DB-1B10-46AD-884B-2AEDCA7D9F07 - 942cf6018e3a04d5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SaveUserInfoAction.call(completion: (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "4BCDA0DB-1B10-46AD-884B-2AEDCA7D9F07 - 942cf6018e3a0436"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SaveUserInfoAction.call(completion: (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CC5E92EA-6E6D-4D75-9C25-07591030E6A3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "call(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CC5E92EA-6E6D-4D75-9C25-07591030E6A3 - 3c15389c80e77f89"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SaveUserInfoAction.call(completion: (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "CC5E92EA-6E6D-4D75-9C25-07591030E6A3 - 3c15389c80e77fa8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SaveUserInfoAction.call(completion: (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "020FF162-362A-4F7D-A9E2-8F28B2F396C5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
+            filePath = "Ideas-for-office-environment/Actions/PostIdeaPostAction.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -1293,47 +101,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "00B2EF1A-4CF5-445A-8482-FAF92E7E79D5"
-            shouldBeEnabled = "Yes"
+            uuid = "D7A6CE46-FCB9-4D09-BDF4-ED5F6EC4885C"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
+            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "call(completion:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "suggestIdea(completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "00B2EF1A-4CF5-445A-8482-FAF92E7E79D5 - 10bbd2e47b5778bf"
+                  uuid = "D7A6CE46-FCB9-4D09-BDF4-ED5F6EC4885C - f27824c2ab134e9e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SaveUserInfoAction.call(completion: (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Ideas_for_office_environment.SuggestIdeaViewModel.suggestIdea(completion: () -&gt; ()) -&gt; ()"
                   moduleName = "Ideas-for-office-environment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "280">
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "336">
                </Location>
                <Location
-                  uuid = "00B2EF1A-4CF5-445A-8482-FAF92E7E79D5 - 10bbd2e47b57789e"
+                  uuid = "D7A6CE46-FCB9-4D09-BDF4-ED5F6EC4885C - ec268baf6cafe4b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ideas_for_office_environment.SaveUserInfoAction.call(completion: (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in Ideas_for_office_environment.SuggestIdeaViewModel.suggestIdea(completion: () -&gt; ()) -&gt; ()"
                   moduleName = "Ideas-for-office-environment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SaveUserInfoAction.swift"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "280">
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "D7A6CE46-FCB9-4D09-BDF4-ED5F6EC4885C - ec268baf6cafe4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Ideas_for_office_environment.SuggestIdeaViewModel.suggestIdea(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "184">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1341,15 +164,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A9B8564C-59B1-4756-880B-83657F7083E6"
+            uuid = "CB75C15F-0243-4AB4-8D6D-2E7764EB3CF3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/ProfileScreen/SetUpProfileScreen/SetUpProfileView.swift"
+            filePath = "Ideas-for-office-environment/Screens/Post/PostView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -1357,222 +180,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E7FEF852-D68C-4FFE-B892-209B2DD5ECCE"
+            uuid = "D06A48D4-AC29-49E8-8418-3B12CA862F9D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/SuggestIdeaScreen/SuggestIdeaView.swift"
+            filePath = "Ideas-for-office-environment/Screens/Post/PostView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "CustomTextView"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3FDA2C85-E783-403B-B695-2436985FA1D7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/FilterScreen/FilterViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "fetchOffices(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BCE54DA9-041F-4E35-95C1-5D343EA45576"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/FilterScreen/FilterViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "fetchOffices(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4E09A143-45AA-4A32-9787-70205288EC02"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/FilterScreen/FilterViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetchOffices(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "48E27D73-D306-44EE-B78A-AC565BE7DF32"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "getPosts(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "48E27D73-D306-44EE-B78A-AC565BE7DF32 - 2bdd8f9834c02adb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "48E27D73-D306-44EE-B78A-AC565BE7DF32 - 2bdd8f9834c02adb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "140">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "61381BA2-1D29-4473-804A-9DE4083654C7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "getPosts(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "61381BA2-1D29-4473-804A-9DE4083654C7 - 44865f55494d8713"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "936">
-               </Location>
-               <Location
-                  uuid = "61381BA2-1D29-4473-804A-9DE4083654C7 - 723e85960287401c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "61381BA2-1D29-4473-804A-9DE4083654C7 - 44865f55494d8713"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "808">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E2815B9A-C39D-4F78-BC7C-4F91562824D6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "E2815B9A-C39D-4F78-BC7C-4F91562824D6 - 2485240757e26fc9"
+                  uuid = "D06A48D4-AC29-49E8-8418-3B12CA862F9D - bdb6e6e7acebbfa6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Ideas_for_office_environment.HomeView.body.getter : some"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.tabViewStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.TabViewStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Ideas_for_office_environment.PostView.body.getter : some"
                   moduleName = "Ideas-for-office-environment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeView.swift"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/Post/PostView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "3784">
                </Location>
                <Location
-                  uuid = "E2815B9A-C39D-4F78-BC7C-4F91562824D6 - b4276184db092ce7"
+                  uuid = "D06A48D4-AC29-49E8-8418-3B12CA862F9D - 6558fa92496437c0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #2 () -&gt; () in Ideas_for_office_environment.HomeView.body.getter : some"
+                  symbolName = "closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.tabViewStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.TabViewStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Ideas_for_office_environment.PostView.body.getter : some"
                   moduleName = "Ideas-for-office-environment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeView.swift"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/Post/PostView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "68">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "D06A48D4-AC29-49E8-8418-3B12CA862F9D - 4e1b5902ca15591d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.tabViewStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.TabViewStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Ideas_for_office_environment.PostView.body.getter : some"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/Post/PostView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "452">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1580,65 +243,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0A6FCCDC-BCF8-4604-85E5-87190F930C8D"
+            uuid = "7C351014-C9CA-4C13-B3A3-DEE1FDD621E7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Actions/GetPostsAction.swift"
+            filePath = "Ideas-for-office-environment/Screens/Post/PostView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "call(office:search:sortingFilter:page:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F7A0E270-21A1-4A97-AED0-5530B8C6BCD5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Actions/GetPostsAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "call(office:search:sortingFilter:page:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5A1E41F0-C668-4662-935F-932775910E63"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Actions/GetPostsAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "call(office:search:sortingFilter:page:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "68705E85-EC34-49B1-82F8-35C6442C8AEA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ideas-for-office-environment/Actions/GetPostsAction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "call(office:search:sortingFilter:page:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7C351014-C9CA-4C13-B3A3-DEE1FDD621E7 - edab70ff2f6c88bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.tabViewStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.TabViewStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Ideas_for_office_environment.PostView.body.getter : some"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/Post/PostView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "7C351014-C9CA-4C13-B3A3-DEE1FDD621E7 - f0f5820f03d0380f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Ideas_for_office_environment.PostView.body.getter : some"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/Post/PostView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "7C351014-C9CA-4C13-B3A3-DEE1FDD621E7 - a09d3cb83aa82c30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Ideas_for_office_environment.PostView.body.getter : some"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/Post/PostView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "7C351014-C9CA-4C13-B3A3-DEE1FDD621E7 - d3243863be190e09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TabView&lt;Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Ideas_for_office_environment.PostView.body.getter : some"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/Post/PostView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
