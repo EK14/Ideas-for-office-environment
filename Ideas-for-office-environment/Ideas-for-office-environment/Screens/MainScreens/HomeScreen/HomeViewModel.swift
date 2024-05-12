@@ -12,6 +12,7 @@ class HomeViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var page = 1
     @Published var selectedOffices: [Int] = []
+    @Published var isLoading = false
     
     init() {
         GetUserInfoAction().call { result in
@@ -34,6 +35,7 @@ class HomeViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     for post in info {
                         self?.posts.append(post)
+                        print(info)
                     }
                     self?.page += 1
                     completion()
@@ -51,5 +53,49 @@ class HomeViewModel: ObservableObject {
         page = 1
         posts.removeAll()
         getPosts {}
+    }
+    
+    func setLike(postId: Int) {
+        LikeAction().call(postId: postId, requestType: .post) { result in
+            switch result {
+            case .success(_):
+                print("successfully set like")
+            case .failure(_):
+                print("Error setting like")
+            }
+        }
+    }
+    
+    func removeLike(postId: Int) {
+        LikeAction().call(postId: postId, requestType: .delete) { result in
+            switch result {
+            case .success(_):
+                print("successfully remove like")
+            case .failure(_):
+                print("Error removing like")
+            }
+        }
+    }
+    
+    func setDislike(postId: Int) {
+        LikeAction().call(postId: postId, requestType: .delete) { result in
+            switch result {
+            case .success(_):
+                print("successfully set like")
+            case .failure(_):
+                print("Error setting like")
+            }
+        }
+    }
+    
+    func removeDislike(postId: Int) {
+        LikeAction().call(postId: postId, requestType: .delete) { result in
+            switch result {
+            case .success(_):
+                print("successfully remove like")
+            case .failure(_):
+                print("Error removing like")
+            }
+        }
     }
 }

@@ -34,7 +34,7 @@ struct HomeView: View {
                             
                             VStack(spacing: 40) {
                                 ForEach(viewModel.posts.indices, id: \.self) { index in
-                                    PostView(postInfo: viewModel.posts[index])
+                                    PostView(postInfo: viewModel.posts[index], parentViewModel: viewModel)
                                         .background(.white)
                                         .cornerRadius(20)
                                         .onAppear {
@@ -80,10 +80,11 @@ struct HomeView: View {
                 .padding(.trailing, 10)
                 .padding(.bottom, 10)
             }
+            
+            if(viewModel.isLoading) {
+                LoadingView()
+            }
         }
-//        .onAppear {
-//            viewModel.getPosts {}
-//        }
     }
 }
 

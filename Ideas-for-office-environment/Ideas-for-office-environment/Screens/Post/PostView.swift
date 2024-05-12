@@ -16,6 +16,7 @@ struct PostView: View {
     @State var dislikes = 0
     @State var date = ""
     var postInfo: IdeaPostResponse
+    @ObservedObject var parentViewModel: HomeViewModel
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -90,10 +91,19 @@ struct PostView: View {
                 
                 HStack {
                     Button {
+                        if !didLiked {
+                            parentViewModel.setLike(postId: postInfo.id)
+                            likes = likes + 1
+                        } else {
+                            parentViewModel.removeLike(postId: postInfo.id)
+                            likes = likes - 1
+                        }
                         didLiked.toggle()
-                        didDisliked = false
-                        likes = likes == postInfo.likesCount ? postInfo.likesCount + 1: postInfo.likesCount
-                        dislikes = postInfo.dislikesCount
+                        if didDisliked {
+                            didDisliked = false
+                            parentViewModel.removeDislike(postId: postInfo.id)
+                            dislikes = dislikes - 1
+                        }
                     } label: {
                         HStack {
                             Image(systemName: "hand.thumbsup")
@@ -110,10 +120,19 @@ struct PostView: View {
                     }
                     
                     Button {
+                        if !didDisliked {
+                            parentViewModel.setDislike(postId: postInfo.id)
+                            dislikes = dislikes + 1
+                        } else {
+                            parentViewModel.removeDislike(postId: postInfo.id)
+                            dislikes = dislikes - 1
+                        }
                         didDisliked.toggle()
-                        didLiked = false
-                        dislikes = dislikes == postInfo.dislikesCount ? postInfo.dislikesCount + 1: postInfo.dislikesCount
-                        likes = postInfo.likesCount
+                        if didLiked {
+                            didLiked = false
+                            parentViewModel.removeLike(postId: postInfo.id)
+                            likes = likes - 1
+                        }
                     } label: {
                         HStack {
                             Image(systemName: "hand.thumbsdown")
@@ -198,6 +217,8 @@ struct PostView: View {
             likes = postInfo.likesCount
             dislikes = postInfo.dislikesCount
             date = dateFormatter(date: postInfo.date)
+            didLiked = postInfo.isLikePressed
+            didDisliked = postInfo.isDislikePressed
         }
     }
     
