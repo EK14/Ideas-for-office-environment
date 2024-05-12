@@ -11,13 +11,18 @@ class FilterCoordinator: Coordinator {
     
     var rootViewController: UINavigationController
     
+    @ObservedObject var viewModel: FilterViewModel
+    @ObservedObject var parentViewModel: HomeViewModel
+    
     lazy var filterVC: UIHostingController = {
-        var vc = UIHostingController(rootView: FilterView(coordinator: self))
+        var vc = UIHostingController(rootView: FilterView(viewModel: viewModel, coordinator: self))
         return vc
     }()
     
-    init(rootViewController: UINavigationController) {
+    init(rootViewController: UINavigationController, parentViewModel: HomeViewModel) {
         self.rootViewController = rootViewController
+        self.parentViewModel = parentViewModel
+        viewModel = FilterViewModel(parentViewModel: parentViewModel)
     }
     
     func start() {

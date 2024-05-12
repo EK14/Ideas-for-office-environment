@@ -20,36 +20,46 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
+            
             ScrollView {
                 
                 VStack {
                     SearchableCustom(searchtxt: $viewModel.searchText, showFilterView: $showFilterView, coordinator: coordinator)
                         .background(.white)
                     
-                    ZStack {
-                        Color("gray")
-                        
-                        LazyVStack(spacing: 40) {
-                            ForEach(viewModel.posts.indices, id: \.self) { index in
-                                PostView(postInfo: viewModel.posts[index])
-                                    .background(.white)
-                                    .cornerRadius(20)
-                                    .onAppear {
-                                        print("\(viewModel.page)")
-                                        viewModel.loadMore()
-                                    }
+                    if(viewModel.posts.count > 0) {
+                        ZStack {
+                            
+                            Color("gray")
+                            
+                            VStack(spacing: 40) {
+                                ForEach(viewModel.posts.indices, id: \.self) { index in
+                                    PostView(postInfo: viewModel.posts[index])
+                                        .background(.white)
+                                        .cornerRadius(20)
+                                        .onAppear {
+                                            viewModel.getPosts {}
+                                        }
+                                }
                             }
+                            .padding(.vertical, 20)
+                            
                         }
-                        .padding(.vertical, 20)
+                        .ignoresSafeArea(edges: .bottom)
                     }
-                    .ignoresSafeArea(edges: .bottom)
                 }
             }
             .refreshable {
                 viewModel.refresh()
             }
             
-            VStack {
+            if(viewModel.posts.count == 0) {
+                Text("Лента идей пуста")
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .foregroundStyle(.gray)
+            }
+        
+        VStack {
                 Spacer()
                 
                 HStack {
@@ -71,10 +81,9 @@ struct HomeView: View {
                 .padding(.bottom, 10)
             }
         }
-        .onAppear {
-            print("\(viewModel.page)")
-            viewModel.loadMore()
-        }
+//        .onAppear {
+//            viewModel.getPosts {}
+//        }
     }
 }
 

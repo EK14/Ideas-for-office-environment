@@ -22,9 +22,8 @@ enum Sort {
 }
 
 struct FilterView: View {
-    @State var isSelestedOffice: [Int] = []
     @State var state = Sort.none
-    @ObservedObject var viewModel = FilterViewModel()
+    @ObservedObject var viewModel: FilterViewModel
     var coordinator: FilterCoordinator
     
     var body: some View {
@@ -56,7 +55,7 @@ struct FilterView: View {
                                         RoundedRectangle(cornerRadius: 2)
                                             .stroke(lineWidth: 1)
                                     }
-                                    .if(isSelestedOffice.contains(index+1)) { view in
+                                    .if(viewModel.selectedOffices.contains(index+1)) { view in
                                         view
                                             .background(.blue)
                                             .cornerRadius(2)
@@ -69,21 +68,21 @@ struct FilterView: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.trailing, 21)
-                        .background(isSelestedOffice.contains(index+1) ? .blue.opacity(0.3): .gray.opacity(0.3))
+                        .background(viewModel.selectedOffices.contains(index+1) ? .blue.opacity(0.3): .gray.opacity(0.3))
                         .cornerRadius(10)
                         .overlay {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(lineWidth: 1)
-                                .foregroundStyle(isSelestedOffice.contains(index+1) ? .blue.opacity(0.3): .gray.opacity(0.3))
+                                .foregroundStyle(viewModel.selectedOffices.contains(index+1) ? .blue.opacity(0.3): .gray.opacity(0.3))
                         }
                         .padding(.horizontal, 20)
                         .onTapGesture {
-                            if isSelestedOffice.contains(index+1) {
-                                if let index = isSelestedOffice.firstIndex(where: { $0 == index + 1 }) {
-                                    isSelestedOffice.remove(at: index)
+                            if viewModel.selectedOffices.contains(index+1) {
+                                if let index = viewModel.selectedOffices.firstIndex(where: { $0 == index + 1 }) {
+                                    viewModel.selectedOffices.remove(at: index)
                                 }
                             } else {
-                                isSelestedOffice.append(index+1)
+                                viewModel.selectedOffices.append(index+1)
                             }
                         }
                     }
@@ -140,6 +139,7 @@ struct FilterView: View {
                     VStack(alignment: .center) {
                         Button {
                             coordinator.applyFilters()
+                            viewModel.applyFilters()
                         } label: {
                             Text("Показать")
                                 .foregroundStyle(.white)
@@ -163,17 +163,15 @@ struct FilterView: View {
         }
         .onAppear {
             viewModel.fetchOffices {
-                viewModel.getUserInfo {
-                    viewModel.isLoading = false
-                    isSelestedOffice.append(viewModel.office)
-                }
+                viewModel.isLoading = false
             }
+            viewModel.selectedOffices = viewModel.parentViewModel.selectedOffices
         }
         .toolbar {
             Button {
                 state = .none
-                isSelestedOffice.removeAll()
-                isSelestedOffice.append(viewModel.office)
+                viewModel.selectedOffices.removeAll()
+                viewModel.selectedOffices.append(viewModel.office)
             } label: {
                 Text("Сбросить")
                     .foregroundStyle(.gray)

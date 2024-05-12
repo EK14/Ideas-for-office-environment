@@ -5,12 +5,18 @@
 //  Created by Elina Karapetian on 10.05.2024.
 //
 
-import Foundation
+import SwiftUI
 
 class FilterViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var offices = [Office]()
     @Published var office: Int = .zero
+    @Published var selectedOffices: [Int] = []
+    @ObservedObject var parentViewModel: HomeViewModel
+    
+    init(parentViewModel: HomeViewModel) {
+        self.parentViewModel = parentViewModel
+    }
     
     func fetchOffices(completion: @escaping () -> ()) {
         isLoading = true
@@ -43,6 +49,13 @@ class FilterViewModel: ObservableObject {
                     completion()
                 }
             }
+        }
+    }
+    
+    func applyFilters() {
+        DispatchQueue.main.async {
+            self.parentViewModel.selectedOffices = self.selectedOffices
+            self.parentViewModel.refresh()
         }
     }
 }

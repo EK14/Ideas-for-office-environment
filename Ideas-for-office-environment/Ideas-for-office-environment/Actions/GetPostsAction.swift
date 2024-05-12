@@ -12,6 +12,7 @@ struct GetPostsAction {
     func call(office: [Int], search: String?, sortingFilter: Int?, page: Int, completion: @escaping (Result<[IdeaPostResponse], NetworkError>) -> Void) {
         let pageSize = 1
         let token = Auth.shared.getAccessToken()
+        print(page)
         
         let scheme: String = "http"
         let host: String = "localhost"
@@ -47,7 +48,6 @@ struct GetPostsAction {
         }
         
         var request = URLRequest(url: url)
-        print(url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -58,9 +58,7 @@ struct GetPostsAction {
                 let response = try? JSONDecoder().decode([IdeaPostResponse].self, from: data)
                 
                 if let response = response {
-                    DispatchQueue.main.async {
-                        completion(.success(response))
-                    }
+                    completion(.success(response))
                 } else {
                     // Error: Unable to decode response JSON
                     print("Unable to decode response JSON")

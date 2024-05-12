@@ -28,7 +28,7 @@ class HomeCoordinator: Coordinator {
     }
     
     func addFilters() {
-        let filterCoordinator = FilterCoordinator(rootViewController: rootViewController)
+        let filterCoordinator = FilterCoordinator(rootViewController: rootViewController, parentViewModel: viewModel)
         filterCoordinator.start()
     }
 }
