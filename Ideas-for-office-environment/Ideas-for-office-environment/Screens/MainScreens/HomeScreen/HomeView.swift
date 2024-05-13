@@ -40,6 +40,7 @@ struct HomeView: View {
                                         .onAppear {
                                             viewModel.getPosts {}
                                         }
+                                        .transition(.move(edge: .trailing))
                                 }
                             }
                             .padding(.vertical, 20)
@@ -67,7 +68,9 @@ struct HomeView: View {
                     Spacer()
                     
                     Button {
-                        coordinator.createNewIdea()
+                        withAnimation {
+                            coordinator.createNewIdea()
+                        }
                     } label: {
                         Image(systemName: "pencil")
                             .imageScale(.large)

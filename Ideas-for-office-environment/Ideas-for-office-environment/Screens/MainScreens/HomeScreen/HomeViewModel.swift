@@ -20,7 +20,7 @@ class HomeViewModel: ObservableObject {
             case .success(let success):
                 DispatchQueue.main.async {
                     self.selectedOffices.append(success.office.id)
-                    self.refresh()
+                    self.getPosts {}
                 }
             case .failure(_):
                 print("Error getting userInfo")
@@ -47,6 +47,10 @@ class HomeViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func hasReachedEnd() {
+        
     }
     
     func refresh() {
@@ -95,6 +99,20 @@ class HomeViewModel: ObservableObject {
                 print("successfully remove like")
             case .failure(_):
                 print("Error removing like")
+            }
+        }
+    }
+    
+    func deletePost(postId: Int) {
+        if let index = posts.firstIndex(where: { $0.id == postId }) {
+            posts.remove(at: index)
+        }
+        DeletePostAction().call(postId: postId) { result in
+            switch result {
+            case .success(_):
+                print("successfully delete post")
+            case .failure(_):
+                print("Error deleting post")
             }
         }
     }

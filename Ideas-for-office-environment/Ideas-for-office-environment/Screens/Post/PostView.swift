@@ -194,7 +194,9 @@ struct PostView: View {
                     }
                     
                     Button {
-                        
+                        withAnimation() {
+                            parentViewModel.deletePost(postId: postInfo.id)
+                        }
                     } label: {
                         Text("Удалить")
                             .multilineTextAlignment(.leading)
