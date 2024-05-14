@@ -92,17 +92,18 @@ struct PostView: View {
                 HStack {
                     Button {
                         if !didLiked {
-                            parentViewModel.setLike(postId: postInfo.id)
-                            likes = likes + 1
+                            parentViewModel.setLike(postId: postInfo.id) {
+                                likes += 1
+                            }
                         } else {
-                            parentViewModel.removeLike(postId: postInfo.id)
-                            likes = likes - 1
+                            parentViewModel.removeLike(postId: postInfo.id) {
+                                likes -= 1
+                            }
                         }
                         didLiked.toggle()
                         if didDisliked {
                             didDisliked = false
-                            parentViewModel.removeDislike(postId: postInfo.id)
-                            dislikes = dislikes - 1
+                            dislikes -= 1
                         }
                     } label: {
                         HStack {
@@ -118,20 +119,22 @@ struct PostView: View {
                         .background(.gray.opacity(0.2))
                         .clipShape(Capsule())
                     }
+                    .disabled((parentViewModel.isSettingLike) || (parentViewModel.isRemovingLike))
                     
                     Button {
                         if !didDisliked {
-                            parentViewModel.setDislike(postId: postInfo.id)
-                            dislikes = dislikes + 1
+                            parentViewModel.setDislike(postId: postInfo.id) {
+                                dislikes += 1
+                            }
                         } else {
-                            parentViewModel.removeDislike(postId: postInfo.id)
-                            dislikes = dislikes - 1
+                            parentViewModel.removeDislike(postId: postInfo.id) {
+                                dislikes -= 1
+                            }
                         }
                         didDisliked.toggle()
                         if didLiked {
                             didLiked = false
-                            parentViewModel.removeLike(postId: postInfo.id)
-                            likes = likes - 1
+                            likes -= 1
                         }
                     } label: {
                         HStack {
@@ -147,6 +150,7 @@ struct PostView: View {
                         .background(.gray.opacity(0.2))
                         .clipShape(Capsule())
                     }
+                    .disabled(parentViewModel.isSettingDislike || parentViewModel.isRemovingDislike)
                     
                     Button {
                         
@@ -173,34 +177,37 @@ struct PostView: View {
             if (dotsButtonDidTouched) {
                 VStack(alignment: .leading, spacing: 16) {
                     Button {
-                        
+                        dotsButtonDidTouched = false
                     } label: {
                         Text("Предложить идею моему\nофису")
                             .multilineTextAlignment(.leading)
                     }
                     
                     Button {
-                        
+                        dotsButtonDidTouched = false
                     } label: {
                         Text("Перейти к автору")
                             .multilineTextAlignment(.leading)
                     }
                     
                     Button {
-                        
+                        dotsButtonDidTouched = false
                     } label: {
                         Text("Редактировать")
                             .multilineTextAlignment(.leading)
                     }
                     
                     Button {
-                        withAnimation() {
+                        parentViewModel.isDeletingPost = true
+                        withAnimation(.easeInOut(duration: 0.5)) {
                             parentViewModel.deletePost(postId: postInfo.id)
                         }
+                        dotsButtonDidTouched = false
                     } label: {
                         Text("Удалить")
                             .multilineTextAlignment(.leading)
                     }
+                    .disabled(parentViewModel.isDeletingPost)
                 }
                 .foregroundStyle(.black)
                 .padding()

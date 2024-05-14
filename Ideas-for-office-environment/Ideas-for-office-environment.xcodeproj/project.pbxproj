@@ -64,7 +64,7 @@
 		C3A3AAFE2BBDC99B008C707D /* SignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AAFD2BBDC99B008C707D /* SignInAction.swift */; };
 		C3A3AB012BBDF297008C707D /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = C3A3AB002BBDF297008C707D /* SwiftKeychainWrapper */; };
 		C3A3AB0A2BBDF5D2008C707D /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3AB092BBDF5D2008C707D /* Auth.swift */; };
-		C3CB764C2BF0CB3400E39880 /* LikeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB764B2BF0CB3400E39880 /* LikeAction.swift */; };
+		C3CB764C2BF0CB3400E39880 /* LikeDislikeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB764B2BF0CB3400E39880 /* LikeDislikeAction.swift */; };
 		C3CB764E2BF0CF8600E39880 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB764D2BF0CF8600E39880 /* NetworkRequest.swift */; };
 		C3CBD4892BA76E47005968EF /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBD4882BA76E47005968EF /* SignUpCoordinator.swift */; };
 		C3CBD48C2BA77EE5005968EF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBD48B2BA77EE5005968EF /* MainCoordinator.swift */; };
@@ -76,6 +76,7 @@
 		C3E7F6F62BC4898F002F68EA /* SignUpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F6F52BC4898F002F68EA /* SignUpAction.swift */; };
 		C3E7F6F92BC48CC2002F68EA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C3E7F6F82BC48CC2002F68EA /* SDWebImageSwiftUI */; };
 		C3EFCA8E2BF2A92800A42D98 /* DeletePostAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EFCA8D2BF2A92800A42D98 /* DeletePostAction.swift */; };
+		C3EFCA902BF3244F00A42D98 /* UserPostAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EFCA8F2BF3244F00A42D98 /* UserPostAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,7 +138,7 @@
 		C3A3AAFB2BBDC90A008C707D /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		C3A3AAFD2BBDC99B008C707D /* SignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAction.swift; sourceTree = "<group>"; };
 		C3A3AB092BBDF5D2008C707D /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
-		C3CB764B2BF0CB3400E39880 /* LikeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAction.swift; sourceTree = "<group>"; };
+		C3CB764B2BF0CB3400E39880 /* LikeDislikeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeDislikeAction.swift; sourceTree = "<group>"; };
 		C3CB764D2BF0CF8600E39880 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		C3CBD4882BA76E47005968EF /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		C3CBD48B2BA77EE5005968EF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		C3E7F6D32BC33730002F68EA /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		C3E7F6F52BC4898F002F68EA /* SignUpAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAction.swift; sourceTree = "<group>"; };
 		C3EFCA8D2BF2A92800A42D98 /* DeletePostAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostAction.swift; sourceTree = "<group>"; };
+		C3EFCA8F2BF3244F00A42D98 /* UserPostAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,7 +353,7 @@
 				C39CB1492BE1138D008B8537 /* UploadImageAction.swift */,
 				C3098E0A2BEE7E9700692D62 /* GetPostsAction.swift */,
 				C3098E0C2BEF749600692D62 /* PostIdeaPostAction.swift */,
-				C3CB764B2BF0CB3400E39880 /* LikeAction.swift */,
+				C3CB764B2BF0CB3400E39880 /* LikeDislikeAction.swift */,
 				C3EFCA8D2BF2A92800A42D98 /* DeletePostAction.swift */,
 			);
 			path = Actions;
@@ -433,6 +435,7 @@
 			children = (
 				C3E7F6CD2BC1E933002F68EA /* NetworkError.swift */,
 				C3CB764D2BF0CF8600E39880 /* NetworkRequest.swift */,
+				C3EFCA8F2BF3244F00A42D98 /* UserPostAction.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -535,7 +538,7 @@
 				C3CB764E2BF0CF8600E39880 /* NetworkRequest.swift in Sources */,
 				C3EFCA8E2BF2A92800A42D98 /* DeletePostAction.swift in Sources */,
 				C32221B82BAB3A880063DDF2 /* ProfileCoordinator.swift in Sources */,
-				C3CB764C2BF0CB3400E39880 /* LikeAction.swift in Sources */,
+				C3CB764C2BF0CB3400E39880 /* LikeDislikeAction.swift in Sources */,
 				C32AA0312BA73EA300477E68 /* Coordinator.swift in Sources */,
 				C3E7F6D42BC33730002F68EA /* SignUpRequest.swift in Sources */,
 				C32221B12BAB254A0063DDF2 /* MyOfficeCoordinator.swift in Sources */,
@@ -575,6 +578,7 @@
 				C3098E0B2BEE7E9700692D62 /* GetPostsAction.swift in Sources */,
 				C3CBD4892BA76E47005968EF /* SignUpCoordinator.swift in Sources */,
 				C39CB1512BE1563F008B8537 /* SuggestIdeaCoordinator.swift in Sources */,
+				C3EFCA902BF3244F00A42D98 /* UserPostAction.swift in Sources */,
 				3D27CED92B66CAAE003C81C5 /* AppDelegate.swift in Sources */,
 				C3CBD4942BA78039005968EF /* FavoritesCoordinator.swift in Sources */,
 				C3E7F6D02BC2DDEA002F68EA /* SignUpViewModel.swift in Sources */,

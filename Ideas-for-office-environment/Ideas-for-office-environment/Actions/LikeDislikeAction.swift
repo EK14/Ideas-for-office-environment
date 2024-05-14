@@ -1,5 +1,5 @@
 //
-//  LikeAction.swift
+//  LikeDislikeAction.swift
 //  Ideas-for-office-environment
 //
 //  Created by Elina Karapetian on 12.05.2024.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct LikeAction {
+struct LikeDislikeAction {
     
-    func call(postId: Int, requestType: NetworkRequestType, completion: @escaping (Result<Any?, NetworkError>) -> Void) {
+    func call(postId: Int, requestType: NetworkRequestType, action: UserPostAction, completion: @escaping (Result<Any?, NetworkError>) -> Void) {
         let token = Auth.shared.getAccessToken()
         let scheme: String = "http"
         let host: String = "localhost"
         let port: Int = 8189
-        let path = "/api/posts/\(postId)/like"
+        let path = "/api/posts/\(postId)/\(action.rawValue)"
         
         var components = URLComponents()
         components.scheme = scheme
