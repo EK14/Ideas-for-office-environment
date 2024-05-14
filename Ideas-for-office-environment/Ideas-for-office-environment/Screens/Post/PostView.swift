@@ -175,11 +175,13 @@ struct PostView: View {
             
             if (dotsButtonDidTouched) {
                 VStack(alignment: .leading, spacing: 16) {
-                    Button {
-                        dotsButtonDidTouched = false
-                    } label: {
-                        Text("Предложить идею моему\nофису")
-                            .multilineTextAlignment(.leading)
+                    if(postInfo.ideaAuthor.id != parentViewModel.userId) {
+                        Button {
+                            dotsButtonDidTouched = false
+                        } label: {
+                            Text("Предложить идею моему\nофису")
+                                .multilineTextAlignment(.leading)
+                        }
                     }
                     
                     Button {
@@ -189,24 +191,26 @@ struct PostView: View {
                             .multilineTextAlignment(.leading)
                     }
                     
-                    Button {
-                        dotsButtonDidTouched = false
-                    } label: {
-                        Text("Редактировать")
-                            .multilineTextAlignment(.leading)
-                    }
-                    
-                    Button {
-                        parentViewModel.isDeletingPost = true
-                        withAnimation(.easeInOut(duration: 0.5)) {
-                            parentViewModel.deletePost(postId: postInfo.id)
+                    if(postInfo.ideaAuthor.id == parentViewModel.userId) {
+                        Button {
+                            dotsButtonDidTouched = false
+                        } label: {
+                            Text("Редактировать")
+                                .multilineTextAlignment(.leading)
                         }
-                        dotsButtonDidTouched = false
-                    } label: {
-                        Text("Удалить")
-                            .multilineTextAlignment(.leading)
+                        
+                        Button {
+                            parentViewModel.isDeletingPost = true
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                parentViewModel.deletePost(postId: postInfo.id)
+                            }
+                            dotsButtonDidTouched = false
+                        } label: {
+                            Text("Удалить")
+                                .multilineTextAlignment(.leading)
+                        }
+                        .disabled(parentViewModel.isDeletingPost)
                     }
-                    .disabled(parentViewModel.isDeletingPost)
                 }
                 .foregroundStyle(.black)
                 .padding()

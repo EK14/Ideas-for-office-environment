@@ -14,8 +14,8 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "init()"
             landmarkType = "7">
             <Locations>
@@ -222,8 +222,8 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "refresh(completion:)"
             landmarkType = "7">
             <Locations>
@@ -270,8 +270,8 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "getPosts(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -286,8 +286,8 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "getPosts(completion:)"
             landmarkType = "7">
             <Locations>
@@ -427,71 +427,11 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "getPosts(completion:)"
             landmarkType = "7">
             <Locations>
-               <Location
-                  uuid = "51457D03-02D1-4F50-8C6B-B8F298246E1E - a2a707fbc6420922"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Ideas_for_office_environment.IdeaPostResponse&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "712">
-               </Location>
-               <Location
-                  uuid = "51457D03-02D1-4F50-8C6B-B8F298246E1E - a2a707fbc6420922"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Ideas_for_office_environment.IdeaPostResponse&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "900">
-               </Location>
-               <Location
-                  uuid = "51457D03-02D1-4F50-8C6B-B8F298246E1E - 68c5f099c12ee33f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;Ideas_for_office_environment.IdeaPostResponse&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "51457D03-02D1-4F50-8C6B-B8F298246E1E - a2a707fbc642082a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Ideas_for_office_environment.IdeaPostResponse&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "Ideas-for-office-environment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "900">
-               </Location>
                <Location
                   uuid = "51457D03-02D1-4F50-8C6B-B8F298246E1E - 68c5f099c12ee227"
                   shouldBeEnabled = "Yes"
@@ -507,6 +447,36 @@
                   endingLineNumber = "42"
                   offsetFromSymbolStart = "48">
                </Location>
+               <Location
+                  uuid = "51457D03-02D1-4F50-8C6B-B8F298246E1E - a2a707fbc6420845"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Ideas_for_office_environment.IdeaPostResponse&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "900">
+               </Location>
+               <Location
+                  uuid = "51457D03-02D1-4F50-8C6B-B8F298246E1E - 68c5f099c12ee206"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;Ideas_for_office_environment.IdeaPostResponse&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.getPosts(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "48">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -520,8 +490,8 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "getPosts(completion:)"
             landmarkType = "7">
             <Locations>
@@ -788,8 +758,8 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "getPosts(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -836,8 +806,8 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "setLike(postId:completion:)"
             landmarkType = "7">
             <Locations>
@@ -914,8 +884,8 @@
             filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "removeLike(postId:completion:)"
             landmarkType = "7">
             <Locations>
@@ -1803,6 +1773,86 @@
                   offsetFromSymbolStart = "1676">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68E54866-7CD0-4AAC-98B0-C45D4CDBA585"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ideas-for-office-environment/Screens/Post/PostView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8DEC6DF-6DD2-47B4-9F23-94250AB8608D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "deletePost(postId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F8DEC6DF-6DD2-47B4-9F23-94250AB8608D - 4fe9edc30e9dae34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.deletePost(postId: Swift.Int) -&gt; ()"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "F8DEC6DF-6DD2-47B4-9F23-94250AB8608D - b15a0e1321044a1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #2 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Ideas_for_office_environment.NetworkError&gt;) -&gt; () in Ideas_for_office_environment.HomeViewModel.deletePost(postId: Swift.Int) -&gt; ()"
+                  moduleName = "Ideas-for-office-environment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Developer/HSE/Coursework/Ideas-for-office-environment/Ideas-for-office-environment/Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DAF8FBDF-CB3A-43C0-8156-A5359825D98B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ideas-for-office-environment/Screens/MainScreens/HomeScreen/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "deletePost(postId:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

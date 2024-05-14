@@ -12,6 +12,7 @@ class HomeViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var page = 1
     @Published var selectedOffices: [Int] = []
+    @Published var userId = 0
     @Published var isLoading = false
     @Published var isDeletingPost = false
     @Published var isSettingDislike = false
@@ -52,6 +53,7 @@ class HomeViewModel: ObservableObject {
             case .success(let success):
                 DispatchQueue.main.async {
                     self.selectedOffices = [success.office.id]
+                    self.userId = success.id
                     self.isLoading = false
                     completion()
                 }
