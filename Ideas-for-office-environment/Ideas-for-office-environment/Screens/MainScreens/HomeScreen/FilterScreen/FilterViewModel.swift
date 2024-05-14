@@ -10,12 +10,13 @@ import SwiftUI
 class FilterViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var offices = [Office]()
-    @Published var office: Int = .zero
+    @Published var myOffice: Int = .zero
     @Published var selectedOffices: [Int] = []
     @ObservedObject var parentViewModel: HomeViewModel
     
     init(parentViewModel: HomeViewModel) {
         self.parentViewModel = parentViewModel
+        getUserInfo {}
     }
     
     func fetchOffices(completion: @escaping () -> ()) {
@@ -40,7 +41,8 @@ class FilterViewModel: ObservableObject {
             switch result {
             case .success(let userInfo):
                 DispatchQueue.main.async {
-                    self?.office = userInfo.office.id
+                    self?.myOffice = userInfo.office.id
+                    self?.isLoading = false
                     completion()
                 }
             case .failure(_):
@@ -55,7 +57,7 @@ class FilterViewModel: ObservableObject {
     func applyFilters() {
         DispatchQueue.main.async {
             self.parentViewModel.selectedOffices = self.selectedOffices
-            self.parentViewModel.refresh()
+            self.parentViewModel.refresh() {}
         }
     }
 }

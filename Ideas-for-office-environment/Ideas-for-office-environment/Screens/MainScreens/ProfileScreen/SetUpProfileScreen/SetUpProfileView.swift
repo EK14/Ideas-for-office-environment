@@ -40,7 +40,7 @@ struct SetUpProfileView: View, KeyboardReadable {
                             }
                         } else {
                             ZStack {
-                                AnimatedImage(url: URL(string: setupProfileViewModel.photoUrl))
+                                WebImage(url: URL(string: setupProfileViewModel.photoUrl))
                                     .resizable()
                                     .scaledToFill()
                                 

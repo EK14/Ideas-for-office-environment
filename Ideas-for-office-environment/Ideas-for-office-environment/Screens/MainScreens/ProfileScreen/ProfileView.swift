@@ -16,7 +16,7 @@ struct ProfileView: View {
         ZStack {
             VStack {
                 VStack {
-                    AnimatedImage(url: URL(string: viewModel.photoUrl))
+                    WebImage(url: URL(string: viewModel.photoUrl))
                         .resizable()
                         .scaledToFill()
                         .foregroundStyle(.blue)

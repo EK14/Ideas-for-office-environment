@@ -23,7 +23,7 @@ struct PostView: View {
             VStack(alignment: .leading, spacing: 10) {
                 HStack(alignment: .top) {
                     HStack {
-                        AnimatedImage(url: URL(string: postInfo.ideaAuthor.photo))
+                        WebImage(url: URL(string: postInfo.ideaAuthor.photo))
                             .resizable()
                             .scaledToFill()
                             .frame(width: 60, height: 60)
@@ -60,7 +60,7 @@ struct PostView: View {
                 if(postInfo.attachedImages.count > 0) {
                     TabView {
                         ForEach(postInfo.attachedImages.indices, id: \.self) { index in
-                            AnimatedImage(url: URL(string: postInfo.attachedImages[index] + "jpeg"))
+                            WebImage(url: URL(string: postInfo.attachedImages[index] + "jpeg"))
                                 .resizable()
                                 .frame(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height / 3, alignment: .center)
                                 .scaledToFill()
@@ -72,7 +72,7 @@ struct PostView: View {
                 }
                 
                 HStack(spacing: 0) {
-                    AnimatedImage(url: URL(string: postInfo.office.imageUrl))
+                    WebImage(url: URL(string: postInfo.office.imageUrl))
                         .resizable()
                         .frame(width: 50, height: 50)
                         .background(.gray)
@@ -224,10 +224,13 @@ struct PostView: View {
         }
         .onAppear {
             likes = postInfo.likesCount
-            dislikes = postInfo.dislikesCount
-            date = dateFormatter(date: postInfo.date)
             didLiked = postInfo.isLikePressed
+            dislikes = postInfo.dislikesCount
             didDisliked = postInfo.isDislikePressed
+            date = dateFormatter(date: postInfo.date)
+        }
+        .onDisappear {
+            parentViewModel.refresh {}
         }
     }
     

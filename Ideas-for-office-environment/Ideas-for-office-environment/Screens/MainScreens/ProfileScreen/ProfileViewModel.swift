@@ -51,12 +51,28 @@ class ProfileViewModel: CarousalViewContainerViewModel {
                                                        office: self.office)).call { result in
                     switch result {
                     case .success(_):
+                        self.isLoading = false
                         print("success")
                     case .failure(_):
                         print("failure")
                     }
                     completion()
                 }
+            }
+        }  else {
+            SaveUserInfoAction(parameters: UserDto(name: self.name,
+                                                   surname: self.surname,
+                                                   job: self.job,
+                                                   photo: photoUrl,
+                                                   office: self.office)).call { result in
+                switch result {
+                case .success(_):
+                    self.isLoading = false
+                    print("success")
+                case .failure(_):
+                    print("failure")
+                }
+                completion()
             }
         }
     }

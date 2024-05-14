@@ -51,7 +51,7 @@ struct HomeView: View {
                 }
             }
             .refreshable {
-                viewModel.refresh()
+                viewModel.refresh() {}
             }
             
             if(viewModel.posts.count == 0) {

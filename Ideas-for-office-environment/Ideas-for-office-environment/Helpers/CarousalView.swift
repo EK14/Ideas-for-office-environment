@@ -39,7 +39,7 @@ struct CarousalViewContainer<ViewModel: CarousalViewContainerViewModel>: View {
             views.append(
                 AnyView(
                     VStack {
-                        AnimatedImage(url: URL(string: office.imageUrl))
+                        WebImage(url: URL(string: office.imageUrl))
                             .resizable()
                             .scaledToFill()
                             .frame(width: 180, height: 200)

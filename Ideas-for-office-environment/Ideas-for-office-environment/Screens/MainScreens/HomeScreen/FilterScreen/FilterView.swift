@@ -37,10 +37,29 @@ struct FilterView: View {
                     
                     ForEach(viewModel.offices.indices, id: \.self) { index in
                         HStack(spacing: 0) {
-                            AnimatedImage(url: URL(string: viewModel.offices[index].imageUrl))
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                                .scaledToFill()
+                            ZStack(alignment: .topLeading) {
+                                WebImage(url: URL(string: viewModel.offices[index].imageUrl))
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                                    .scaledToFill()
+                                
+                                if(index + 1 == viewModel.myOffice) {
+                                    Text("Мой офис")
+                                        .padding(5)
+                                        .background(.blue)
+                                        .clipShape(
+                                            .rect(
+                                                topLeadingRadius: 0,
+                                                bottomLeadingRadius: 0,
+                                                bottomTrailingRadius: 5,
+                                                topTrailingRadius: 5
+                                            )
+                                        )
+                                        .foregroundStyle(.white)
+                                        .padding(.top, 10)
+                                        .font(.caption)
+                                }
+                            }
                             
                             Text(viewModel.offices[index].address)
                                 .font(.system(size: 16))
@@ -163,15 +182,20 @@ struct FilterView: View {
         }
         .onAppear {
             viewModel.fetchOffices {
-                viewModel.isLoading = false
+                viewModel.parentViewModel.getUserInfo() {
+                    viewModel.isLoading = false
+                }
             }
             viewModel.selectedOffices = viewModel.parentViewModel.selectedOffices
+        }
+        .onDisappear{
+            coordinator.applyFilters()
         }
         .toolbar {
             Button {
                 state = .none
                 viewModel.selectedOffices.removeAll()
-                viewModel.selectedOffices.append(viewModel.office)
+                viewModel.selectedOffices.append(viewModel.myOffice)
             } label: {
                 Text("Сбросить")
                     .foregroundStyle(.gray)

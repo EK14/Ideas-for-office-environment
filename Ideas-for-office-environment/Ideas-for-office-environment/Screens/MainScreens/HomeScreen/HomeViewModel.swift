@@ -20,16 +20,8 @@ class HomeViewModel: ObservableObject {
     @Published var isRemovingLike = false
     
     init() {
-        GetUserInfoAction().call { result in
-            switch result {
-            case .success(let success):
-                DispatchQueue.main.async {
-                    self.selectedOffices.append(success.office.id)
-                    self.getPosts {}
-                }
-            case .failure(_):
-                print("Error getting userInfo")
-            }
+        getUserInfo() {
+            self.getPosts {}
         }
     }
 
@@ -40,7 +32,6 @@ class HomeViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     for post in info {
                         self?.posts.append(post)
-                        print(info)
                     }
                     self?.page += 1
                     completion()
@@ -54,14 +45,32 @@ class HomeViewModel: ObservableObject {
         }
     }
     
+    func getUserInfo(completion: @escaping () -> ()) {
+        isLoading = true
+        GetUserInfoAction().call { result in
+            switch result {
+            case .success(let success):
+                DispatchQueue.main.async {
+                    self.selectedOffices = [success.office.id]
+                    self.isLoading = false
+                    completion()
+                }
+            case .failure(_):
+                print("Error getting userInfo")
+            }
+        }
+    }
+    
     func hasReachedEnd() {
         
     }
     
-    func refresh() {
+    func refresh(completion: @escaping () -> ()) {
         page = 1
         posts.removeAll()
-        getPosts {}
+        getPosts {
+            completion()
+        }
     }
     
     func setLike(postId: Int, completion: @escaping () -> ()) {

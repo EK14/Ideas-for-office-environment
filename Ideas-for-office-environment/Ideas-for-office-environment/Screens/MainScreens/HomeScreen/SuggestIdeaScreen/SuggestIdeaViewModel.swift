@@ -31,15 +31,15 @@ class SuggestIdeaViewModel: ObservableObject {
     }
     
     func suggestIdea(completion: @escaping () -> ()) {
-        print(posts)
         isLoading = true
         uploadImages {
             PostIdeaPostAction(parameters: PostIdeaRequest(title: self.title, content: self.content, attachedImages: self.attachedImages)).call() { result in
                 switch result {
                 case .success(_):
                     DispatchQueue.main.async {
-                        self.parentViewModel.refresh()
-                        completion()
+                        self.parentViewModel.refresh() {
+                            completion()
+                        }
                     }
                 case .failure(_):
                     print("Error fetching user info")
