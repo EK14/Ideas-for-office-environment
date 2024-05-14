@@ -77,6 +77,7 @@
 		C3E7F6F92BC48CC2002F68EA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C3E7F6F82BC48CC2002F68EA /* SDWebImageSwiftUI */; };
 		C3EFCA8E2BF2A92800A42D98 /* DeletePostAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EFCA8D2BF2A92800A42D98 /* DeletePostAction.swift */; };
 		C3EFCA902BF3244F00A42D98 /* UserPostAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EFCA8F2BF3244F00A42D98 /* UserPostAction.swift */; };
+		C3EFCA922BF35B5D00A42D98 /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EFCA912BF35B5D00A42D98 /* ExpandableText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +151,7 @@
 		C3E7F6F52BC4898F002F68EA /* SignUpAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAction.swift; sourceTree = "<group>"; };
 		C3EFCA8D2BF2A92800A42D98 /* DeletePostAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostAction.swift; sourceTree = "<group>"; };
 		C3EFCA8F2BF3244F00A42D98 /* UserPostAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostAction.swift; sourceTree = "<group>"; };
+		C3EFCA912BF35B5D00A42D98 /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 				C32AA0262BA73D6100477E68 /* HybridTextField.swift */,
 				C32AA02B2BA73DC700477E68 /* CustomTextField.swift */,
 				C354E2BB2BCB13460071D81A /* LoadingView.swift */,
+				C3EFCA912BF35B5D00A42D98 /* ExpandableText.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				C32221BD2BAB3CBB0063DDF2 /* PostView.swift in Sources */,
 				C32221E02BB372AE0063DDF2 /* CommentView.swift in Sources */,
 				3DC71B172B927C8B00AA98C3 /* Constants.swift in Sources */,
+				C3EFCA922BF35B5D00A42D98 /* ExpandableText.swift in Sources */,
 				C33FFAED2BD8054E008D2A1C /* GetUserInfoAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

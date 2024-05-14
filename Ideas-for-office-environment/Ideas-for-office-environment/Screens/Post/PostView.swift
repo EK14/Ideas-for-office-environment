@@ -53,8 +53,7 @@ struct PostView: View {
                     .padding(.vertical, 10)
                     .padding(.horizontal, 20)
                 
-                Text(postInfo.content)
-                    .lineLimit(5)
+                ExpandableText(postInfo.content, lineLimit: 5)
                     .padding(.horizontal, 20)
                 
                 if(postInfo.attachedImages.count > 0) {

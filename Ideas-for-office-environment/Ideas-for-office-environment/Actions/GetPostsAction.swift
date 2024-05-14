@@ -12,7 +12,6 @@ struct GetPostsAction {
     func call(office: [Int], search: String?, sortingFilter: Int?, page: Int, completion: @escaping (Result<[IdeaPostResponse], NetworkError>) -> Void) {
         let pageSize = 1
         let token = Auth.shared.getAccessToken()
-        print(page)
         
         let scheme: String = "http"
         let host: String = "localhost"
