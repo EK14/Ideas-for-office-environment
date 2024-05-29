@@ -11,7 +11,7 @@ class FilterViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var offices = [Office]()
     @Published var myOffice: Int = .zero
-    @Published var selectedOffices: [Int] = []
+    @Published var selectedOffices: Set<Int> = []
     @ObservedObject var parentViewModel: HomeViewModel
     
     init(parentViewModel: HomeViewModel) {

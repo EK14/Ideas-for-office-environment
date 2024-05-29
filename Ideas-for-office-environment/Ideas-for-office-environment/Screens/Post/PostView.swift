@@ -17,6 +17,7 @@ struct PostView: View {
     @State var date = ""
     var postInfo: IdeaPostResponse
     @ObservedObject var parentViewModel: HomeViewModel
+    var coordinator: HomeCoordinator
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -193,6 +194,7 @@ struct PostView: View {
                     
                     if(postInfo.ideaAuthor.id == parentViewModel.userId) {
                         Button {
+                            coordinator.editPost(postId: postInfo.id)
                             dotsButtonDidTouched = false
                         } label: {
                             Text("Редактировать")
@@ -232,9 +234,9 @@ struct PostView: View {
             didDisliked = postInfo.isDislikePressed
             date = dateFormatter(date: postInfo.date)
         }
-        .onDisappear {
-            parentViewModel.refresh {}
-        }
+//        .onDisappear {
+//            parentViewModel.refresh {}
+//        }
     }
     
     func dateFormatter(date: String) -> String {

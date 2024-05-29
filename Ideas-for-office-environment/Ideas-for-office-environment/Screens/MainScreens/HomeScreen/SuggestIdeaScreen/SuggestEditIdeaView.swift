@@ -1,5 +1,5 @@
 //
-//  SuggestIdeaView.swift
+//  SuggestEditIdeaView.swift
 //  Ideas-for-office-environment
 //
 //  Created by Elina Karapetian on 30.04.2024.
@@ -8,8 +8,14 @@
 import SwiftUI
 import Combine
 
-struct SuggestIdeaView: View {
+enum SuggestEditScreenType {
+    case suggest
+    case edit
+}
+
+struct SuggestEditIdeaView: View {
     var coordinator: SuggestIdeaCoordinator
+    var screenType: SuggestEditScreenType
     @State var titleHeight: CGFloat = 56.0
     @State var textHeight: CGFloat = 56.0
     @State private var showingImagePicker = false
@@ -18,7 +24,7 @@ struct SuggestIdeaView: View {
     @ObservedObject var viewModel: SuggestIdeaViewModel
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 20) {
                     HStack {
@@ -31,30 +37,18 @@ struct SuggestIdeaView: View {
                         }
                         
                         Spacer()
-                        
-                        Button {
-                            viewModel.suggestIdea {
-                                viewModel.isLoading = false
-                                coordinator.close()
-                            }
-                        } label: {
-                            Text("Опубликовать")
-                                .padding(.vertical, 7)
-                                .padding(.horizontal, 14)
-                                .background(.blue.opacity(0.3))
-                                .clipShape(Capsule())
-                                .overlay(
-                                    Capsule()
-                                        .stroke(.blue, lineWidth: 1)
-                                )
-                                .font(.system(size: 16))
-                        }
                     }
                     .padding(.horizontal, 20)
                     
-                    Text("Предложить идею")
-                        .font(.system(size: 24))
-                        .padding(.horizontal, 20)
+                    if(screenType == .suggest) {
+                        Text("Предложить идею")
+                            .font(.system(size: 24))
+                            .padding(.horizontal, 20)
+                    } else {
+                        Text("Редактирование")
+                            .font(.system(size: 24))
+                            .padding(.horizontal, 20)
+                    }
                     
                     VStack(spacing: 5) {
                         ZStack(alignment: .leading) {
@@ -147,6 +141,38 @@ struct SuggestIdeaView: View {
                 ImagePicker(image: $inputImage)
                     .ignoresSafeArea()
             }
+            
+            HStack {
+                Spacer()
+                
+                Button {
+                    if(screenType == .suggest) {
+                        viewModel.suggestIdea {
+                            viewModel.isLoading = false
+                            coordinator.close()
+                        }
+                    } else {
+                        viewModel.editIdea {
+                            viewModel.isLoading = false
+                            coordinator.close()
+                        }
+                    }
+                } label: {
+                    Text("Опубликовать")
+                        .padding(.vertical, 7)
+                        .padding(.horizontal, 14)
+                        .background(.blue.opacity(0.3))
+                        .background(.white)
+                        .clipShape(Capsule())
+                        .overlay(
+                            Capsule()
+                                .stroke(.blue, lineWidth: 1)
+                        )
+                        .font(.system(size: 16))
+                }
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
             
             if(viewModel.isLoading)  {
                 LoadingView()

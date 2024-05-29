@@ -101,7 +101,7 @@ struct FilterView: View {
                                     viewModel.selectedOffices.remove(at: index)
                                 }
                             } else {
-                                viewModel.selectedOffices.append(index+1)
+                                viewModel.selectedOffices.insert(index+1)
                             }
                         }
                     }
@@ -195,7 +195,7 @@ struct FilterView: View {
             Button {
                 state = .none
                 viewModel.selectedOffices.removeAll()
-                viewModel.selectedOffices.append(viewModel.myOffice)
+                viewModel.selectedOffices.insert(viewModel.myOffice)
             } label: {
                 Text("Сбросить")
                     .foregroundStyle(.gray)

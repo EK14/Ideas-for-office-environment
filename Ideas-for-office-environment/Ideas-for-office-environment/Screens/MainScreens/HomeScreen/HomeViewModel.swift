@@ -10,8 +10,8 @@ import Foundation
 class HomeViewModel: ObservableObject {
     @Published var posts = [IdeaPostResponse]()
     @Published var searchText: String = ""
-    @Published var page = 1
-    @Published var selectedOffices: [Int] = []
+    @Published var page = 0
+    @Published var selectedOffices: Set<Int> = []
     @Published var userId = 0
     @Published var isLoading = false
     @Published var isDeletingPost = false
@@ -19,22 +19,41 @@ class HomeViewModel: ObservableObject {
     @Published var isRemovingDislike = false
     @Published var isSettingLike = false
     @Published var isRemovingLike = false
+    @Published var didReachedLastPost = false
     
-    init() {
-        getUserInfo() {
-            self.getPosts {}
+//    init() {
+//        getUserInfo() {
+//            self.isLoading = true
+//            self.getPosts {
+//                self.isLoading = false
+//            }
+//            self.page += 1
+//        }
+//    }
+    
+    //MARK: - PAGINATION
+    func loadMoreContent(currentPost item: IdeaPostResponse){
+        guard posts.count > 0 else { return }
+        if posts[posts.count - 1].id == item.id {
+            self.didReachedLastPost = true
+            page += 1
+            getPosts {
+                self.didReachedLastPost = false
+            }
         }
     }
 
     func getPosts(completion: @escaping () -> ()) {
+//        isLoading = true
         GetPostsAction().call(office: selectedOffices, search: nil, sortingFilter: nil, page: self.page) { [weak self] result in
             switch result {
             case .success(let info):
                 DispatchQueue.main.async {
+//                    self?.posts = info
                     for post in info {
                         self?.posts.append(post)
                     }
-                    self?.page += 1
+//                    self?.isLoading = false
                     completion()
                 }
             case .failure(_):
@@ -52,7 +71,7 @@ class HomeViewModel: ObservableObject {
             switch result {
             case .success(let success):
                 DispatchQueue.main.async {
-                    self.selectedOffices = [success.office.id]
+                    self.selectedOffices.insert(success.office.id)
                     self.userId = success.id
                     self.isLoading = false
                     completion()
@@ -69,9 +88,13 @@ class HomeViewModel: ObservableObject {
     
     func refresh(completion: @escaping () -> ()) {
         page = 1
-        posts.removeAll()
-        getPosts {
-            completion()
+        DispatchQueue.main.async {
+            self.posts = []
+        }
+        DispatchQueue.main.async {
+            self.getPosts {
+                completion()
+            }
         }
     }
     

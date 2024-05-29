@@ -10,19 +10,21 @@ import SwiftUI
 class SuggestIdeaCoordinator: Coordinator {
     
     var rootViewController: UINavigationController
+    var postId: Int?
     
     @ObservedObject var parentViewModel: HomeViewModel
     @ObservedObject var viewModel: SuggestIdeaViewModel
     
     lazy var suggestIdeaView: UIHostingController = {
-        var vc = UIHostingController(rootView: SuggestIdeaView(coordinator: self, viewModel: viewModel))
+        var vc = UIHostingController(rootView: SuggestEditIdeaView(coordinator: self, screenType: .suggest, viewModel: viewModel))
         return vc
     }()
     
-    init(rootViewController: UINavigationController, parentViewModel: HomeViewModel) {
+    init(rootViewController: UINavigationController, parentViewModel: HomeViewModel, postId: Int? = nil) {
         self.rootViewController = rootViewController
         self.parentViewModel = parentViewModel
-        viewModel = SuggestIdeaViewModel(parentViewModel: parentViewModel)
+        self.postId = postId
+        viewModel = SuggestIdeaViewModel(parentViewModel: parentViewModel, postId: postId)
     }
     
     func start() {

@@ -9,8 +9,8 @@ import Foundation
 
 struct GetPostsAction {
     
-    func call(office: [Int], search: String?, sortingFilter: Int?, page: Int, completion: @escaping (Result<[IdeaPostResponse], NetworkError>) -> Void) {
-        let pageSize = 1
+    func call(office: Set<Int>, search: String?, sortingFilter: Int?, page: Int, completion: @escaping (Result<[IdeaPostResponse], NetworkError>) -> Void) {
+        let pageSize = 10
         let token = Auth.shared.getAccessToken()
         
         let scheme: String = "http"

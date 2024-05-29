@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct IdeaPostResponse: Decodable {
+struct IdeaPostResponse: Decodable, Identifiable, Hashable {
     let id: Int
     let title: String
     let content: String
@@ -21,6 +21,14 @@ struct IdeaPostResponse: Decodable {
     let isDislikePressed: Bool
     let commentsCount: Int
     let isSuggestedToMyOffice: Bool
+
+    static func == (lhs: IdeaPostResponse, rhs: IdeaPostResponse) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
 struct IdeaAuthor: Decodable {

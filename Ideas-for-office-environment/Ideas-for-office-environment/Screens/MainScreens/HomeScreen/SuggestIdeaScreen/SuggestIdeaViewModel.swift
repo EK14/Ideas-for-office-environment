@@ -14,14 +14,17 @@ struct Post: Identifiable {
 
 class SuggestIdeaViewModel: ObservableObject {
     @Published var posts = [Post]()
+    @Published var postId: Int?
     @Published var title = ""
     @Published var content = ""
     @Published var attachedImages = [String]()
     @Published var isLoading = false
     @ObservedObject var parentViewModel: HomeViewModel
     
-    init(parentViewModel: HomeViewModel) {
+    init(parentViewModel: HomeViewModel, postId: Int? = nil) {
         self.parentViewModel = parentViewModel
+        self.postId = postId
+        
     }
 
     func deletePhoto(post: Post) {
@@ -34,6 +37,28 @@ class SuggestIdeaViewModel: ObservableObject {
         isLoading = true
         uploadImages {
             PostIdeaPostAction(parameters: PostIdeaRequest(title: self.title, content: self.content, attachedImages: self.attachedImages)).call() { result in
+                switch result {
+                case .success(_):
+                    DispatchQueue.main.async {
+                        self.parentViewModel.refresh() {
+                            completion()
+                        }
+                    }
+                case .failure(_):
+                    print("Error fetching user info")
+                    DispatchQueue.main.async {
+                        completion()
+                    }
+                }
+            }
+        }
+    }
+    
+    func editIdea(completion: @escaping () -> ()) {
+        isLoading = true
+        guard let postId else { return }
+        uploadImages {
+            EditPostAction(parameters: PostIdeaRequest(title: self.title, content: self.content, attachedImages: self.attachedImages)).call(postId: postId) { result in
                 switch result {
                 case .success(_):
                     DispatchQueue.main.async {

@@ -27,6 +27,11 @@ class HomeCoordinator: Coordinator {
         suggestIdeaCoordinator.start()
     }
     
+    func editPost(postId: Int) {
+        let suggestIdeaCoordinator = SuggestIdeaCoordinator(rootViewController: rootViewController, parentViewModel: viewModel, postId: postId)
+        suggestIdeaCoordinator.start()
+    }
+    
     func addFilters() {
         let filterCoordinator = FilterCoordinator(rootViewController: rootViewController, parentViewModel: viewModel)
         filterCoordinator.start()

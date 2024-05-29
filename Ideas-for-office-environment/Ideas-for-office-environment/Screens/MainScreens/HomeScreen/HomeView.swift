@@ -17,56 +17,56 @@ struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     @State var showFilterView = false
     var coordinator: HomeCoordinator
-    
+
     var body: some View {
         ZStack {
-            
             ScrollView {
-                
-                VStack {
+                LazyVStack {
                     SearchableCustom(searchtxt: $viewModel.searchText, showFilterView: $showFilterView, coordinator: coordinator)
                         .background(.white)
-                    
+
                     if(viewModel.posts.count > 0) {
                         ZStack {
-                            
                             Color("gray")
-                            
-                            VStack(spacing: 40) {
-                                ForEach(viewModel.posts.indices, id: \.self) { index in
-                                    PostView(postInfo: viewModel.posts[index], parentViewModel: viewModel)
+
+                            LazyVStack(spacing: 40) {
+                                ForEach(viewModel.posts, id: \.id) { post in
+                                    PostView(postInfo: post, parentViewModel: viewModel, coordinator: coordinator)
                                         .background(.white)
                                         .cornerRadius(20)
                                         .onAppear {
-                                            viewModel.getPosts {}
+                                            viewModel.loadMoreContent(currentPost: post)
                                         }
                                         .transition(.move(edge: .trailing))
+
                                 }
                             }
                             .padding(.vertical, 20)
-                            
                         }
                         .ignoresSafeArea(edges: .bottom)
+                    }
+                    
+                    if viewModel.didReachedLastPost {
+                        LoadingView()
                     }
                 }
             }
             .refreshable {
                 viewModel.refresh() {}
             }
-            
+
             if(viewModel.posts.count == 0) {
                 Text("Лента идей пуста")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundStyle(.gray)
             }
-        
-        VStack {
+
+            VStack {
                 Spacer()
-                
+
                 HStack {
-                    
                     Spacer()
-                    
+
                     Button {
                         withAnimation {
                             coordinator.createNewIdea()
@@ -83,13 +83,22 @@ struct HomeView: View {
                 .padding(.trailing, 10)
                 .padding(.bottom, 10)
             }
-            
+
             if(viewModel.isLoading) {
                 LoadingView()
             }
         }
+        .onAppear {
+            viewModel.posts = []
+            viewModel.page = 0
+            viewModel.getUserInfo {
+                viewModel.page += 1
+                viewModel.getPosts {}
+            }
+        }
     }
 }
+
 
 struct SearchableCustom: View {
     
